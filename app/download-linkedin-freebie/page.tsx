@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function DownloadLinkedInFreebie() {
   const handleDownload = () => {
     // Create a temporary link element to trigger download
@@ -81,7 +83,7 @@ export default function DownloadLinkedInFreebie() {
                       <span className="text-xs font-bold">✓</span>
                     </div>
                     <span className="text-gray-700">
-                      Echte Ergebnisse messen statt "Prinzip Hoffnung"
+                      Echte Ergebnisse messen statt &quot;Prinzip Hoffnung&quot;
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -101,9 +103,11 @@ export default function DownloadLinkedInFreebie() {
               <div className="relative">
                 {/* Book cover with download animation */}
                 <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform hover:scale-105 transition-all duration-500">
-                  <img
+                  <Image
                     src="/images/freebie-cover.png"
                     alt="Content-Hamsterrad Playbook Cover"
+                    width={448}
+                    height={576}
                     className="w-full h-full object-contain bg-white"
                   />
 
@@ -212,14 +216,14 @@ export default function DownloadLinkedInFreebie() {
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Spezialisiert auf B2B-SaaS, IT- & Tech-Unternehmer mit $1M+
-                Revenue. Wie die Top 5% planbar Kunden gewinnen statt "Prinzip
-                Hoffnung".
+                Revenue. Wie die Top 5% planbar Kunden gewinnen statt
+                &quot;Prinzip Hoffnung&quot;.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4 text-white">Kontakt</h3>
               <p className="text-gray-300 text-sm">
-                Planbare Meetings statt "Content-Hamsterrad"
+                Planbare Meetings statt &quot;Content-Hamsterrad&quot;
                 <br />
                 Planbare Kundenakquise
                 <br />
@@ -247,7 +251,7 @@ export default function DownloadLinkedInFreebie() {
               </p>
               <div className="text-xs text-gray-400 text-center md:text-right max-w-md">
                 <p className="mb-2">
-                  I'm committed to your privacy. I use the information you
+                  I&apos;m committed to your privacy. I use the information you
                   provide to me to contact you about my relevant content,
                   products, and services. You may unsubscribe from these
                   communications at any time.

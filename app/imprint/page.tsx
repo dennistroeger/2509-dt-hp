@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Imprint | GrowMyTechProfile.com",
@@ -89,12 +90,12 @@ export default function Imprint() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <a
+            <Link
               href="/"
               className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
             >
               ← Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </div>

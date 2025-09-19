@@ -46,7 +46,7 @@ export default function ContactForm({
         const errorData = await response.json();
         setError(errorData.error || "Something went wrong. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setError("Network error. Please try again.");
     } finally {
       setIsSubmitting(false);

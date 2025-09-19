@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Nächster Schritt - E-Mail bestätigen | GrowMyTechProfile.com",
@@ -128,7 +129,7 @@ export default function NextStep() {
                   <span className="text-xs font-bold">✓</span>
                 </div>
                 <span className="text-gray-700">
-                  Echte Ergebnisse messen statt "Prinzip Hoffnung"
+                  Echte Ergebnisse messen statt &quot;Prinzip Hoffnung&quot;
                 </span>
               </div>
               <div className="flex items-start space-x-3">
@@ -144,12 +145,12 @@ export default function NextStep() {
 
           {/* Back to Home Link */}
           <div className="mt-12">
-            <a
+            <Link
               href="/"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white font-semibold rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               ← Zurück zur Startseite
-            </a>
+            </Link>
           </div>
         </div>
       </section>
