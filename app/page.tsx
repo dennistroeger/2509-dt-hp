@@ -1,5 +1,6 @@
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
                 Planbare Meetings statt
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   {" "}
-                  "Content-Hamsterrad"
+                  &ldquo;Content-Hamsterrad&rdquo;
                 </span>
                 <br />
                 auf Linkedin
@@ -41,7 +42,8 @@ export default function Home() {
               <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 In diesem kostenlosen Playbook zeige ich dir, wie du dem
                 Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
-                Ergebnisse statt "Prinzip Hoffnung" bei 50+ Tech-Unternehmen.
+                Ergebnisse statt &ldquo;Prinzip Hoffnung&rdquo; bei 50+
+                Tech-Unternehmen.
               </p>
 
               {/* Form */}
@@ -66,9 +68,11 @@ export default function Home() {
               <div className="relative">
                 {/* Clean book cover image */}
                 <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                  <img
+                  <Image
                     src="/images/freebie-cover.png"
                     alt="Content-Hamsterrad Playbook Cover"
+                    width={448}
+                    height={576}
                     className="w-full h-full object-contain bg-white"
                   />
 
@@ -92,7 +96,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Wie du dem Content-Hamsterrad entkommst und planbar Kunden
-              gewinnst - echte Ergebnisse statt "Prinzip Hoffnung".
+              gewinnst - echte Ergebnisse statt &ldquo;Prinzip Hoffnung&rdquo;.
             </p>
           </div>
 
@@ -131,8 +135,8 @@ export default function Home() {
                 Echte Ergebnisse messen
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Klare KPIs und ROI-Messung statt "Prinzip Hoffnung". Bewährte
-                Systeme für vorhersagbare Ergebnisse.
+                Klare KPIs und ROI-Messung statt &ldquo;Prinzip Hoffnung&rdquo;.
+                Bewährte Systeme für vorhersagbare Ergebnisse.
               </p>
             </div>
 
@@ -144,8 +148,8 @@ export default function Home() {
                 Systematischer Ansatz
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Bewährte Systeme statt "Prinzip Hoffnung". Wie du LinkedIn
-                strategisch nutzt ohne tägliche Content-Erstellung.
+                Bewährte Systeme statt &ldquo;Prinzip Hoffnung&rdquo;. Wie du
+                LinkedIn strategisch nutzt ohne tägliche Content-Erstellung.
               </p>
             </div>
 
@@ -188,9 +192,11 @@ export default function Home() {
                 <div className="relative w-80 h-96 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105">
                   {/* Modern 2025 book cover with glassmorphism effect */}
                   <div className="absolute inset-0 bg-white rounded-2xl border-2 border-gray-100 shadow-2xl overflow-hidden">
-                    <img
+                    <Image
                       src="/images/freebie-cover.png"
                       alt="Content-Hamsterrad Playbook Cover"
+                      width={320}
+                      height={384}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -234,7 +240,7 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 In diesem kostenlosen Playbook zeige ich dir, wie du dem
                 Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
-                Ergebnisse statt "Prinzip Hoffnung".
+                Ergebnisse statt &ldquo;Prinzip Hoffnung&rdquo;.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -260,7 +266,7 @@ export default function Home() {
                     <span className="text-xs font-bold">✓</span>
                   </div>
                   <span className="text-gray-700">
-                    Echte Ergebnisse messen statt "Prinzip Hoffnung"
+                    Echte Ergebnisse messen statt &ldquo;Prinzip Hoffnung&rdquo;
                   </span>
                 </div>
               </div>
