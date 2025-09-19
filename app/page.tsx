@@ -1,102 +1,349 @@
-import Image from "next/image";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+        <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tr from-emerald-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="relative max-w-7xl mx-auto">
+          {/* Two-Column Grid Layout */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left Column - Text + Form */}
+            <div className="text-center lg:text-left">
+              {/* Top Small Text / Banner */}
+              <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-red-100 to-orange-100 rounded-full text-xs sm:text-sm font-medium text-red-800 mb-3 sm:mb-4">
+                📚 Kostenloser Download für B2B-SaaS, IT- & Tech-Unternehmer
+              </div>
+
+              {/* Short line of text (highlighted) */}
+              <div className="text-base sm:text-lg font-semibold text-red-600 mb-3 sm:mb-4">
+                Wie die Top 5% planbar Kunden gewinnen
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+                Planbare Meetings statt
+                <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                  {" "}
+                  "Content-Hamsterrad"
+                </span>
+                <br />
+                auf Linkedin
+              </h1>
+
+              {/* Subheadline / Supporting Copy */}
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+                In diesem kostenlosen Playbook zeige ich dir, wie du dem
+                Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
+                Ergebnisse statt "Prinzip Hoffnung" bei 50+ Tech-Unternehmen.
+              </p>
+
+              {/* Form */}
+              <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto lg:mx-0">
+                <ContactForm
+                  formId="hero"
+                  buttonText="Playbook kostenlos herunterladen →"
+                />
+
+                {/* Trust Badge / Disclaimer */}
+                <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
+                  <span className="text-green-600">🔒</span>
+                  <p className="text-xs text-gray-500">
+                    Kein Spam. Nur relevante B2B SaaS Insights.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Book Cover */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                {/* Clean book cover image */}
+                <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                  <img
+                    src="/images/freebie-cover.png"
+                    alt="Content-Hamsterrad Playbook Cover"
+                    className="w-full h-full object-contain bg-white"
+                  />
+
+                  {/* FREE Badge */}
+                  <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    FREE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Das Content-Hamsterrad stoppen
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Wie du dem Content-Hamsterrad entkommst und planbar Kunden
+              gewinnst - echte Ergebnisse statt "Prinzip Hoffnung".
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🚫</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Das Content-Hamsterrad stoppen
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit verschwenden
+                und wie du dem Hamsterrad entkommst.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Planbare Kundenakquise
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Wie die Top 5% systematisch und vorhersagbar Kunden gewinnen -
+                ohne tägliche Content-Erstellung.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">📈</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Echte Ergebnisse messen
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Klare KPIs und ROI-Messung statt "Prinzip Hoffnung". Bewährte
+                Systeme für vorhersagbare Ergebnisse.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Systematischer Ansatz
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Bewährte Systeme statt "Prinzip Hoffnung". Wie du LinkedIn
+                strategisch nutzt ohne tägliche Content-Erstellung.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Top 5% Strategien
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Die exakten Methoden der erfolgreichsten SaaS-Gründer. Wie sie
+                planbar Kunden gewinnen ohne Content-Hamsterrad.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Sofort umsetzbar
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Schritt-für-Schritt Anleitung mit Templates. In 2 Wochen läuft
+                dein planbares Kundenakquise-System.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Freebie Section */}
+      <section className="bg-gradient-to-br from-purple-50 to-blue-50 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Book Image */}
+            <div className="text-center lg:text-left">
+              <div className="relative inline-block">
+                <div className="relative w-80 h-96 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105">
+                  {/* Modern 2025 book cover with glassmorphism effect */}
+                  <div className="absolute inset-0 bg-white rounded-2xl border-2 border-gray-100 shadow-2xl overflow-hidden">
+                    <img
+                      src="/images/freebie-cover.png"
+                      alt="Content-Hamsterrad Playbook Cover"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Modern floating elements */}
+                  <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center text-white font-bold text-sm shadow-lg animate-pulse">
+                    FREE
+                  </div>
+
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-2xl blur-xl -z-10"></div>
+                </div>
+
+                {/* Floating particles for modern effect */}
+                <div className="absolute -top-2 -left-2 w-3 h-3 bg-red-400 rounded-full animate-bounce"></div>
+                <div className="absolute top-1/2 -right-3 w-2 h-2 bg-orange-400 rounded-full animate-bounce delay-300"></div>
+                <div className="absolute bottom-1/4 -left-4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce delay-700"></div>
+              </div>
+            </div>
+
+            {/* Right Column - Content */}
+            <div>
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-100 to-orange-100 rounded-full text-sm font-medium text-red-800 mb-6">
+                📚 Kostenloser Download
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                  Wie die Top 5% auf LinkedInplanbar Kunden gewinnen
+                </span>
+                <br />
+              </h2>
+
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit verschwenden
+                <span className="text-red-600"> (und wie die Top 5%</span>{" "}
+                <span className="text-orange-600">planbar Kunden</span>{" "}
+                gewinnen)
+              </h3>
+
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                In diesem kostenlosen Playbook zeige ich dir, wie du dem
+                Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
+                Ergebnisse statt "Prinzip Hoffnung".
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-gray-700">
+                    Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit
+                    verschwenden
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-gray-700">
+                    Wie die Top 5% systematisch und planbar Kunden gewinnen
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-gray-700">
+                    Echte Ergebnisse messen statt "Prinzip Hoffnung"
+                  </span>
+                </div>
+              </div>
+
+              {/* Download Form */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <ContactForm
+                  formId="freebie"
+                  showCompany={true}
+                  buttonText="Kostenlosen Guide herunterladen →"
+                />
+                <p className="text-xs text-gray-500 mt-4 text-center">
+                  🔒 Kein Spam. Nur relevante Tech-Insights.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-slate-800 via-gray-900 to-slate-800 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-orange-600/5"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-red-400/10 to-orange-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-tr from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+
+        <div className="relative max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">
+                Content-Hamsterrad Exit
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Spezialisiert auf B2B-SaaS, IT- & Tech-Unternehmer mit $1M+
+                Revenue. Wie die Top 5% planbar Kunden gewinnen statt "Prinzip
+                Hoffnung".
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">Kontakt</h3>
+              <p className="text-gray-300 text-sm">
+                Planbare Meetings statt "Content-Hamsterrad"
+                <br />
+                Planbare Kundenakquise
+                <br />
+                Top 5% Strategien
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">Rechtliches</h3>
+              <div className="text-gray-300 text-sm space-y-1">
+                <p>Datenschutz</p>
+                <p>
+                  <a href="/imprint" className="hover:text-white underline">
+                    Impressum
+                  </a>
+                </p>
+                <p>AGB</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700/50 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-gray-300 text-center md:text-left">
+                COPYRIGHT 2024® ALL RIGHTS RESERVED | GrowMyTechProfile.com
+              </p>
+              <div className="text-xs text-gray-400 text-center md:text-right max-w-md">
+                <p className="mb-2">
+                  I'm committed to your privacy. I use the information you
+                  provide to me to contact you about my relevant content,
+                  products, and services. You may unsubscribe from these
+                  communications at any time.
+                </p>
+                <p>
+                  This site is not a part of LinkedIn, Microsoft INC.
+                  Additionally, This site is NOT endorsed by LinkedIn in any
+                  way. LINKEDIN is a trademark of LINKEDIN.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
