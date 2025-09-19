@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Nächster Schritt - E-Mail bestätigen | GrowMyTechProfile.com",
@@ -155,17 +156,7 @@ export default function NextStep() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-br from-slate-800 via-gray-900 to-slate-800 text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/5 to-blue-600/5"></div>
-        <div className="relative max-w-4xl mx-auto text-center">
-          <div className="border-t border-gray-700/50 pt-8">
-            <p className="text-sm text-gray-300">
-              COPYRIGHT 2024® ALL RIGHTS RESERVED | GrowMyTechProfile.com
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
