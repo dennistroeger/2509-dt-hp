@@ -189,10 +189,10 @@ export default function DownloadLinkedInFreebie() {
               Strategien brauchst, melde dich gerne bei mir.
             </p>
             <a
-              href="mailto:kontakt@growmytechprofile.com"
+              href="https://calendar.app.google/QErRk78CbZJiNFbq6"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              📧 Kontakt aufnehmen
+              📧 Termin vereinbaren
             </a>
           </div>
         </div>
