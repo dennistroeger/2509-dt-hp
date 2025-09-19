@@ -32,13 +32,15 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">Rechtliches</h3>
             <div className="text-gray-300 text-sm space-y-1">
-              <p>Datenschutz</p>
+              <Link href="/datenschutz" className="hover:text-white underline">
+                Datenschutz
+              </Link>
+
               <p>
                 <Link href="/imprint" className="hover:text-white underline">
                   Impressum
                 </Link>
               </p>
-              <p>AGB</p>
             </div>
           </div>
         </div>
