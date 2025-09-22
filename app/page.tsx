@@ -24,7 +24,7 @@ export default function Home() {
 
               {/* Short line of text (highlighted) */}
               <div className="text-base sm:text-lg font-semibold text-red-600 mb-3 sm:mb-4">
-                Wie die Top 5% planbar Kunden gewinnen
+                Kostenfreier Leitfaden
               </div>
 
               {/* Main Headline */}
