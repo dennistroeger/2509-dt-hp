@@ -3,11 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, fullName, company } = body;
+    const { email, firstName, company } = body;
 
-    if (!email || !fullName) {
+    if (!email || !firstName) {
       return NextResponse.json(
-        { error: 'Email and full name are required' },
+        { error: 'Email and first name are required' },
         { status: 400 }
       );
     }
@@ -24,8 +24,7 @@ export async function POST(request: NextRequest) {
     const contactData = {
       email: email,
       attributes: {
-        FIRSTNAME: fullName.split(' ')[0] || fullName,
-        LASTNAME: fullName.split(' ').slice(1).join(' ') || '',
+        VORNAME: firstName, // Trying German attribute name
         COMPANY: company || '',
         SOURCE: 'Website Form',
         SIGNUP_DATE: new Date().toISOString(),
@@ -33,6 +32,9 @@ export async function POST(request: NextRequest) {
       listIds: [7], // List ID 7 as specified
       updateEnabled: true, // Update existing contacts
     };
+
+    // Debug logging
+    console.log('Sending to Brevo:', JSON.stringify(contactData, null, 2));
 
     // Send to BREVO API
     const response = await fetch('https://api.brevo.com/v3/contacts', {
@@ -52,6 +54,10 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    // Log successful response
+    const responseData = await response.json();
+    console.log('Brevo response:', JSON.stringify(responseData, null, 2));
 
     return NextResponse.json(
       { message: 'Contact added successfully' },
