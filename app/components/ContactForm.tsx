@@ -95,25 +95,6 @@ export default function ContactForm({
         />
       </div>
 
-      {showCompany && (
-        <div>
-          <label
-            htmlFor={`company-${formId}`}
-            className="block text-sm font-semibold text-gray-700 mb-1 sm:mb-2"
-          >
-            Tech-Unternehmen*
-          </label>
-          <input
-            type="text"
-            id={`company-${formId}`}
-            name="company"
-            required
-            className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all text-sm sm:text-base"
-            placeholder="Dein Unternehmen"
-          />
-        </div>
-      )}
-
       <button
         type="submit"
         disabled={isSubmitting}

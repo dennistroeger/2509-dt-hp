@@ -40,17 +40,17 @@ export default function Home() {
 
               {/* Subheadline / Supporting Copy */}
               <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                In diesem kostenlosen Playbook zeige ich dir, wie du dem
-                Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
-                Ergebnisse statt &ldquo;Prinzip Hoffnung&rdquo; bei 50+
-                Tech-Unternehmen.
+                In diesem kostenlosen Leitfaden zeige ich dir, wie du dem
+                Content-Hamsterrad entkommst und planbar Kunden gewinnst mit dem
+                CEO-System - echte Ergebnisse statt &ldquo;Prinzip
+                Hoffnung&rdquo.
               </p>
 
               {/* Form */}
               <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto lg:mx-0">
                 <ContactForm
                   formId="hero"
-                  buttonText="Playbook kostenlos herunterladen →"
+                  buttonText="Leitfaden kostenlos herunterladen →"
                 />
 
                 {/* Trust Badge / Disclaimer */}
@@ -238,7 +238,7 @@ export default function Home() {
               </h3>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                In diesem kostenlosen Playbook zeige ich dir, wie du dem
+                In diesem kostenlosen Leitfaden zeige ich dir, wie du dem
                 Content-Hamsterrad entkommst und planbar Kunden gewinnst - echte
                 Ergebnisse statt &ldquo;Prinzip Hoffnung&rdquo;.
               </p>
