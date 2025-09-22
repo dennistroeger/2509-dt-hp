@@ -275,7 +275,7 @@ export default function Home() {
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
                 <ContactForm
                   formId="freebie"
-                  showCompany={true}
+                  showCompany={false}
                   buttonText="Kostenlosen Guide herunterladen →"
                 />
                 <p className="text-xs text-gray-500 mt-4 text-center">

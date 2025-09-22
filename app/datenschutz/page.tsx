@@ -96,7 +96,7 @@ export default function Datenschutz() {
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    Klicken Sie auf den "Abmelden"-Link am Ende jeder
+                    Klicken Sie auf den &quot;Abmelden&quot;-Link am Ende jeder
                     Newsletter-E-Mail
                   </li>
                   <li>
@@ -107,7 +107,7 @@ export default function Datenschutz() {
                     >
                       info@histack.io
                     </a>{" "}
-                    mit dem Betreff "Newsletter abmelden"
+                    mit dem Betreff &quot;Newsletter abmelden&quot;
                   </li>
                   <li>
                     Kontaktieren Sie uns über das Kontaktformular auf unserer
