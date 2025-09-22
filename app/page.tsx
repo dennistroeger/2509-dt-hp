@@ -29,13 +29,11 @@ export default function Home() {
 
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
-                Planbare Meetings statt
+                5–10+ hochwertige Sales-Termine pro Monat{" "}
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-                  {" "}
-                  &ldquo;Content-Hamsterrad&rdquo;
+                  mit dem CEO-System{" "}
                 </span>
-                <br />
-                auf Linkedin
+                auf LinkedIn
               </h1>
 
               {/* Subheadline / Supporting Copy */}
