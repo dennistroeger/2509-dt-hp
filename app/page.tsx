@@ -1,8 +1,32 @@
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Image from "next/image";
+import { cookies } from "next/headers";
+import { sendLinkedInConversion } from "./lib/linkedin";
 
-export default function Home() {
+export default async function Home() {
+  const cookieStore = await cookies();
+  const liFatId = cookieStore.get("li_fat_id")?.value;
+  const conversionUrn = process.env.LINKEDIN_WEBSITE_VISIT_CONVERSION_URN;
+
+  // Debug logging
+  console.log("🔍 Debug Info:", {
+    liFatId: liFatId ? "present" : "missing",
+    conversionUrn: conversionUrn ? "present" : "missing",
+    nodeEnv: process.env.NODE_ENV,
+  });
+
+  if (conversionUrn) {
+    if (liFatId) {
+      // Send conversion with real LinkedIn tracking ID
+      sendLinkedInConversion(liFatId, conversionUrn);
+    } else if (process.env.NODE_ENV === "development") {
+      // Send test conversion in development mode
+      console.log("🧪 Testing LinkedIn conversion tracking (no real liFatId)");
+      sendLinkedInConversion("", conversionUrn, true);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
