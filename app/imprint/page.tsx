@@ -3,9 +3,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Imprint | GrowMyTechProfile.com",
-  description:
-    "Legal information and company details for GrowMyTechProfile.com",
+  title: "Imprint | Histack.io",
+  description: "Legal information and company details for Histack.io",
   robots: {
     index: false,
     follow: false,
@@ -83,9 +82,7 @@ export default function Imprint() {
                 Copyright
               </h2>
               <div className="text-gray-600">
-                <p>
-                  COPYRIGHT 2024® ALL RIGHTS RESERVED | GrowMyTechProfile.com
-                </p>
+                <p>COPYRIGHT 2024® ALL RIGHTS RESERVED | Histack.io</p>
               </div>
             </section>
           </div>

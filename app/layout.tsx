@@ -14,16 +14,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://growmytechprofile.com"),
+  metadataBase: new URL("https://www.histack.io"),
   title:
     "Planbare Meetings statt Content-Hamsterrad auf LinkedIn | B2B SaaS Guide",
   description:
     "Wie die Top 5% planbar Kunden gewinnen - kostenloses Playbook für B2B-SaaS, IT- & Tech-Unternehmer. Echte Ergebnisse statt 'Prinzip Hoffnung' bei 50+ Tech-Unternehmen.",
   keywords:
     "LinkedIn Marketing, B2B SaaS, Kundenakquise, Content Marketing, Tech Marketing, SaaS Growth, LinkedIn Strategie, B2B Lead Generation",
-  authors: [{ name: "GrowMyTechProfile.com" }],
-  creator: "GrowMyTechProfile.com",
-  publisher: "GrowMyTechProfile.com",
+  authors: [{ name: "Histack.io" }],
+  creator: "Histack.io",
+  publisher: "Histack.io",
   robots: {
     index: true,
     follow: true,
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://growmytechprofile.com",
-    siteName: "GrowMyTechProfile.com",
+    url: "https://www.histack.io",
+    siteName: "Histack.io",
     title: "Planbare Meetings statt Content-Hamsterrad auf LinkedIn",
     description:
       "Wie die Top 5% planbar Kunden gewinnen - kostenloses Playbook für B2B-SaaS, IT- & Tech-Unternehmer.",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     images: ["/images/freebie-cover.png"],
   },
   alternates: {
-    canonical: "https://growmytechprofile.com",
+    canonical: "https://www.histack.io",
   },
   category: "Business",
 };

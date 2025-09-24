@@ -3,9 +3,9 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Datenschutz | GrowMyTechProfile.com",
+  title: "Datenschutz | Histack.io",
   description:
-    "Datenschutzerklärung und Informationen zum Datenschutz für GrowMyTechProfile.com",
+    "Datenschutzerklärung und Informationen zum Datenschutz für Histack.io",
   robots: {
     index: false,
     follow: false,

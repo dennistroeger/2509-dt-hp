@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { sendLinkedInConversion } from "../lib/linkedin";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: "Nächster Schritt - E-Mail bestätigen | GrowMyTechProfile.com",
+  title: "Nächster Schritt - E-Mail bestätigen | Histack.io",
   description:
     "Bestätige deine E-Mail-Adresse, um dein kostenloses LinkedIn Playbook zu erhalten.",
   robots: {
@@ -12,7 +14,29 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NextStep() {
+export default async function NextStep() {
+  const cookieStore = await cookies();
+  const liFatId = cookieStore.get("li_fat_id")?.value;
+  const conversionUrn = process.env.LINKEDIN_CEO_SYSTEM_DOWNLOAD;
+
+  // Debug logging
+  console.log("🔍 Next Step Debug Info:", {
+    liFatId: liFatId ? "present" : "missing",
+    conversionUrn: conversionUrn ? "present" : "missing",
+    nodeEnv: process.env.NODE_ENV,
+  });
+
+  if (conversionUrn) {
+    if (liFatId) {
+      // Send conversion with real LinkedIn tracking ID
+      sendLinkedInConversion(liFatId, conversionUrn);
+    } else if (process.env.NODE_ENV === "development") {
+      // Send test conversion in development mode
+      console.log("🧪 Testing LinkedIn conversion tracking (no real liFatId)");
+      sendLinkedInConversion("", conversionUrn, true);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
