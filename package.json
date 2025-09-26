@@ -6,17 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "studio": "sanity dev --port 3333"
+    "lint": "eslint"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
-    "@portabletext/react": "^4.0.3",
-    "@sanity/client": "^7.11.2",
-    "@sanity/image-url": "^1.2.0",
-    "groq": "^4.10.1",
     "next": "15.5.3",
-    "next-sanity": "^11.4.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-markdown": "^10.1.0",
@@ -25,7 +19,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@sanity/vision": "^4.10.1",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
@@ -33,7 +26,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "sanity": "^4.10.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
