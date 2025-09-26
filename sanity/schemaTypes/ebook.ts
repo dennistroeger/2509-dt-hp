@@ -31,6 +31,26 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'coverTagline',
+      title: 'Cover Tagline',
+      type: 'string',
+    }),
+    defineField({
+      name: 'coverBenefit1',
+      title: 'Cover Benefit 1',
+      type: 'string',
+    }),
+    defineField({
+      name: 'coverBenefit2',
+      title: 'Cover Benefit 2',
+      type: 'string',
+    }),
+    defineField({
+      name: 'coverBackgroundColor',
+      title: 'Cover Background Color',
+      type: 'color',
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
