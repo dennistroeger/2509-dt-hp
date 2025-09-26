@@ -4,7 +4,16 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/hybmnyri/histack_cms/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
