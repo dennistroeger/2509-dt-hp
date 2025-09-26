@@ -71,3 +71,4 @@ export const ebookPage = defineType({
     },
   },
 });
+
