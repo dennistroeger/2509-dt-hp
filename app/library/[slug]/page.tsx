@@ -7,6 +7,20 @@ import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams, useParams } from "next/navigation";
 
+interface ContentItem {
+  _id: string;
+  _type: "chapter" | "ebookPage";
+  title: string;
+  content?: string;
+}
+
+interface Ebook {
+  title: string;
+  slug: string;
+  coverImageUrl: string;
+  content: ContentItem[];
+}
+
 async function getEbook(slug: string) {
   const query = `*[_type == "ebook" && slug.current == $slug][0]{
     title,
@@ -24,7 +38,7 @@ async function getEbook(slug: string) {
 }
 
 export default function EbookPage() {
-  const [ebook, setEbook] = useState<any>(null);
+  const [ebook, setEbook] = useState<Ebook | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [isTocOpen, setIsTocOpen] = useState(false);
   const router = useRouter();
@@ -90,20 +104,23 @@ export default function EbookPage() {
     <div className="mt-8">
       <h2 className="text-2xl font-semibold mb-4">Table of Contents</h2>
       <ul className="space-y-2">
-        {ebook.content?.map((item: any, index: number) => (
-          <li key={item._id}>
-            <button
-              onClick={() => handleTocItemClick(index)}
-              className={`text-left w-full p-2 rounded transition-colors ${
-                currentPage === index
-                  ? "bg-blue-100 text-blue-700 font-bold"
-                  : "text-gray-800 hover:bg-gray-100"
-              }`}
-            >
-              {item.title}
-            </button>
-          </li>
-        ))}
+        {ebook.content?.map((item, index: number) => {
+          const isChapter = item._type === "chapter";
+          return (
+            <li key={item._id}>
+              <button
+                onClick={() => handleTocItemClick(index)}
+                className={`text-left w-full p-2 rounded transition-colors ${
+                  currentPage === index
+                    ? "bg-blue-100 text-blue-700 font-bold"
+                    : "text-gray-800 hover:bg-gray-100"
+                } ${isChapter ? "font-bold mt-2" : ""}`}
+              >
+                {item.title}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
