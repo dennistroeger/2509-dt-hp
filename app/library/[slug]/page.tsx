@@ -207,7 +207,7 @@ export default function EbookPage() {
                 </div>
               )}
 
-              <div className="mb-12 p-6 md:p-8 bg-gray-50 rounded-lg shadow-inner min-h-[calc(100vh-20rem)]">
+              <div className="mb-12 p-6 md:p-8 white rounded-lg  min-h-[calc(100vh-20rem)]">
                 {currentContent._type === "chapter" ? (
                   <div className="flex items-center justify-center h-full min-h-[calc(100vh-24rem)]">
                     <h2 className="text-5xl font-extrabold text-gray-800 text-center leading-tight">
@@ -216,7 +216,7 @@ export default function EbookPage() {
                   </div>
                 ) : (
                   <div>
-                    <h2 className="text-3xl font-bold border-b-2 border-gray-200 pb-4 mb-6">
+                    <h2 className="text-3xl font-bold pb-4 mb-6">
                       {currentContent.title}
                     </h2>
                     <div className="prose prose-lg lg:prose-xl max-w-none">
@@ -289,7 +289,7 @@ export default function EbookPage() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mt-4">{ebook.title}</h2>
           <p className="text-lg text-gray-600 mt-2">{ebook.coverTagline}</p>
-          <div className="flex items-center gap-2 mt-4 border-b pb-4">
+          <div className="flex items-center gap-2 mt-4  pb-4">
             <button
               onClick={() => setViewType("list")}
               className={`p-2 rounded-md ${

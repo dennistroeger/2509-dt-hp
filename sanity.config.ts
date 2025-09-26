@@ -13,11 +13,15 @@ import {markdownSchema} from 'sanity-plugin-markdown'
 import {schemaTypes} from './sanity/schemaTypes'
 import {structure} from './sanity/structure'
 import {colorInput} from '@sanity/color-input'
+import {apiVersion, dataset, projectId} from './sanity/env'
+import {studioTheme} from './sanity/studioTheme'
 
 export default defineConfig({
   basePath: '/studio',
-  projectId: '0f6a65p1',
-  dataset: 'production',
+  projectId,
+  dataset,
+  apiVersion,
+  theme: studioTheme,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
   schema: {
     types: schemaTypes,
