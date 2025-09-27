@@ -122,3 +122,14 @@ h6 {
 .prose strong {
     font-weight: 600;
 }
+
+.PhoneInputInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+}
+
+.PhoneInputCountry {
+  margin-right: 0.5rem;
+}
