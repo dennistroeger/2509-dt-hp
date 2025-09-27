@@ -3,7 +3,7 @@ import {buildLegacyTheme} from 'sanity'
 export const studioTheme = buildLegacyTheme({
   '--component-bg': 'transparent',
   '--main-navigation-color': 'transparent',
-  '--card-bg-color': 'transparent',
+  '--card-bg': 'transparent',
   '--card-border-color': 'transparent',
   '--card-shadow-outline-color': 'transparent',
   '--card-shadow-penumbra-color': 'transparent',
