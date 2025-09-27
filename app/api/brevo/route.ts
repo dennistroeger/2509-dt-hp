@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, firstName, company } = body;
+    const { email, firstName, company, listId: rawListId } = body;
 
     if (!email || !firstName) {
       return NextResponse.json(
@@ -20,17 +20,26 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const listId = rawListId ? parseInt(String(rawListId), 10) : 7;
+
+    if (isNaN(listId)) {
+      return NextResponse.json(
+        { error: 'Invalid listId provided' },
+        { status: 400 }
+      );
+    }
+
     // Prepare contact data for BREVO
     const contactData = {
       email: email,
       attributes: {
-        VORNAME: firstName, // Trying German attribute name
+        VORNAME: firstName,
         COMPANY: company || '',
         SOURCE: 'Website Form',
         SIGNUP_DATE: new Date().toISOString(),
       },
-      listIds: [7], // List ID 7 as specified
-      updateEnabled: true, // Update existing contacts
+      listIds: [listId],
+      updateEnabled: true,
     };
 
     // Debug logging

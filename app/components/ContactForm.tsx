@@ -7,12 +7,14 @@ interface ContactFormProps {
   formId: string;
   showCompany?: boolean;
   buttonText: string;
+  listId?: number;
 }
 
 export default function ContactForm({
   formId,
   showCompany = false,
   buttonText,
+  listId,
 }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -28,6 +30,7 @@ export default function ContactForm({
       email: formData.get("email") as string,
       firstName: formData.get("firstName") as string,
       company: showCompany ? (formData.get("company") as string) : "",
+      listId: listId,
     };
 
     try {
