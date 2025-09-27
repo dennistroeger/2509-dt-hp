@@ -112,7 +112,7 @@ export default async function DmBoosterPage() {
                 {/* Clean book cover image */}
                 <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                   <Image
-                    src="/images/freebie-cover.png"
+                    src="/images/der-dm-booster.png"
                     alt="LinkedIn DM Booster Guide"
                     width={448}
                     height={576}
