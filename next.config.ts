@@ -5,14 +5,7 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-        pathname: "/images/hybmnyri/histack_cms/**",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 
