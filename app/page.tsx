@@ -46,7 +46,7 @@ export default function Home() {
                 href="https://tally.so/r/waVLQy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white font-bold py-4 px-10 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-sm sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 style={{ backgroundColor: "#FF5044" }}
               >
                 INTERESSIERT? BUCHE EIN GESPRÄCH!
