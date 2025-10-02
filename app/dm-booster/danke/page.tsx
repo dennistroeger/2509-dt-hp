@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import Image from "next/image";
 
 export default function DankePage() {
   return (
@@ -33,8 +32,8 @@ export default function DankePage() {
           <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-xl mb-8">
             <p className="text-lg text-gray-700 mb-6">
               Du erhältst in den nächsten Minuten eine E-Mail mit dem
-              Download-Link für deinen kostenlosen Guide "Der Chat-Verkauf:
-              Hochpreis-Kunden gewinnen mit Direktnachrichten".
+              Download-Link für deinen kostenlosen Guide &quot;Der Chat-Verkauf:
+              Hochpreis-Kunden gewinnen mit Direktnachrichten&quot;.
             </p>
 
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
