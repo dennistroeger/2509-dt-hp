@@ -27,6 +27,7 @@ export default function DownloadLinkedInFreebie() {
           },
           body: JSON.stringify({
             liFatId: liFatId || "",
+            conversionEventName: "LINKEDIN_CEO_SYSTEM_DOWNLOAD",
             testMode: !liFatId && process.env.NODE_ENV === "development",
           }),
         });

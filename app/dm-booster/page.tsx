@@ -37,8 +37,8 @@ export default async function DmBoosterPage() {
         <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tr from-emerald-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-7xl mx-auto">
-          {/* Two-Column Grid Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Mobile & Desktop Layout */}
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
             {/* Left Column - Text + Form */}
             <div className="text-center lg:text-left">
               {/* Top Small Text / Banner */}
@@ -52,7 +52,7 @@ export default async function DmBoosterPage() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-base sm:text-lg lg:text-3xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
                 Verkaufen mit Chats:{" "}
                 <span className="text-red-600">
                   Das System, um hochpreisige Kunden auf LinkedIn zu gewinnen
@@ -60,36 +60,14 @@ export default async function DmBoosterPage() {
               </h1>
 
               {/* Subheadline / Supporting Copy */}
-              <p className="text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-md sm:text-lg text-gray-600 mb-6 leading-relaxed">
                 Ein kostenloses Training, das dir zeigt, wie du ein Angebot
                 erstellst, das sich auf LinkedIn verkauft, damit du online Geld
                 verdienen kannst.
               </p>
 
-              {/* Benefits */}
-              <div className="space-y-3 text-left mb-8">
-                <div className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700">
-                    Finde deine Superkraft & idealen Kunden
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700">
-                    Pitche mit Selbstvertrauen und schließe Geschäfte ab
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700">
-                    Erhalte eine fertige Angebotsvorlage und ein Pitch-Deck
-                  </p>
-                </div>
-              </div>
-
               {/* Form */}
-              <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto lg:mx-0">
+              <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto lg:mx-0 mb-6">
                 <ContactForm
                   formId="dm-booster"
                   buttonText="Guide kostenlos herunterladen →"
@@ -104,19 +82,62 @@ export default async function DmBoosterPage() {
                   </p>
                 </div>
               </div>
+
+              {/* Mobile Image - Shown only on mobile, after CTA */}
+              <div className="flex justify-center mb-6 lg:hidden">
+                <div className="relative w-64 h-80 sm:w-72 sm:h-[22rem]">
+                  <div className="w-full h-full rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <Image
+                      src="/images/der-dm-booster.png"
+                      alt="LinkedIn DM Booster Guide"
+                      width={448}
+                      height={576}
+                      className="w-full h-full object-contain bg-white"
+                      priority
+                    />
+                    {/* FREE Badge */}
+                    <div className="absolute top-3 right-3 w-14 h-14 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white font-bold text-xs shadow-lg">
+                      FREE
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Benefits */}
+              <div className="space-y-3 text-left mb-6 sm:mb-8">
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    Finde deine Superkraft & idealen Kunden
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    Pitche mit Selbstvertrauen und schließe Geschäfte ab
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    Erhalte eine fertige Angebotsvorlage und ein Pitch-Deck
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Right Column - Book Cover */}
-            <div className="hidden lg:flex justify-center lg:justify-end">
+            {/* Right Column - Book Cover (Desktop Only) */}
+            <div className="hidden lg:flex justify-center lg:justify-end lg:sticky lg:top-8">
               <div className="relative">
                 {/* Clean book cover image */}
-                <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                <div className="w-80 h-96 lg:w-[28rem] lg:h-[36rem] rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                   <Image
                     src="/images/der-dm-booster.png"
                     alt="LinkedIn DM Booster Guide"
                     width={448}
                     height={576}
                     className="w-full h-full object-contain bg-white"
+                    priority
                   />
 
                   {/* FREE Badge */}

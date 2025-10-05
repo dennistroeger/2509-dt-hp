@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 interface ContactFormProps {
@@ -16,9 +16,14 @@ export default function ContactForm({
   buttonText,
   listId,
 }: ContactFormProps) {
+  const [hasMounted, setHasMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -55,6 +60,10 @@ export default function ContactForm({
       setIsSubmitting(false);
     }
   };
+
+  if (!hasMounted) {
+    return null;
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">

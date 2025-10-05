@@ -17,6 +17,51 @@ export default function Anruf() {
         layout: "month_view",
       });
     })();
+
+    // Track custom conversion for download page
+    // Get LinkedIn tracking ID from cookie
+    const getCookie = (name: string) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(";").shift();
+      return null;
+    };
+
+    const liFatId = getCookie("li_fat_id");
+
+    // Send conversion via API route
+    const sendConversion = async () => {
+      try {
+        const response = await fetch("/api/linkedin/conversion", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            liFatId: liFatId || "",
+            conversionEventName: "LINKEDIN_WORKFLOW_PAGE_OPEN",
+            testMode: !liFatId && process.env.NODE_ENV === "development",
+          }),
+        });
+
+        if (response.ok) {
+          console.log("✅ LinkedIn conversion sent successfully");
+        } else {
+          console.error("❌ Failed to send LinkedIn conversion");
+        }
+      } catch (error) {
+        console.error("Error sending LinkedIn conversion:", error);
+      }
+    };
+
+    if (liFatId) {
+      // Send conversion with real LinkedIn tracking ID
+      sendConversion();
+    } else if (process.env.NODE_ENV === "development") {
+      // Send test conversion in development mode
+      console.log("🧪 Testing LinkedIn conversion tracking (no real liFatId)");
+      sendConversion();
+    }
   }, []);
 
   return (

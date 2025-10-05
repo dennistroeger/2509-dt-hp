@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, firstName, company, mobile, listId: rawListId } = body;
+    const { email, firstName, company, mobile, linkedinUrl, listId: rawListId } = body;
 
     if (!email || !firstName) {
       return NextResponse.json(
@@ -54,6 +54,7 @@ export async function POST(request: NextRequest) {
           VORNAME: firstName,
           COMPANY: company || "",
           SMS: mobile || "",
+          LINKEDIN_URL: linkedinUrl || "",
         },
         listIds: newListIds,
       };
@@ -90,6 +91,7 @@ export async function POST(request: NextRequest) {
           VORNAME: firstName,
           COMPANY: company || "",
           SMS: mobile || "",
+          LINKEDIN_URL: linkedinUrl || "",
           SOURCE: "Website Form",
           SIGNUP_DATE: new Date().toISOString(),
         },
