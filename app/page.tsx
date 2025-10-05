@@ -33,12 +33,13 @@ export default function Home() {
                   color: "#FF5044",
                 }}
               >
-                ohne Werbebudget
+                mit dem Viral-Ad-System
               </span>
             </h1>
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-              Lerne, hochpreisige Kunden auf LinkedIn für 0 EUR zu gewinnen.
+              Lerne, hochpreisige Kunden auf LinkedIn zu gewinnen mit dem
+              Viral-Ad-System.
             </p>
             {/* Call to Action */}
             <div className="mt-8">
