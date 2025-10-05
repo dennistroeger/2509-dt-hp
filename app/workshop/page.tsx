@@ -4,7 +4,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 
-export default function Anruf() {
+export default function WorkshopPage() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "30min" });
@@ -70,11 +70,11 @@ export default function Anruf() {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Kostenlosen Workshop buchen
+              Kostenlose Strategie-Session buchen
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Erfahre in diesem Workshop, wie wir mit dem CEO-System planbar
-              Kunden gewinnen.
+              Erfahre in dieser kostenlosen Strategie-Session, wie du planbar
+              hochpreise Kunden mit LinkedIn gewinnst.
             </p>
           </div>
 
@@ -90,16 +90,14 @@ export default function Anruf() {
           <div className="mt-12 text-center">
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Was erwartet dich im Workshop?
+                Was erwartet dich in der Strategie-Session?
               </h3>
               <ul className="text-gray-600 space-y-1 text-left max-w-md mx-auto">
-                <li>
-                  • Das CEO-System, welches uns planbar Kunden gewinnen lässt
-                </li>
-                <li>• Konkrete Optimierungsvorschläge</li>
-                <li>• Strategien für mehr Sichtbarkeit</li>
-                <li>• Tipps für Networking und Content</li>
-                <li>• Antworten auf deine Fragen</li>
+                <li>• Eine Analyse deiner aktuellen LinkedIn-Strategie</li>
+                <li>• Konkrete Schritte, um deine Wunschkunden zu erreichen</li>
+                <li>• Strategien für Content, der Anfragen generiert</li>
+                <li>• Ein klarer Plan für die nächsten 90 Tage</li>
+                <li>• Antworten auf deine spezifischen Fragen</li>
               </ul>
             </div>
           </div>

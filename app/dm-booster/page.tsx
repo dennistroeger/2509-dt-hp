@@ -52,15 +52,23 @@ export default async function DmBoosterPage() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-base sm:text-lg lg:text-3xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
-                Verkaufen mit Chats:{" "}
-                <span className="text-red-600">
-                  Das System, um hochpreisige Kunden auf LinkedIn zu gewinnen
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+                <span className="lg:hidden">
+                  Verkaufen mit Chats: <br />
+                  <span className="text-red-600">
+                    Hochpreis-Kunden auf LinkedIn gewinnen
+                  </span>
+                </span>
+                <span className="hidden lg:inline">
+                  Verkaufen mit Chats:{" "}
+                  <span className="text-red-600">
+                    Das System, um hochpreisige Kunden auf LinkedIn zu gewinnen
+                  </span>
                 </span>
               </h1>
 
               {/* Subheadline / Supporting Copy */}
-              <p className="text-md sm:text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
                 Ein kostenloses Training, das dir zeigt, wie du ein Angebot
                 erstellst, das sich auf LinkedIn verkauft, damit du online Geld
                 verdienen kannst.
