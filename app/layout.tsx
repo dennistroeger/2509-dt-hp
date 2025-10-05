@@ -1,7 +1,9 @@
-import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
+import PrivacyModeManager from "./components/PrivacyModeManager";
+import { Suspense } from "react";
+import React from "react";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -74,8 +76,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${inter.variable} antialiased`}>
+        <Suspense>
+          <PrivacyModeManager />
+        </Suspense>
         {children}
-        <Analytics />
       </body>
     </html>
   );

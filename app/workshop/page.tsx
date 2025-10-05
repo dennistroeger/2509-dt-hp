@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Footer from "../components/Footer";

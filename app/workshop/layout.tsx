@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AnrufLayout({
+export default function WorkshopLayout({
   children,
 }: {
   children: React.ReactNode;
