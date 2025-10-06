@@ -95,7 +95,7 @@ export default function VadsPage() {
               />
               {!showCta && (
                 <div
-                  className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black bg-opacity-20 hover:bg-opacity-40 transition-all duration-300 rounded-lg"
+                  className="absolute inset-0 flex items-center justify-center cursor-pointer transition-all duration-300 rounded-lg"
                   onClick={() => setShowCta(true)}
                 >
                   <svg
