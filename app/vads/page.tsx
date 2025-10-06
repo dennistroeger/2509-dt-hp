@@ -77,12 +77,12 @@ export default function VadsPage() {
 
   return (
     <div
-      className={`flex flex-col min-h-screen transition-colors duration-500 ${
+      className={`transition-colors duration-500 ${
         showPlayer ? "bg-white" : "bg-gray-50"
       }`}
     >
       {!showPlayer ? (
-        <div className="flex-grow flex items-center justify-center p-4 py-12">
+        <div className="min-h-screen flex items-center justify-center p-4 py-12">
           <div className="flex flex-col items-center space-y-8 w-full">
             <Header />
             <div className="w-full max-w-md relative">
@@ -171,7 +171,7 @@ export default function VadsPage() {
           </div>
         </div>
       ) : (
-        <div className="flex-grow flex items-center justify-center p-4 py-12">
+        <div className="min-h-screen flex items-center justify-center p-4 py-12">
           <div className="flex flex-col items-center space-y-8 w-full">
             <Header />
             <div className="w-full max-w-2xl">
