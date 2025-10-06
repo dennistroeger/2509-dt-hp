@@ -2,15 +2,19 @@
 
 import Script from "next/script";
 
-export default function WistiaPlayer() {
+type WistiaPlayerProps = {
+  mediaId: string;
+};
+
+export default function WistiaPlayer({ mediaId }: WistiaPlayerProps) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const WistiaPlayerComponent = "wistia-player" as any;
   return (
     <>
       <style>
         {`
-          wistia-player[media-id='39u4itcqa2']:not(:defined) {
-            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/39u4itcqa2/swatch');
+          wistia-player[media-id='${mediaId}']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${mediaId}/swatch');
             display: block;
             filter: blur(5px);
             padding-top: 56.25%;
@@ -32,7 +36,7 @@ export default function WistiaPlayer() {
           }}
         >
           <WistiaPlayerComponent
-            media-id="39u4itcqa2"
+            media-id={mediaId}
             seo="false"
             aspect="1.7777777777777777"
           ></WistiaPlayerComponent>
@@ -40,7 +44,7 @@ export default function WistiaPlayer() {
       </div>
       <Script src="https://fast.wistia.com/player.js" strategy="lazyOnload" />
       <Script
-        src="https://fast.wistia.com/embed/39u4itcqa2.js"
+        src={`https://fast.wistia.com/embed/${mediaId}.js`}
         strategy="lazyOnload"
         type="module"
       />

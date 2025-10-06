@@ -37,12 +37,12 @@ export default async function ViraAdSystem() {
               Planbar Kunden gewinnenn auf LinkedIn
             </p>
             <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-              Wie du mit dem &quot;Viral Ad&quot;-System LinkedIn Ads für unter 1 €
-              pro Klick schaltest.
+              Wie du mit dem &quot;Viral Ad&quot;-System LinkedIn Ads für unter
+              1 € pro Klick schaltest.
             </h1>
 
             <div className="mt-8 w-full max-w-2xl">
-              <WistiaPlayer />
+              <WistiaPlayer mediaId="39u4itcqa2" />
             </div>
 
             <div className="mt-8 flex items-center space-x-4">
