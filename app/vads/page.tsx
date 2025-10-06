@@ -7,7 +7,7 @@ import WistiaPlayer from "../components/WistiaPlayer";
 import Footer from "../components/Footer";
 
 export default function VadsPage() {
-  const [showPlayer, setShowPlayer] = useState(false);
+  const [showPlayer, setShowPlayer] = useState(true);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
