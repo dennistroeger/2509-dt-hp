@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import WistiaPlayer from "../components/WistiaPlayer";
+import Footer from "../components/Footer";
 
 export default function VadsPage() {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -76,12 +77,12 @@ export default function VadsPage() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-500 ${
+      className={`flex flex-col min-h-screen transition-colors duration-500 ${
         showPlayer ? "bg-white" : "bg-gray-50"
       }`}
     >
       {!showPlayer ? (
-        <div className="flex items-center justify-center min-h-screen p-4 py-12">
+        <div className="flex-grow flex items-center justify-center p-4 py-12">
           <div className="flex flex-col items-center space-y-8 w-full">
             <Header />
             <div className="w-full max-w-md relative">
@@ -170,7 +171,7 @@ export default function VadsPage() {
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-center min-h-screen p-4 py-12">
+        <div className="flex-grow flex items-center justify-center p-4 py-12">
           <div className="flex flex-col items-center space-y-8 w-full">
             <Header />
             <div className="w-full max-w-2xl">
@@ -195,6 +196,7 @@ export default function VadsPage() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
