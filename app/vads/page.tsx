@@ -7,7 +7,7 @@ import WistiaPlayer from "../components/WistiaPlayer";
 import Footer from "../components/Footer";
 
 export default function VadsPage() {
-  const [showPlayer, setShowPlayer] = useState(true);
+  const [showPlayer, setShowPlayer] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -65,13 +65,17 @@ export default function VadsPage() {
 
   const Header = () => (
     <div className="w-full max-w-4xl text-center">
-      <p className="text-lg sm:text-xl text-gray-600">
-        Planbar Kunden gewinnenn auf LinkedIn
-      </p>
-      <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-        Wie du mit dem &quot;Viral Ad&quot;-System LinkedIn Ads für unter 1 €
-        pro Klick schaltest.
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
+        Wachstum auf{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+          Autopilot
+        </span>{" "}
+        statt täglicher Akquise-Stress.
       </h1>
+      <p className="mt-4 text-lg text-gray-600 max-w-3xl">
+        Die strategische Blaupause für etablierte Berater, die ihr Wachstum
+        nicht länger dem Zufall überlassen wollen.
+      </p>
     </div>
   );
 
