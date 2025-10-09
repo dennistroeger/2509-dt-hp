@@ -5,7 +5,7 @@ import WaitlistForm from "../components/WaitlistForm";
 import Footer from "../components/Footer";
 
 function WaitlistCounter() {
-  const [count, setCount] = useState(40);
+  const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
     async function fetchCount() {
@@ -14,16 +14,47 @@ function WaitlistCounter() {
         if (response.ok) {
           const data = await response.json();
           const fetchedCount = data.count || 0;
-          const displayCount = Math.min(fetchedCount + 40, 93);
-          setCount(displayCount);
+          const finalCount = Math.min(fetchedCount + 40, 93);
+
+          const startValue = 0;
+          setCount(startValue);
+
+          if (finalCount === startValue) {
+            return;
+          }
+
+          const duration = 1500; // Animation duration in milliseconds
+          let startTime: number | null = null;
+
+          const animateCount = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const currentCount = Math.floor(
+              progress * (finalCount - startValue) + startValue
+            );
+            setCount(currentCount);
+
+            if (progress < 1) {
+              requestAnimationFrame(animateCount);
+            }
+          };
+
+          requestAnimationFrame(animateCount);
+        } else {
+          setCount(40);
         }
       } catch (error) {
         console.error("Failed to fetch waitlist count:", error);
+        setCount(40);
       }
     }
 
     fetchCount();
   }, []);
+
+  if (count === null) {
+    return <div className="mt-8 mb-4 h-[28px]" />;
+  }
 
   return (
     <div className="mt-8 mb-4">
@@ -60,8 +91,8 @@ export default function KiBeraterKursPage() {
           {/* Subheadline / Supporting Copy */}
           <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
             Trag dich in die Warteliste ein und erfahre als Erster, wann der
-            Kurs verfügbar ist. Die ersten 100 Teilnehmer erhalten einen
-            Kurs kostenfrei.
+            Kurs verfügbar ist. Die ersten 100 Teilnehmer erhalten einen Kurs
+            kostenfrei.
           </p>
 
           <WaitlistCounter />
