@@ -37,9 +37,9 @@ function WaitlistCounter() {
 
 export default function KiBeraterKursPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 flex flex-col">
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden flex-grow flex items-center justify-center">
+      <main className="min-h-screen relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
         <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
@@ -84,7 +84,7 @@ export default function KiBeraterKursPage() {
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>
