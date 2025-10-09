@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import WaitlistForm from "../components/WaitlistForm";
 import Footer from "../components/Footer";
-import Image from "next/image";
 
 function WaitlistCounter() {
   const [count, setCount] = useState(40);
@@ -61,8 +60,8 @@ export default function KiBeraterKursPage() {
           {/* Subheadline / Supporting Copy */}
           <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
             Trag dich in die Warteliste ein und erfahre als Erster, wann der
-            Kurs verfügbar ist. Erhalte exklusive Inhalte und einen
-            Frühbucherrabatt.
+            Kurs verfügbar ist. Die ersten 100 Teilnehmer erhalten einen
+            Kurs kostenfrei.
           </p>
 
           <WaitlistCounter />
