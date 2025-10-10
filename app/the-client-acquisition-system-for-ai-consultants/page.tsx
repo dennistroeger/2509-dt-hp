@@ -65,7 +65,7 @@ function WaitlistCounter() {
   );
 }
 
-export default function ClientAcquisitionSystemPage() {
+export default function AiConsultantCoursePage() {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
@@ -78,17 +78,21 @@ export default function ClientAcquisitionSystemPage() {
         <div className="relative max-w-3xl mx-auto text-center">
           {/* Top Small Text / Banner */}
           <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-xs sm:text-sm font-medium text-blue-800 mb-3 sm:mb-4">
-            🚀 The Client Acquisition System for AI Consultants
+            🚀 Exclusive AI Consultant Course
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
-            The Client Acquisition System for AI Consultants
+            How to generate{" "}
+            <span className="text-blue-600">5-figure contracts</span> as an AI
+            Consultant
           </h1>
 
           {/* Subheadline / Supporting Copy */}
           <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
-            How to monetize your AI & tech knowledge
+            Join the waiting list and be the first to know when the course is
+            available. The first 100 participants will receive a course for
+            free.
           </p>
 
           <WaitlistCounter />
@@ -96,7 +100,7 @@ export default function ClientAcquisitionSystemPage() {
           {/* Form */}
           <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto mb-6">
             <WaitlistForm
-              formId="the-client-acquisition-system-for-ai-consultants"
+              formId="ai-consultant-course"
               buttonText="Join the waitlist →"
               listId={13}
             />
