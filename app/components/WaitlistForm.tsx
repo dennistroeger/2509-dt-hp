@@ -33,7 +33,7 @@ export default function WaitlistForm({
     const consent = formData.get("consent") as string;
 
     if (!consent) {
-      setError("Bitte bestätige, dass wir dich kontaktieren dürfen.");
+      setError("Please confirm that we're allowed to contact you.");
       setIsSubmitting(false);
       return;
     }
@@ -92,7 +92,7 @@ export default function WaitlistForm({
           name="email"
           required
           className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
-          placeholder="deine@email.com"
+          placeholder="your@email.com"
         />
       </div>
 
@@ -111,7 +111,7 @@ export default function WaitlistForm({
             htmlFor={`consent-${formId}`}
             className="text-gray-500 text-left"
           >
-            Klar dürft ihr mich kontaktieren
+            Yes, you can contact me
           </label>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function WaitlistForm({
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-base sm:text-lg py-3 sm:py-4 px-4 sm:px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? "Wird gesendet..." : buttonText}
+        {isSubmitting ? "Submitting..." : buttonText}
       </button>
     </form>
   );
