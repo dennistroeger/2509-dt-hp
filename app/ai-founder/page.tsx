@@ -1,5 +1,8 @@
-import WistiaPlayer from "../components/WistiaPlayer";
+import Footer from "@/app/components/Footer";
+import WaitlistForm from "@/app/components/WaitlistForm";
+import WistiaPlayer from "@/app/components/WistiaPlayer";
 import { Metadata } from "next";
+import { List } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "AI Founder",

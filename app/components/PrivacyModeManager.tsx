@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Cookies from "js-cookie";
 import Clarity from "@microsoft/clarity";
 
@@ -9,8 +8,8 @@ const PRIVACY_COOKIE_NAME = "privacy-mode";
 
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: Record<string, any>[];
+    gtag: (...args: (string | Record<string, string>)[]) => void;
   }
 }
 
