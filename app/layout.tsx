@@ -75,8 +75,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies();
+  const isPrivate = cookieStore.get("privacy-mode")?.value === "true";
   return (
     <html lang="en" suppressHydrationWarning>
+      <Script id="gtm-consent" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+          'ad_storage': '${isPrivate ? "denied" : "granted"}',
+          'analytics_storage': '${isPrivate ? "denied" : "granted"}'
+        });
+      `}
+      </Script>
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
