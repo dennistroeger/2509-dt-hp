@@ -4,6 +4,7 @@ import React from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
+import { WistiaPlayer } from "../components/WistiaPlayer";
 
 export default function WorkshopPage() {
   useEffect(() => {

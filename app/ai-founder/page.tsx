@@ -1,4 +1,12 @@
-export default function AiFounderPage() {
+import { WistiaPlayer } from "../components/WistiaPlayer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Founder",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
+
+export default function Page() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <iframe

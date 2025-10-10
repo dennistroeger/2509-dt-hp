@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Das CEO System für LinkedIn",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default function Home() {
   return (

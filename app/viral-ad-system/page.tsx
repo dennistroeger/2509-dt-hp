@@ -5,6 +5,12 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import WistiaPlayer from "../components/WistiaPlayer";
 import { useEffect, useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Viral Ad System",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default function ViraAdSystem() {
   const [isButtonVisible, setIsButtonVisible] = useState(false);

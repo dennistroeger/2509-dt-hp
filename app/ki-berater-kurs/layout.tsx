@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Termin buchen | Histack.io",
+  title: "KI-Berater & KI-Agenturen: Der Kurs",
   description: "Gewinne Premium Kunden mit LinkedIn",
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
-export default function WorkshopLayout({
+export default function KiBeraterKursLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return children;
 }
+

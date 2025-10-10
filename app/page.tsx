@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "./components/Footer";
 import WistiaPlayer from "./components/WistiaPlayer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hi! I'm Dennis.",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default function Home() {
   return (

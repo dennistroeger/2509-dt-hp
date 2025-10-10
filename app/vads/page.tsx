@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import WistiaPlayer from "../components/WistiaPlayer";
+import { WistiaPlayer } from "../components/WistiaPlayer";
 import Footer from "../components/Footer";
 
 export default function VadsPage() {

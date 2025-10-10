@@ -1,15 +1,10 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Datenschutz | Histack.io",
-  description:
-    "Datenschutzerklärung und Informationen zum Datenschutz für Histack.io",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: "Datenschutz",
+  description: "Gewinne Premium Kunden mit LinkedIn",
 };
 
 export default function Datenschutz() {

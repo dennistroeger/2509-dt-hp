@@ -1,17 +1,12 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { sendLinkedInConversion } from "../lib/linkedin";
 import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: "Nächster Schritt - E-Mail bestätigen | Histack.io",
-  description:
-    "Bestätige deine E-Mail-Adresse, um dein kostenloses LinkedIn Playbook zu erhalten.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: "Nächster Schritt",
+  description: "Gewinne Premium Kunden mit LinkedIn",
 };
 
 export default async function NextStep() {

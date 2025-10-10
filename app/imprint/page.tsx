@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Imprint | Histack.io",
-  description: "Legal information and company details for Histack.io",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: "Impressum",
+  description: "Gewinne Premium Kunden mit LinkedIn",
 };
 
 export default function Imprint() {

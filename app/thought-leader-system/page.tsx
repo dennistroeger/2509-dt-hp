@@ -3,6 +3,13 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { cookies } from "next/headers";
 import { sendLinkedInConversion } from "../lib/linkedin";
+import { WistiaPlayer } from "../components/WistiaPlayer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Das Thought Leader System für LinkedIn",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default async function Home() {
   const cookieStore = await cookies();

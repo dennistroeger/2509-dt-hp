@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Footer from "../components/Footer";
+import { WistiaPlayer } from "../components/WistiaPlayer";
 
 export default function DmBotPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -241,11 +242,3 @@ export default function DmBotPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
-

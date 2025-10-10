@@ -3,6 +3,12 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { cookies } from "next/headers";
 import { sendLinkedInConversion } from "../lib/linkedin";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Der DM Booster für LinkedIn",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default async function DmBoosterPage() {
   const cookieStore = await cookies();

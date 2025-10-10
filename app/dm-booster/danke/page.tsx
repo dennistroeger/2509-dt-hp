@@ -1,4 +1,11 @@
+import { Metadata } from "next";
+import Link from "next/link";
 import Footer from "../../components/Footer";
+
+export const metadata: Metadata = {
+  title: "Vielen Dank!",
+  description: "Gewinne Premium Kunden mit LinkedIn",
+};
 
 export default function DankePage() {
   return (
