@@ -1,11 +1,8 @@
-import Footer from "@/app/components/Footer";
-import WaitlistForm from "@/app/components/WaitlistForm";
-import WistiaPlayer from "@/app/components/WistiaPlayer";
 import { Metadata } from "next";
-import { List } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Founder",
+  metadataBase: new URL("https://www.histack.io"),
+  title: "AI-Founder: Die tägliche Arbeit eines Gründers, automatisiert.",
   description: "Gewinne Premium Kunden mit LinkedIn",
 };
 

@@ -8,7 +8,7 @@ const PRIVACY_COOKIE_NAME = "privacy-mode";
 
 declare global {
   interface Window {
-    dataLayer: Record<string, any>[];
+    dataLayer: Record<string, unknown>[];
     gtag: (...args: (string | Record<string, string>)[]) => void;
   }
 }

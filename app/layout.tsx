@@ -70,12 +70,12 @@ export const metadata: Metadata = {
   category: "Business",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const isPrivate = cookieStore.get("privacy-mode")?.value === "true";
   return (
     <html lang="en" suppressHydrationWarning>
