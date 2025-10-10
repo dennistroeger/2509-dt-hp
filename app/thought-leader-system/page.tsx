@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { cookies } from "next/headers";
 import { sendLinkedInConversion } from "../lib/linkedin";
-import { WistiaPlayer } from "../components/WistiaPlayer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

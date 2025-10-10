@@ -3,14 +3,6 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import { Metadata } from "next";
-import Link from "next/link";
-import WaitlistForm from "../components/WaitlistForm";
-
-export const metadata: Metadata = {
-  title: "Download: Der CEO Leitfaden für LinkedIn",
-  description: "Gewinne Premium Kunden mit LinkedIn",
-};
 
 export default function DownloadLinkedInFreebie() {
   useEffect(() => {

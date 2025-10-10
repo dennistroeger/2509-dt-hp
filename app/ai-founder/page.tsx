@@ -1,4 +1,4 @@
-import { WistiaPlayer } from "../components/WistiaPlayer";
+import WistiaPlayer from "../components/WistiaPlayer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
