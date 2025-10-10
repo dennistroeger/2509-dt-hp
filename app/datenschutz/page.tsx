@@ -80,6 +80,38 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
+                Nutzungsanalyse mit Microsoft Clarity
+              </h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Wir arbeiten mit Microsoft Clarity und Microsoft Advertising
+                  zusammen, um zu erfassen, wie Sie unsere Website nutzen und
+                  mit ihr interagieren. Dies geschieht durch Verhaltensmetriken,
+                  Heatmaps und Sitzungswiederholungen, um unsere
+                  Produkte/Dienstleistungen zu verbessern und zu vermarkten.
+                  Websitenutzungsdaten werden mithilfe von Erst- und
+                  Drittanbieter-Cookies und anderen Tracking-Technologien
+                  erfasst, um die Beliebtheit von Produkten/Dienstleistungen und
+                  Online-Aktivitäten zu ermitteln. Zusätzlich verwenden wir
+                  diese Informationen zur Website-Optimierung, für
+                  Betrugs-/Sicherheitszwecke und für Werbung. Weitere
+                  Informationen darüber, wie Microsoft Ihre Daten sammelt und
+                  verwendet, finden Sie in der{" "}
+                  <a
+                    href="https://privacy.microsoft.com/de-de/privacystatement"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:text-red-700 underline"
+                  >
+                    Microsoft-Datenschutzerklärung
+                  </a>
+                  .
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 Abmeldung vom Newsletter
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">

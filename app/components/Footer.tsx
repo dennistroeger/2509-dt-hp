@@ -52,6 +52,20 @@ export default function Footer() {
             </p>
             <div className="text-xs text-gray-400 text-center md:text-right max-w-md">
               <p className="mb-2">
+                Wir nutzen Microsoft Clarity, um zu verstehen, wie Sie unsere
+                Website nutzen, und so unsere Produkte und Werbung zu
+                verbessern. Mit der Nutzung unserer Website stimmen Sie der
+                Erfassung und Verwendung dieser Daten durch uns und Microsoft
+                zu. Weitere Details finden Sie in unserer{" "}
+                <Link
+                  href="/datenschutz"
+                  className="underline hover:text-white"
+                >
+                  Datenschutzerklärung
+                </Link>
+                .
+              </p>
+              <p className="mb-2">
                 Ich bin verpflichtet, deine Privatsphäre zu schützen. Ich
                 verwende die Informationen, die du mir gibst, um dich über meine
                 relevanten Inhalte, Produkte und Dienstleistungen zu

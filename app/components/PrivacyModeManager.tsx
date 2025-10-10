@@ -9,7 +9,7 @@ import Clarity from "@microsoft/clarity";
 const PRIVACY_COOKIE_NAME = "privacy-mode";
 
 export default function PrivacyModeManager() {
-  const [isPrivate, setIsPrivate] = useState(false);
+  const [isPrivate, setIsPrivate] = useState(true);
   const searchParams = useSearchParams();
 
   useEffect(() => {
