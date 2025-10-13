@@ -4,67 +4,6 @@ import { useState, useEffect } from "react";
 import WaitlistForm from "../components/WaitlistForm";
 import Footer from "../components/Footer";
 
-function WaitlistCounter() {
-  const [count, setCount] = useState<number | null>(null);
-
-  useEffect(() => {
-    async function fetchCount() {
-      try {
-        const response = await fetch("/api/brevo/list-count?listId=13");
-        if (response.ok) {
-          const data = await response.json();
-          const fetchedCount = data.count || 0;
-          const finalCount = Math.min(fetchedCount + 40, 93);
-
-          const startValue = 0;
-          setCount(startValue);
-
-          if (finalCount === startValue) {
-            return;
-          }
-
-          const duration = 1500; // Animation duration in milliseconds
-          let startTime: number | null = null;
-
-          const animateCount = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const currentCount = Math.floor(
-              progress * (finalCount - startValue) + startValue
-            );
-            setCount(currentCount);
-
-            if (progress < 1) {
-              requestAnimationFrame(animateCount);
-            }
-          };
-
-          requestAnimationFrame(animateCount);
-        } else {
-          setCount(40);
-        }
-      } catch (error) {
-        console.error("Failed to fetch waitlist count:", error);
-        setCount(40);
-      }
-    }
-
-    fetchCount();
-  }, []);
-
-  if (count === null) {
-    return <div className="mt-8 mb-4 h-[28px]" />;
-  }
-
-  return (
-    <div className="mt-8 mb-4">
-      <p className="text-lg font-semibold text-gray-800">
-        {count} AI enthusiasts are already on the waitlist!
-      </p>
-    </div>
-  );
-}
-
 export default function ClientAcquisitionSystemPage() {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -103,7 +42,7 @@ export default function ClientAcquisitionSystemPage() {
             <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
               <span className="text-green-600">🔒</span>
               <p className="text-xs text-gray-500">
-                No spam. We'll send you the blueprint and other valuable
+                No spam. We&apos;ll send you the blueprint and other valuable
                 content.
               </p>
             </div>
