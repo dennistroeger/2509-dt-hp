@@ -51,6 +51,9 @@ export default function Home() {
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl">
               Land Your Next High-Ticket Consulting Deal in 30 Days*
+              <span className="block text-sm italic mt-1 text-gray-500">
+                *Or Money Back
+              </span>
             </p>
 
             {/* Call to Action */}

@@ -78,26 +78,24 @@ export default function ClientAcquisitionSystemPage() {
         <div className="relative max-w-3xl mx-auto text-center">
           {/* Top Small Text / Banner */}
           <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-xs sm:text-sm font-medium text-blue-800 mb-3 sm:mb-4">
-            🚀 The Client Acquisition System for AI Consultants
+            🚀 For AI & Automation Consultants
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
-            The Client Acquisition System for AI Consultants
+            The Hackathon Acquisition System
           </h1>
 
           {/* Subheadline / Supporting Copy */}
           <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
-            How to monetize your AI & tech knowledge
+            Get the Blueprint worth $999 for free when its released.
           </p>
-
-          <WaitlistCounter />
 
           {/* Form */}
           <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-xl max-w-md mx-auto mb-6">
             <WaitlistForm
-              formId="the-client-acquisition-system-for-ai-consultants"
-              buttonText="Join the waitlist →"
+              formId="hackathon-acquisition-system"
+              buttonText="Get the Blueprint worth $999 for free when its released →"
               listId={13}
             />
 
@@ -105,7 +103,8 @@ export default function ClientAcquisitionSystemPage() {
             <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
               <span className="text-green-600">🔒</span>
               <p className="text-xs text-gray-500">
-                No spam. Only valuable info about the course.
+                No spam. We'll send you the blueprint and other valuable
+                content.
               </p>
             </div>
           </div>
