@@ -5,8 +5,18 @@ import WistiaPlayer from "./components/WistiaPlayer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hi! I'm Dennis.",
-  description: "Gewinne Premium Kunden mit LinkedIn",
+  title: "THE Hackathon Acquisition System™",
+
+  keywords:
+    "Hackathon Acquisition System, LinkedIn, Acquisition, Sales, Marketing, Consulting, AI, Automation",
+  authors: [{ name: "Histack.io" }],
+  creator: "Histack.io",
+  publisher: "Histack.io",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  description: "Land Your Next High-Ticket Consulting Deal in 30 Days*",
 };
 
 export default function Home() {
@@ -35,30 +45,24 @@ export default function Home() {
         <main className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 w-full z-10 py-20">
           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center w-full">
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Wachstum auf{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
-                Autopilot
-              </span>{" "}
-              statt täglicher Akquise-Stress.
+            <h1 className="uppercase text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
+              <span className="text-3xl block">THE</span>
+              Hackathon Acquisition System™
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl">
-              Die strategische Blaupause für etablierte Berater, die ihr
-              Wachstum nicht länger dem Zufall überlassen wollen.
+              Land Your Next High-Ticket Consulting Deal in 30 Days*
             </p>
 
-            {/* Video Player */}
-            <div className="w-full max-w-3xl mx-auto my-12 shadow-2xl rounded-xl overflow-hidden border-2 border-red-500/20 transform hover:scale-105 transition-transform duration-300">
-              <WistiaPlayer mediaId="39u4itcqa2" />
-            </div>
-
             {/* Call to Action */}
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-4 mt-12">
               <Link
                 href="/workshop"
-                className="text-white font-bold py-4 px-10 rounded-lg text-lg bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="text-white font-bold py-4 px-10 rounded-full text-lg bg-[#FE5454] hover:bg-[#E54B4B] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-center"
               >
-                Jetzt Workshop-Platz sichern
+                <span className="block text-sm font-normal">
+                  For AI & Automation Consultants.
+                </span>
+                Book a call to see if we are a good fit.
               </Link>
               {/* Scarcity element */}
               <div className="flex items-center space-x-2 text-sm text-gray-500 animate-pulse">
@@ -66,7 +70,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
-                <span>Nur 3 Plätze pro Woche verfügbar!</span>
+                <span>Only 3 spots per week available!</span>
               </div>
             </div>
           </div>

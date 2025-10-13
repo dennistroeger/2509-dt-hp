@@ -5,7 +5,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 
-export default function BookACallPage() {
+export default function WorkshopPage() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "30min" });
@@ -71,11 +71,11 @@ export default function BookACallPage() {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Book a Free Strategy Session
+              Kostenlose Strategie-Session buchen
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Learn in this free strategy session how you can predictably win
-              high-paying clients with LinkedIn.
+              Erfahre in dieser kostenlosen Strategie-Session, wie du planbar
+              hochpreise Kunden mit LinkedIn gewinnst.
             </p>
           </div>
 
@@ -91,14 +91,14 @@ export default function BookACallPage() {
           <div className="mt-12 text-center">
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                What can you expect in the strategy session?
+                Was erwartet dich in der Strategie-Session?
               </h3>
               <ul className="text-gray-600 space-y-1 text-left max-w-md mx-auto">
-                <li>• An analysis of your current LinkedIn strategy</li>
-                <li>• Concrete steps to reach your ideal clients</li>
-                <li>• Strategies for content that generates inquiries</li>
-                <li>• A clear plan for the next 90 days</li>
-                <li>• Answers to your specific questions</li>
+                <li>• Eine Analyse deiner aktuellen LinkedIn-Strategie</li>
+                <li>• Konkrete Schritte, um deine Wunschkunden zu erreichen</li>
+                <li>• Strategien für Content, der Anfragen generiert</li>
+                <li>• Ein klarer Plan für die nächsten 90 Tage</li>
+                <li>• Antworten auf deine spezifischen Fragen</li>
               </ul>
             </div>
           </div>
