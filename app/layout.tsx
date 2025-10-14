@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import React from "react";
 import { cookies } from "next/headers";
 import Script from "next/script";
+import Header from "./components/Header";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -108,6 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Suspense>
           <PrivacyModeManager />
         </Suspense>
+        <Header />
         {children}
       </body>
     </html>
