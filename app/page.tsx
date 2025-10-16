@@ -46,17 +46,18 @@ export default function Home() {
             </p>
 
             {/* Video Player */}
-            <div className="mt-8">
-              <video
-                width="640"
-                height="480"
-                controls
-                preload="metadata"
+            <div className="mt-8 w-full max-w-2xl">
+              <iframe
+                src="https://player.mux.com/A3boCcTmLKzqTw3QE3LVg5wKl9Ri1KYrae7021qo005pM?metadata-video-title=Leads_With_AI&video-title=Leads_With_AI&accent-color=%23fe5454"
+                style={{
+                  width: "100%",
+                  border: "none",
+                  aspectRatio: "16/9",
+                }}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
                 className="rounded-lg shadow-xl"
-              >
-                <source src="/videos/Intro_finished.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              ></iframe>
             </div>
 
             {/* Call to Action */}
