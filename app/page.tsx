@@ -42,8 +42,22 @@ export default function Home() {
             <p className="mt-4 text-lg text-gray-600 max-w-3xl">
               Join 100+ AI & Automation professionals leveraging AI Hackathons
               to establish figures in their niche and well paid gigs in their
-              field.
+              field. Get the exact steps we took to lang 5-figure clients.
             </p>
+
+            {/* Video Player */}
+            <div className="mt-8">
+              <video
+                width="640"
+                height="480"
+                controls
+                preload="metadata"
+                className="rounded-lg shadow-xl"
+              >
+                <source src="/videos/Intro_finished.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
             {/* Call to Action */}
             <div className="flex flex-col items-center space-y-4 mt-12">
