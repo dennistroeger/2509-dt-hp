@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  description: "Land Your Next High-Ticket Consulting Deal in 30 Days*",
+  description: "Land Your Next High-Ticket Consulting Deal in 45 Days*",
 };
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
               THE HACKATHON ACQUISITION SYSTEM™
             </p>
             <h1 className="mt-2 text-7xl sm:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Acquire premium consulting clients in 30 days
+              Acquire premium consulting clients in 45 days
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl">
               Join 100+ AI & Automation professionals leveraging AI Hackathons

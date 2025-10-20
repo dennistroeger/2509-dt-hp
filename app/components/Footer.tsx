@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="border-t border-gray-700/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-300 text-center md:text-left">
-              COPYRIGHT 2024® ALL RIGHTS RESERVED | dennisdebus.com
+              COPYRIGHT 2024® ALLE RECHTE VORBEHALTEN | dennisdebus.com
             </p>
             <div className="text-xs text-gray-400 text-center md:text-right max-w-md">
               <p className="mb-2">
