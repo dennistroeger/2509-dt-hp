@@ -45,7 +45,7 @@ export default function Home() {
               field. Get the exact steps we took to lang 5-figure clients.
             </p>
 
-            {/* Video Player */}
+            {/* Video Player d */}
             <div className="mt-8 w-full max-w-2xl">
               <iframe
                 src="https://player.mux.com/A3boCcTmLKzqTw3QE3LVg5wKl9Ri1KYrae7021qo005pM?metadata-video-title=Leads_With_AI&video-title=Leads_With_AI&accent-color=%23fe5454"
