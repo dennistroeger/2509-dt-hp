@@ -37,9 +37,7 @@ export default function Home() {
               HIGH-INTENT MEETING SYSTEM™
             </p>
             <h1 className="mt-2 text-7xl sm:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Book 3-5 High-Intent Meetings
-              <br />
-              as an <span className="text-[#FE5454]">AI Expert</span> per week
+              Get 3+ warm leads a week on LinkedIn as <span className="text-[#FE5454]">AI expert</span>
             </h1>
             <p className="mt-2 text-2xl sm:text-xl font-semibold text-black max-w-3xl">
               No Ads. No BS.
