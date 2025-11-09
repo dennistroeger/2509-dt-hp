@@ -80,16 +80,16 @@ export default function SevenDayChallengePage() {
         <p className="text-lg text-black mb-8 leading-relaxed">
           You know AI inside and out, but struggling to package your expertise
           into offers that sell? I found my profitable niche in 20 minutes after
-          years of trying everything - and I'll show you how. This isn't just
-          about making money. It's about combining your AI skills with real
-          business problems to create value that clients can't resist—and that
-          pays you what you're worth.
+          years of trying everything - and I&apos;ll show you how. This
+          isn&apos;t just about making money. It&apos;s about combining your AI
+          skills with real business problems to create value that clients
+          can&apos;t resist—and that pays you what you&apos;re worth.
         </p>
 
         {/* What You'll Get */}
         <div className="bg-gray-50 rounded-xl p-6 mb-8">
           <p className="text-lg font-bold text-black mb-4">
-            Over the next 7 days, you'll:
+            Over the next 7 days, you&apos;ll:
           </p>
           <ul className="space-y-2 text-black">
             <li className="flex items-start">
@@ -120,8 +120,8 @@ export default function SevenDayChallengePage() {
         {/* Closing Statement */}
         <p className="text-lg text-black leading-relaxed">
           The AI consulting market is crowded, but your unique combination of
-          skills and experience? That's your unfair advantage. Let's turn it
-          into a profitable niche that fits you perfectly.
+          skills and experience? That&apos;s your unfair advantage. Let&apos;s
+          turn it into a profitable niche that fits you perfectly.
         </p>
       </section>
 

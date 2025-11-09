@@ -53,7 +53,7 @@ export default function Datenschutz() {
                   For processing email newsletters and email marketing, we use
                   the <strong>Brevo</strong> service (formerly Sendinblue). When
                   you subscribe to our newsletter or send us an email, your
-                  email address and associated data are stored on Brevo's
+                  email address and associated data are stored on Brevo&apos;s
                   servers.
                 </p>
                 <p>

@@ -54,8 +54,8 @@ export default async function NextStep() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Thank you for your interest! You'll receive an email within the next
-            few minutes with a download link to access your free guide.
+            Thank you for your interest! You&apos;ll receive an email within the
+            next few minutes with a download link to access your free guide.
           </p>
 
           {/* Important Notice Box */}
@@ -73,7 +73,7 @@ export default async function NextStep() {
                     You must click the confirmation link in the email
                   </strong>{" "}
                   to receive your free guide. Please also check your spam folder
-                  if you don't see the email in your inbox.
+                  if you don&apos;t see the email in your inbox.
                 </p>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default async function NextStep() {
           {/* What's Next Section */}
           <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-black mb-6 text-center">
-              What's Inside Your Guide?
+              What&apos;s Inside Your Guide?
             </h2>
             <div className="space-y-4 text-left">
               <div className="flex items-start space-x-3">
