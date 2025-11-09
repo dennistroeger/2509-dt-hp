@@ -12,16 +12,16 @@ export default function Datenschutz() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8">
             Datenschutzerklärung
           </h1>
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Hosting und Datenspeicherung
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
                   Diese Website wird auf der Plattform <strong>Vercel</strong>{" "}
                   gehostet. Vercel ist ein Anbieter von Hosting-Dienstleistungen
@@ -46,10 +46,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 E-Mail-Datenverarbeitung
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
                   Für die Verarbeitung von E-Mail-Newslettern und
                   E-Mail-Marketing nutzen wir den Dienst <strong>Brevo</strong>{" "}
@@ -79,10 +79,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Nutzungsanalyse mit Microsoft Clarity
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
                   Wir arbeiten mit Microsoft Clarity und Microsoft Advertising
                   zusammen, um zu erfassen, wie Sie unsere Website nutzen und
@@ -111,10 +111,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Abmeldung vom Newsletter
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
                   Sie können sich <strong>jederzeit</strong> vom Newsletter
                   abmelden, ohne dass Ihnen dadurch Nachteile entstehen. Die
@@ -150,10 +150,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Ihre Rechte
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
                   Sie haben das Recht auf Auskunft, Berichtigung, Löschung und
                   Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.
@@ -174,10 +174,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Änderungen der Datenschutzerklärung
               </h2>
-              <div className="text-gray-600 leading-relaxed">
+              <div className="text-black leading-relaxed">
                 <p>
                   Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu
                   aktualisieren. Die aktuelle Version finden Sie stets auf
@@ -188,10 +188,10 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Kontakt
               </h2>
-              <div className="text-gray-600">
+              <div className="text-black">
                 <p>
                   <strong>Histack</strong>
                 </p>

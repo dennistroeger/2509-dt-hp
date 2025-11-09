@@ -12,16 +12,16 @@ export default function Imprint() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8">
             Impressum
           </h1>
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Company Information
               </h2>
-              <div className="space-y-2 text-gray-600">
+              <div className="space-y-2 text-black">
                 <p>
                   <strong>Company:</strong> Histack
                 </p>
@@ -32,10 +32,10 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Address
               </h2>
-              <div className="text-gray-600">
+              <div className="text-black">
                 <p>1111B S Governors Ave STE 21755</p>
                 <p>Dover</p>
                 <p>DE</p>
@@ -44,10 +44,10 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Contact
               </h2>
-              <div className="text-gray-600">
+              <div className="text-black">
                 <p>
                   <strong>Email:</strong>{" "}
                   <a
@@ -61,10 +61,10 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Disclaimer
               </h2>
-              <div className="text-gray-600 leading-relaxed">
+              <div className="text-black leading-relaxed">
                 <p>
                   The information provided on this website is for general
                   informational purposes only and is subject to change without
@@ -74,10 +74,10 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Copyright
               </h2>
-              <div className="text-gray-600">
+              <div className="text-black">
                 <p>COPYRIGHT 2024® ALL RIGHTS RESERVED | Histack.io</p>
               </div>
             </section>

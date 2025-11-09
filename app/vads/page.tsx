@@ -65,14 +65,14 @@ export default function VadsPage() {
 
   const Header = () => (
     <div className="w-full max-w-4xl text-center">
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-black leading-tight tracking-tight">
         Wachstum auf{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
           Autopilot
         </span>{" "}
         statt täglicher Akquise-Stress.
       </h1>
-      <p className="mt-4 text-lg text-gray-600 max-w-3xl">
+      <p className="mt-4 text-lg text-black max-w-3xl">
         Die strategische Blaupause für etablierte Berater, die ihr Wachstum
         nicht länger dem Zufall überlassen wollen.
       </p>
@@ -121,14 +121,14 @@ export default function VadsPage() {
 
             {showCta && (
               <div className="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full border border-gray-200">
-                <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-center text-black mb-6">
                   Exklusiven Zugang erhalten
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label
                       htmlFor="firstName"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-black mb-2"
                     >
                       Vorname
                     </label>
@@ -144,7 +144,7 @@ export default function VadsPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 mb-2"
+                      className="block text-sm font-semibold text-black mb-2"
                     >
                       E-Mail-Adresse
                     </label>

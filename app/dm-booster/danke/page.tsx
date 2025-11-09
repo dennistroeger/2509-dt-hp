@@ -25,18 +25,18 @@ export default function DankePage() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl lg:text-5xl font-black text-black mb-6 leading-tight">
             Vielen Dank! 🎉
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-black mb-8 leading-relaxed">
             Dein LinkedIn DM Booster Guide ist auf dem Weg zu dir!
           </p>
 
           {/* Description */}
           <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-xl mb-8">
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-black mb-6">
               Du erhältst in den nächsten Minuten eine E-Mail mit dem
               Download-Link für deinen kostenlosen Guide &quot;Der Chat-Verkauf:
               Hochpreis-Kunden gewinnen mit Direktnachrichten&quot;.
@@ -60,7 +60,7 @@ export default function DankePage() {
                 Jetzt zum Guide →
               </a>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-black">
                 Klicke auf den Button, um direkt zum Notion-Guide zu gelangen
               </p>
             </div>
@@ -68,25 +68,25 @@ export default function DankePage() {
 
           {/* What's Next Section */}
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-black mb-4">
               Was passiert als nächstes?
             </h2>
             <div className="space-y-4 text-left max-w-2xl mx-auto">
               <div className="flex items-start">
                 <span className="text-green-500 mr-3 text-xl">1.</span>
-                <p className="text-gray-700">
+                <p className="text-black">
                   Du erhältst eine E-Mail mit dem Download-Link für den Guide
                 </p>
               </div>
               <div className="flex items-start">
                 <span className="text-green-500 mr-3 text-xl">2.</span>
-                <p className="text-gray-700">
+                <p className="text-black">
                   Lade den Guide herunter und arbeite die 5 Module durch
                 </p>
               </div>
               <div className="flex items-start">
                 <span className="text-green-500 mr-3 text-xl">3.</span>
-                <p className="text-gray-700">
+                <p className="text-black">
                   Beginne sofort, dein Angebot zu erstellen und auf LinkedIn zu
                   verkaufen
                 </p>
@@ -99,16 +99,16 @@ export default function DankePage() {
       {/* Additional Resources Section */}
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-black mb-8">
             Weitere hilfreiche Ressourcen
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-black mb-3">
                 CEO System
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-black mb-4">
                 Lerne, wie du als CEO systematisch Kunden gewinnst
               </p>
               <a
@@ -120,10 +120,10 @@ export default function DankePage() {
             </div>
 
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-black mb-3">
                 Thought Leader System
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-black mb-4">
                 Werde zum Experten in deiner Branche
               </p>
               <a

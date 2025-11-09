@@ -81,7 +81,7 @@ export default function DownloadLinkedInFreebie() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   Dein Playbook
                 </span>
@@ -90,7 +90,7 @@ export default function DownloadLinkedInFreebie() {
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-black mb-8 leading-relaxed">
                 Lade jetzt dein kostenloses Playbook herunter und starte damit,
                 dem Content-Hamsterrad zu entkommen und planbar Kunden zu
                 gewinnen.
@@ -106,7 +106,7 @@ export default function DownloadLinkedInFreebie() {
 
               {/* What's Inside */}
               <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-xl">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-black mb-4">
                   Was erwartet dich im Playbook?
                 </h3>
                 <div className="space-y-3 text-left">
@@ -114,7 +114,7 @@ export default function DownloadLinkedInFreebie() {
                     <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-xs font-bold">✓</span>
                     </div>
-                    <span className="text-gray-700">
+                    <span className="text-black">
                       Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit
                       verschwenden
                     </span>
@@ -123,7 +123,7 @@ export default function DownloadLinkedInFreebie() {
                     <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-xs font-bold">✓</span>
                     </div>
-                    <span className="text-gray-700">
+                    <span className="text-black">
                       Wie die Top 5% systematisch und planbar Kunden gewinnen
                     </span>
                   </div>
@@ -131,7 +131,7 @@ export default function DownloadLinkedInFreebie() {
                     <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-xs font-bold">✓</span>
                     </div>
-                    <span className="text-gray-700">
+                    <span className="text-black">
                       Echte Ergebnisse messen statt &quot;Prinzip Hoffnung&quot;
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function DownloadLinkedInFreebie() {
                     <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-xs font-bold">✓</span>
                     </div>
-                    <span className="text-gray-700">
+                    <span className="text-black">
                       Schritt-für-Schritt Anleitung mit Templates
                     </span>
                   </div>
@@ -188,7 +188,7 @@ export default function DownloadLinkedInFreebie() {
       {/* Next Steps Section */}
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-8">
             Was sind die nächsten Schritte?
           </h2>
 
@@ -197,10 +197,10 @@ export default function DownloadLinkedInFreebie() {
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📖</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 1. Playbook lesen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Nimm dir 30 Minuten Zeit und arbeite das komplette Playbook
                 durch.
               </p>
@@ -210,10 +210,10 @@ export default function DownloadLinkedInFreebie() {
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 2. Strategie umsetzen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Beginne mit der Umsetzung der Top 5% Strategien in deinem
                 Unternehmen.
               </p>
@@ -223,10 +223,10 @@ export default function DownloadLinkedInFreebie() {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📈</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 3. Ergebnisse messen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Verfolge deine Fortschritte und optimiere kontinuierlich.
               </p>
             </div>
@@ -234,10 +234,10 @@ export default function DownloadLinkedInFreebie() {
 
           {/* Additional Resources */}
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-black mb-4">
               Brauchst du Unterstützung bei der Umsetzung?
             </h3>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-black mb-6">
               Falls du Fragen hast oder Unterstützung bei der Umsetzung der
               Strategien brauchst, melde dich gerne bei mir.
             </p>

@@ -58,7 +58,7 @@ function WaitlistCounter() {
 
   return (
     <div className="mt-8 mb-4">
-      <p className="text-lg font-semibold text-gray-800">
+      <p className="text-lg font-semibold text-black">
         {count} KI-Enthusiasten sind bereits auf der Warteliste!
       </p>
     </div>
@@ -82,14 +82,14 @@ export default function KiBeraterKursPage() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 leading-tight">
             Wie du als KI-Berater{" "}
             <span className="text-blue-600">5-stellige Aufträge</span>{" "}
             generierst
           </h1>
 
           {/* Subheadline / Supporting Copy */}
-          <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-black mb-6 leading-relaxed max-w-2xl mx-auto">
             Trag dich in die Warteliste ein und erfahre als Erster, wann der
             Kurs verfügbar ist. Die ersten 100 Teilnehmer erhalten einen Kurs
             kostenfrei.
@@ -108,7 +108,7 @@ export default function KiBeraterKursPage() {
             {/* Trust Badge / Disclaimer */}
             <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
               <span className="text-green-600">🔒</span>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-black">
                 Kein Spam. Nur wertvolle Infos zum Kurs.
               </p>
             </div>

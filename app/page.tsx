@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "THE Hackathon Acquisition System™",
+  title: "High-Intent Meeting System™",
 
   keywords:
     "Hackathon Acquisition System, LinkedIn, Acquisition, Sales, Marketing, Consulting, AI, Automation",
@@ -34,15 +34,18 @@ export default function Home() {
           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center w-full">
             {/* Headline */}
             <p className="uppercase text-sm font-semibold tracking-wider text-red-600">
-              THE HACKATHON ACQUISITION SYSTEM™
+              HIGH-INTENT MEETING SYSTEM™
             </p>
             <h1 className="mt-2 text-7xl sm:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Acquire premium consulting clients in 45 days
+              Book 3-5 High-Intent Meetings
+              <br />
+              as an <span className="text-[#FE5454]">AI Expert</span> per week
             </h1>
-            <p className="mt-4 text-lg text-gray-600 max-w-3xl">
-              Join 100+ AI & Automation professionals leveraging AI Hackathons
-              to establish figures in their niche and well paid gigs in their
-              field. Get the exact steps we took to lang 5-figure clients.
+            <p className="mt-2 text-2xl sm:text-xl font-semibold text-black max-w-3xl">
+              No Ads. No BS.
+            </p>
+            <p className="mt-4 text-lg text-black max-w-3xl">
+              Stop wasting time on cold outreach that goes nowhere. Get a proven system that fills your calendar with qualified AI founders who are ready to buy—using authentic relationship-building, not spam.
             </p>
 
             {/* Video Player d */}

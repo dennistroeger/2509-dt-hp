@@ -8,37 +8,27 @@ export default function Footer() {
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-tr from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">
-              Content-Hamsterrad Exit
-            </h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Spezialisiert auf B2B-SaaS, IT- & Tech-Unternehmer mit $1M+
-              Revenue. Wie die Top 5% planbar Kunden gewinnen statt
-              &quot;Prinzip Hoffnung&quot;.
+            <h3 className="text-lg font-bold mb-4 text-white">Contact</h3>
+            <p className="text-white text-sm">
+              Systematic meetings instead of &quot;Content Hamster Wheel&quot;
+              <br />
+              Systematic customer acquisition
+              <br />
+              Top 5% Strategies
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Kontakt</h3>
-            <p className="text-gray-300 text-sm">
-              Planbare Meetings statt &quot;Content-Hamsterrad&quot;
-              <br />
-              Planbare Kundenakquise
-              <br />
-              Top 5% Strategien
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Rechtliches</h3>
-            <div className="text-gray-300 text-sm space-y-1">
-              <Link href="/datenschutz" className="hover:text-white underline">
-                Datenschutz
+            <h3 className="text-lg font-bold mb-4 text-white">Legal</h3>
+            <div className="text-white text-sm space-y-1">
+              <Link href="/datenschutz" className="hover:text-gray-300 underline">
+                Privacy Policy
               </Link>
 
               <p>
-                <Link href="/imprint" className="hover:text-white underline">
-                  Impressum
+                <Link href="/imprint" className="hover:text-gray-300 underline">
+                  Imprint
                 </Link>
               </p>
             </div>
@@ -47,35 +37,33 @@ export default function Footer() {
 
         <div className="border-t border-gray-700/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-300 text-center md:text-left">
-              COPYRIGHT 2024® ALLE RECHTE VORBEHALTEN | dennisdebus.com
+            <p className="text-sm text-white text-center md:text-left">
+              COPYRIGHT 2024® ALL RIGHTS RESERVED | dennisdebus.com
             </p>
-            <div className="text-xs text-gray-400 text-center md:text-right max-w-md">
+            <div className="text-xs text-white text-center md:text-right max-w-md">
               <p className="mb-2">
-                Wir nutzen Microsoft Clarity, um zu verstehen, wie Sie unsere
-                Website nutzen, und so unsere Produkte und Werbung zu
-                verbessern. Mit der Nutzung unserer Website stimmen Sie der
-                Erfassung und Verwendung dieser Daten durch uns und Microsoft
-                zu. Weitere Details finden Sie in unserer{" "}
+                We use Microsoft Clarity to understand how you use our website
+                and to improve our products and advertising. By using our
+                website, you consent to the collection and use of this data by
+                us and Microsoft. For more details, please see our{" "}
                 <Link
                   href="/datenschutz"
-                  className="underline hover:text-white"
+                  className="underline hover:text-gray-300"
                 >
-                  Datenschutzerklärung
+                  Privacy Policy
                 </Link>
                 .
               </p>
               <p className="mb-2">
-                Ich bin verpflichtet, deine Privatsphäre zu schützen. Ich
-                verwende die Informationen, die du mir gibst, um dich über meine
-                relevanten Inhalte, Produkte und Dienstleistungen zu
-                kontaktieren. Du kannst dich jederzeit von diesen
-                Kommunikationen abmelden.
+                I am committed to protecting your privacy. I use the information
+                you provide to contact you about my relevant content, products,
+                and services. You can unsubscribe from these communications at
+                any time.
               </p>
               <p>
-                Diese Website ist kein Teil von LinkedIn, Microsoft INC.
-                Zusätzlich wird diese Website NICHT von LinkedIn in irgendeiner
-                Weise unterstützt. LINKEDIN ist eine Marke von LINKEDIN.
+                This website is not part of LinkedIn or Microsoft INC.
+                Additionally, this website is NOT endorsed by LinkedIn in any
+                way. LINKEDIN is a trademark of LINKEDIN.
               </p>
             </div>
           </div>

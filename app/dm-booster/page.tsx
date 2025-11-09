@@ -58,7 +58,7 @@ export default async function DmBoosterPage() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 leading-tight">
                 <span className="lg:hidden">
                   Verkaufen mit Chats: <br />
                   <span className="text-red-600">
@@ -74,7 +74,7 @@ export default async function DmBoosterPage() {
               </h1>
 
               {/* Subheadline / Supporting Copy */}
-              <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-black mb-6 leading-relaxed">
                 Ein kostenloses Training, das dir zeigt, wie du ein Angebot
                 erstellst, das sich auf LinkedIn verkauft, damit du online Geld
                 verdienen kannst.
@@ -91,7 +91,7 @@ export default async function DmBoosterPage() {
                 {/* Trust Badge / Disclaimer */}
                 <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
                   <span className="text-green-600">🔒</span>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-black">
                     Kein Spam. Nur relevante B2B SaaS Insights.
                   </p>
                 </div>
@@ -121,19 +121,19 @@ export default async function DmBoosterPage() {
               <div className="space-y-3 text-left mb-6 sm:mb-8">
                 <div className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700 text-sm sm:text-base">
+                  <p className="text-black text-sm sm:text-base">
                     Finde deine Superkraft & idealen Kunden
                   </p>
                 </div>
                 <div className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700 text-sm sm:text-base">
+                  <p className="text-black text-sm sm:text-base">
                     Pitche mit Selbstvertrauen und schließe Geschäfte ab
                   </p>
                 </div>
                 <div className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
-                  <p className="text-gray-700 text-sm sm:text-base">
+                  <p className="text-black text-sm sm:text-base">
                     Erhalte eine fertige Angebotsvorlage und ein Pitch-Deck
                   </p>
                 </div>
@@ -169,53 +169,53 @@ export default async function DmBoosterPage() {
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
               Ein Einblick in den Inhalt...
             </h2>
           </div>
 
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 Modul 1: Definiere Deine Superkraft
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Identifiziere deine einzigartigen Fähigkeiten und verwandle sie
                 in ein wertvolles Angebot.
               </p>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 Modul 2: Finde Deine Idealen Kunden
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Lerne, wie du kaufbereite Personen auf LinkedIn identifizierst
                 und ansprichst.
               </p>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 Modul 3: Vereinfache Dein Angebot
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Erstelle ein klares, hochpreisiges Angebot, das echte Probleme
                 löst.
               </p>
             </div>
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 Modul 4: Perfekte Pitch-Vorlagen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Gebrauchsfertige Vorlagen für Angebotsdokumente in Notion und
                 Pitch-Decks in Figma, um Geschäfte abzuschließen.
               </p>
             </div>
             <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 Modul 5: Beginne auf LinkedIn zu verkaufen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Füge alles zusammen und beginne, Verkäufe zu tätigen, ohne einen
                 Cent für Anzeigen auszugeben.
               </p>
@@ -227,10 +227,10 @@ export default async function DmBoosterPage() {
       {/* CTA Section */}
       <section className="bg-blue-50 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             Lerne, wie du auf LinkedIn verkaufst!
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-black mb-8">
             Ein kostenloser Kurs, der dir genau zeigt, wie du ein Angebot
             erstellst, das sich verkauft, damit du anfangen kannst, online Geld
             zu verdienen.
@@ -241,7 +241,7 @@ export default async function DmBoosterPage() {
               buttonText="Kostenlosen Kurs anfordern →"
               listId={9}
             />
-            <p className="text-xs text-gray-500 mt-4 text-center">
+            <p className="text-xs text-black mt-4 text-center">
               🔒 Kein Spam. Nur relevante Tech-Insights.
             </p>
           </div>

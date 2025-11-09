@@ -33,10 +33,10 @@ export default async function ViraAdSystem() {
 
         <main className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center w-full">
-            <p className="text-lg sm:text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-black">
               Planbar Kunden gewinnenn auf LinkedIn
             </p>
-            <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold text-black leading-tight">
               Wie du mit dem &quot;Viral Ad&quot;-System LinkedIn Ads für unter
               1 € pro Klick schaltest.
             </h1>

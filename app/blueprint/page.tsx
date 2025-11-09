@@ -21,12 +21,12 @@ export default function ClientAcquisitionSystemPage() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 leading-tight">
             The Hackathon Acquisition System
           </h1>
 
           {/* Subheadline / Supporting Copy */}
-          <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-black mb-6 leading-relaxed max-w-2xl mx-auto">
             Get the Blueprint worth $999 for free when its released.
           </p>
 
@@ -41,7 +41,7 @@ export default function ClientAcquisitionSystemPage() {
             {/* Trust Badge / Disclaimer */}
             <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
               <span className="text-green-600">🔒</span>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-black">
                 No spam. We&apos;ll send you the blueprint and other valuable
                 content.
               </p>

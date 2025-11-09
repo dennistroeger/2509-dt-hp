@@ -69,10 +69,10 @@ export default function DmBotPage() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-black mb-4">
               Erfolgreich registriert!
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-black mb-4">
               Du wirst in wenigen Sekunden zum DM-Booster weitergeleitet...
             </p>
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto"></div>
@@ -99,14 +99,14 @@ export default function DmBotPage() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 leading-tight">
               Starte dein{" "}
               <span className="text-red-600">LinkedIn DM-System</span> mit
               unserem Bot
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-gray-600 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-black mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto">
               Gib deine Daten ein und erhalte sofort Zugang zu unserem
               intelligenten DM-Booster Bot, der dir dabei hilft, perfekte
               LinkedIn-Nachrichten zu erstellen.
@@ -124,7 +124,7 @@ export default function DmBotPage() {
                 <div>
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-black mb-2"
                   >
                     Vorname*
                   </label>
@@ -142,7 +142,7 @@ export default function DmBotPage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-black mb-2"
                   >
                     Email Address*
                   </label>
@@ -160,7 +160,7 @@ export default function DmBotPage() {
                 <div>
                   <label
                     htmlFor="linkedinUrl"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-black mb-2"
                   >
                     LinkedIn Profil URL*
                   </label>
@@ -189,7 +189,7 @@ export default function DmBotPage() {
               {/* Trust Badge / Disclaimer */}
               <div className="flex items-center justify-center mt-4 space-x-2">
                 <span className="text-green-600">🔒</span>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-black">
                   Deine Daten sind sicher und werden nur für den Bot-Zugang
                   verwendet.
                 </p>
@@ -202,10 +202,10 @@ export default function DmBotPage() {
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🤖</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">
+                <h3 className="font-semibold text-black mb-2">
                   KI-gestützte Nachrichten
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-black">
                   Erstelle personalisierte LinkedIn-Nachrichten mit Hilfe von KI
                 </p>
               </div>
@@ -213,10 +213,10 @@ export default function DmBotPage() {
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">⚡</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">
+                <h3 className="font-semibold text-black mb-2">
                   Sofortiger Zugang
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-black">
                   Starte sofort mit dem Bot und verbessere deine
                   LinkedIn-Strategie
                 </p>
@@ -225,10 +225,10 @@ export default function DmBotPage() {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">📈</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">
+                <h3 className="font-semibold text-black mb-2">
                   Bessere Ergebnisse
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-black">
                   Erhöhe deine Antwortrate und schließe mehr Geschäfte ab
                 </p>
               </div>

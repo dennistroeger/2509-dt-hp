@@ -58,7 +58,7 @@ export default async function Home() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-4 sm:mb-6 leading-tight">
                 5–10+ hochwertige Kundenanfragen pro Monat{" "}
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   als Thought Leader{" "}
@@ -67,7 +67,7 @@ export default async function Home() {
               </h1>
 
               {/* Subheadline / Supporting Copy */}
-              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-black mb-6 sm:mb-8 leading-relaxed">
                 In diesem kostenlosen Leitfaden zeige ich dir, wie du als
                 Experte Sichtbarkeit aufbaust, Vertrauen gewinnst und planbar
                 Kundenanfragen generierst - ohne Akquise.
@@ -83,7 +83,7 @@ export default async function Home() {
                 {/* Trust Badge / Disclaimer */}
                 <div className="flex items-center justify-center mt-3 sm:mt-4 space-x-2">
                   <span className="text-green-600">🔒</span>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-black">
                     Kein Spam. Nur relevante Insights für dein Business.
                   </p>
                 </div>
@@ -118,10 +118,10 @@ export default async function Home() {
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
               Schluss mit der Kaltakquise
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               Wie du als Thought Leader eine starke Personenmarke aufbaust und
               planbar Kundenanfragen gewinnst - echte Ergebnisse statt
               &ldquo;Prinzip Hoffnung&rdquo;.
@@ -133,10 +133,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🚫</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Sichtbarkeit als Experte
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Warum 95% der Berater auf LinkedIn ihre Zeit verschwenden und
                 wie du als Thought Leader sichtbar wirst.
               </p>
@@ -146,10 +146,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Planbare Kundenanfragen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Wie die Top 5% systematisch und vorhersagbar Kundenanfragen
                 generieren - ohne tägliche Content-Erstellung.
               </p>
@@ -159,10 +159,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📈</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Echte Ergebnisse messen
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Klare KPIs und ROI-Messung statt &ldquo;Prinzip Hoffnung&rdquo;.
                 Bewährte Systeme für vorhersagbare Ergebnisse.
               </p>
@@ -172,10 +172,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Systematischer Ansatz
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Bewährte Systeme statt &ldquo;Prinzip Hoffnung&rdquo;. Wie du
                 LinkedIn strategisch nutzt ohne tägliche Content-Erstellung.
               </p>
@@ -185,10 +185,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Top 5% Strategien
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Die exakten Methoden der erfolgreichsten Experten. Wie sie
                 planbar Kundenanfragen gewinnen ohne Content-Hamsterrad.
               </p>
@@ -198,10 +198,10 @@ export default async function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 Sofort umsetzbar
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Schritt-für-Schritt Anleitung mit Templates. In 2 Wochen läuft
                 dein planbares Kundenanfrage-System.
               </p>
@@ -251,21 +251,21 @@ export default async function Home() {
                 📚 Kostenloser Download
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   Wie die Top 5% auf LinkedIn planbar Kundenanfragen gewinnen
                 </span>
                 <br />
               </h2>
 
-              <h3 className="text-xl font-bold text-gray-800 mb-6">
+              <h3 className="text-xl font-bold text-black mb-6">
                 Warum 95% der Berater auf LinkedIn ihre Zeit verschwenden
                 <span className="text-red-600"> (und wie die Top 5%</span>{" "}
                 <span className="text-orange-600">planbar Kunden</span>{" "}
                 gewinnen)
               </h3>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-black mb-8 leading-relaxed">
                 In diesem kostenlosen Leitfaden zeige ich dir, wie du als
                 Experte Sichtbarkeit aufbaust, Vertrauen gewinnst und planbar
                 Kundenanfragen generierst - ohne Akquise.
@@ -276,7 +276,7 @@ export default async function Home() {
                   <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-gray-700">
+                  <span className="text-black">
                     Warum 95% der Berater auf LinkedIn ihre Zeit verschwenden
                   </span>
                 </div>
@@ -284,7 +284,7 @@ export default async function Home() {
                   <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-gray-700">
+                  <span className="text-black">
                     Wie die Top 5% systematisch und planbar Kundenanfragen
                     gewinnen
                   </span>
@@ -293,7 +293,7 @@ export default async function Home() {
                   <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-gray-700">
+                  <span className="text-black">
                     Echte Ergebnisse messen statt &ldquo;Prinzip Hoffnung&rdquo;
                   </span>
                 </div>
@@ -306,7 +306,7 @@ export default async function Home() {
                   showCompany={false}
                   buttonText="Kostenlosen Guide herunterladen →"
                 />
-                <p className="text-xs text-gray-500 mt-4 text-center">
+                <p className="text-xs text-black mt-4 text-center">
                   🔒 Kein Spam. Nur relevante Business-Insights.
                 </p>
               </div>

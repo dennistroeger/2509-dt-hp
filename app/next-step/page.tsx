@@ -48,7 +48,7 @@ export default async function NextStep() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
               Fast geschafft!
             </span>
@@ -57,7 +57,7 @@ export default async function NextStep() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-black mb-8 leading-relaxed max-w-3xl mx-auto">
             Vielen Dank für dein Interesse! Du erhältst in wenigen Minuten eine
             E-Mail mit dem Download-Link für dein kostenloses Playbook.
           </p>
@@ -89,10 +89,10 @@ export default async function NextStep() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-black mb-2">
                 E-Mail prüfen
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-black text-sm">
                 Schaue in dein E-Mail-Postfach (auch Spam-Ordner)
               </p>
             </div>
@@ -101,10 +101,10 @@ export default async function NextStep() {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-black mb-2">
                 Link anklicken
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-black text-sm">
                 Bestätige deine E-Mail-Adresse durch Klick auf den Link
               </p>
             </div>
@@ -113,10 +113,10 @@ export default async function NextStep() {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-black mb-2">
                 Playbook downloaden
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-black text-sm">
                 Erhalte sofort Zugang zu deinem kostenlosen Guide
               </p>
             </div>
@@ -124,7 +124,7 @@ export default async function NextStep() {
 
           {/* What's Next Section */}
           <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-black mb-4">
               Was erwartet dich im Playbook?
             </h2>
             <div className="space-y-3 text-left">
@@ -132,7 +132,7 @@ export default async function NextStep() {
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-gray-700">
+                <span className="text-black">
                   Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit verschwenden
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default async function NextStep() {
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-gray-700">
+                <span className="text-black">
                   Wie die Top 5% systematisch und planbar Kunden gewinnen
                 </span>
               </div>
@@ -148,7 +148,7 @@ export default async function NextStep() {
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-gray-700">
+                <span className="text-black">
                   Echte Ergebnisse messen statt &quot;Prinzip Hoffnung&quot;
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default async function NextStep() {
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-gray-700">
+                <span className="text-black">
                   Schritt-für-Schritt Anleitung mit Templates
                 </span>
               </div>

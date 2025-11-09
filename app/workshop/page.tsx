@@ -70,10 +70,10 @@ export default function BookACallPage() {
       <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
               Book a Free Strategy Session
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-black max-w-2xl mx-auto">
               Learn in this free strategy session how you can predictably win
               high-paying clients with LinkedIn.
             </p>
@@ -90,10 +90,10 @@ export default function BookACallPage() {
 
           <div className="mt-12 text-center">
             <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-black mb-2">
                 What can you expect in the strategy session?
               </h3>
-              <ul className="text-gray-600 space-y-1 text-left max-w-md mx-auto">
+              <ul className="text-black space-y-1 text-left max-w-md mx-auto">
                 <li>• An analysis of your current LinkedIn strategy</li>
                 <li>• Concrete steps to reach your ideal clients</li>
                 <li>• Strategies for content that generates inquiries</li>
