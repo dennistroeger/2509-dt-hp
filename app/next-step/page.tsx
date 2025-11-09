@@ -5,8 +5,9 @@ import { sendLinkedInConversion } from "../lib/linkedin";
 import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: "Nächster Schritt",
-  description: "Gewinne Premium Kunden mit LinkedIn",
+  title: "Next Step - Confirm Your Email",
+  description:
+    "Confirm your email to access your free guide and start winning high-value clients with LinkedIn",
 };
 
 export default async function NextStep() {
@@ -33,15 +34,10 @@ export default async function NextStep() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/5 to-blue-600/5"></div>
-        <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 sm:bottom-20 sm:left-20 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tr from-emerald-400/10 to-green-400/10 rounded-full blur-3xl"></div>
-
-        <div className="relative max-w-4xl mx-auto text-center">
+      <section className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Success Icon */}
           <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
             <span className="text-4xl">✓</span>
@@ -50,16 +46,16 @@ export default async function NextStep() {
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              Fast geschafft!
+              Almost There!
             </span>
             <br />
-            E-Mail bestätigen
+            Confirm Your Email
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-black mb-8 leading-relaxed max-w-3xl mx-auto">
-            Vielen Dank für dein Interesse! Du erhältst in wenigen Minuten eine
-            E-Mail mit dem Download-Link für dein kostenloses Playbook.
+          <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+            Thank you for your interest! You'll receive an email within the next
+            few minutes with a download link to access your free guide.
           </p>
 
           {/* Important Notice Box */}
@@ -70,14 +66,14 @@ export default async function NextStep() {
               </div>
               <div className="text-left">
                 <h3 className="text-lg font-bold text-amber-800 mb-2">
-                  Wichtiger Hinweis:
+                  Important Notice:
                 </h3>
                 <p className="text-amber-700 leading-relaxed">
                   <strong>
-                    Du musst den Bestätigungslink in der E-Mail anklicken
-                  </strong>
-                  , um dein kostenloses Playbook zu erhalten. Prüfe auch deinen
-                  Spam-Ordner, falls die E-Mail nicht ankommt.
+                    You must click the confirmation link in the email
+                  </strong>{" "}
+                  to receive your free guide. Please also check your spam folder
+                  if you don't see the email in your inbox.
                 </p>
               </div>
             </div>
@@ -85,79 +81,79 @@ export default async function NextStep() {
 
           {/* Steps */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h3 className="text-lg font-bold text-black mb-2">
-                E-Mail prüfen
+                Check Your Email
               </h3>
-              <p className="text-black text-sm">
-                Schaue in dein E-Mail-Postfach (auch Spam-Ordner)
+              <p className="text-gray-600 text-sm">
+                Look in your inbox (and spam folder) for our confirmation email
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">2</span>
               </div>
               <h3 className="text-lg font-bold text-black mb-2">
-                Link anklicken
+                Click the Link
               </h3>
-              <p className="text-black text-sm">
-                Bestätige deine E-Mail-Adresse durch Klick auf den Link
+              <p className="text-gray-600 text-sm">
+                Confirm your email address by clicking the confirmation link
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">3</span>
               </div>
               <h3 className="text-lg font-bold text-black mb-2">
-                Playbook downloaden
+                Access Your Guide
               </h3>
-              <p className="text-black text-sm">
-                Erhalte sofort Zugang zu deinem kostenlosen Guide
+              <p className="text-gray-600 text-sm">
+                Get instant access to your free guide and start implementing
               </p>
             </div>
           </div>
 
           {/* What's Next Section */}
           <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-black mb-4">
-              Was erwartet dich im Playbook?
+            <h2 className="text-2xl font-bold text-black mb-6 text-center">
+              What's Inside Your Guide?
             </h2>
-            <div className="space-y-3 text-left">
+            <div className="space-y-4 text-left">
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-black">
-                  Warum 95% der SaaS-Gründer auf LinkedIn ihre Zeit verschwenden
+                <span className="text-gray-700">
+                  Why 95% of SaaS founders waste their time on LinkedIn
                 </span>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-black">
-                  Wie die Top 5% systematisch und planbar Kunden gewinnen
+                <span className="text-gray-700">
+                  How the top 5% systematically and predictably win customers
                 </span>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-black">
-                  Echte Ergebnisse messen statt &quot;Prinzip Hoffnung&quot;
+                <span className="text-gray-700">
+                  Measure real results instead of relying on hope
                 </span>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-xs font-bold">✓</span>
                 </div>
-                <span className="text-black">
-                  Schritt-für-Schritt Anleitung mit Templates
+                <span className="text-gray-700">
+                  Step-by-step guide with ready-to-use templates
                 </span>
               </div>
             </div>
@@ -169,7 +165,7 @@ export default async function NextStep() {
               href="/"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white font-semibold rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              ← Zurück zur Startseite
+              ← Back to Home
             </Link>
           </div>
         </div>
