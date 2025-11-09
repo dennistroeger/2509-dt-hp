@@ -32,9 +32,7 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-black mb-4">
-                Address
-              </h2>
+              <h2 className="text-xl font-semibold text-black mb-4">Address</h2>
               <div className="text-black">
                 <p>1111B S Governors Ave STE 21755</p>
                 <p>Dover</p>
@@ -44,9 +42,7 @@ export default function Imprint() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-black mb-4">
-                Contact
-              </h2>
+              <h2 className="text-xl font-semibold text-black mb-4">Contact</h2>
               <div className="text-black">
                 <p>
                   <strong>Email:</strong>{" "}
