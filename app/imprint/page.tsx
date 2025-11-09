@@ -3,8 +3,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Impressum",
-  description: "Gewinne Premium Kunden mit LinkedIn",
+  title: "Imprint",
+  description: "Win Premium Customers with LinkedIn",
 };
 
 export default function Imprint() {
@@ -13,7 +13,7 @@ export default function Imprint() {
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8">
-            Impressum
+            Imprint
           </h1>
 
           <div className="space-y-8">
