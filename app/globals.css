@@ -151,7 +151,7 @@ h6 {
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animation-delay-2000 {
@@ -173,4 +173,31 @@ h6 {
 
 .animate-shimmer {
   animation: shimmer 3s linear infinite;
+}
+
+/* Apple Liquid Glass Utility */
+.glass-apple {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.glass-apple-dark {
+  background: rgba(20, 20, 25, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
