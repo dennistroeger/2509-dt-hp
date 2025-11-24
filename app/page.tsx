@@ -39,22 +39,21 @@ export default function Home() {
             {/* Headline Badge */}
             <div className="relative inline-flex items-center px-4 py-1.5 rounded-full border border-[#FE5454]/20 bg-[#FE5454]/5 backdrop-blur-md mb-8 shadow-sm">
               <span className="text-xs font-bold tracking-[0.2em] text-[#FE5454] uppercase">
-                High-Intent Meeting System™
+                Für KI-Experten & Consultants
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="relative text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900 drop-shadow-sm">
-              Hol dir 3+ warme Leads pro Woche auf LinkedIn als{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FE5454] to-[#ff8e8e]">
-                KI-Experte
-              </span>
+            <h1 className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-12 text-slate-900">
+              So wird aus einem <br className="hidden sm:block" />
+              <span className="inline-block relative">
+                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#FE5454] to-purple-600 px-2">
+                  ‚Hey 👋‘
+                </span>
+                <span className="absolute bottom-2 left-0 w-full h-3 bg-[#FE5454]/10 -rotate-1 z-0 rounded-full transform scale-105"></span>
+              </span>{" "}
+              Umsatz
             </h1>
-
-            {/* Sub-headline */}
-            <p className="relative text-xl sm:text-2xl font-medium text-slate-700 mb-6 tracking-wide">
-              Keine Ads. Kein Bullshit.
-            </p>
 
             {/* Description */}
             <p className="relative text-lg text-slate-600 max-w-2xl mb-12 leading-relaxed">

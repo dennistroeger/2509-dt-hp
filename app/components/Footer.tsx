@@ -16,13 +16,21 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4 text-slate-900">Rechtliches</h3>
+            <h3 className="text-lg font-bold mb-4 text-slate-900">
+              Rechtliches
+            </h3>
             <div className="text-slate-600 text-sm space-y-2 flex flex-col">
-              <Link href="/datenschutz" className="hover:text-[#FE5454] transition-colors underline decoration-slate-300 underline-offset-4">
+              <Link
+                href="/datenschutz"
+                className="hover:text-[#FE5454] transition-colors underline decoration-slate-300 underline-offset-4"
+              >
                 Datenschutz
               </Link>
 
-              <Link href="/imprint" className="hover:text-[#FE5454] transition-colors underline decoration-slate-300 underline-offset-4">
+              <Link
+                href="/imprint"
+                className="hover:text-[#FE5454] transition-colors underline decoration-slate-300 underline-offset-4"
+              >
                 Impressum
               </Link>
             </div>
@@ -36,9 +44,10 @@ export default function Footer() {
             </p>
             <div className="text-xs text-slate-500 text-center md:text-right max-w-md space-y-3">
               <p>
-                Wir nutzen Microsoft Clarity, um zu verstehen, wie du unsere Website nutzt 
-                und um unsere Produkte und Werbung zu verbessern. Durch die Nutzung stimmst 
-                du der Datenerhebung durch uns und Microsoft zu. Für Details siehe unsere{" "}
+                Wir nutzen Microsoft Clarity, um zu verstehen, wie du unsere
+                Website nutzt und um unsere Produkte und Werbung zu verbessern.
+                Durch die Nutzung stimmst du der Datenerhebung durch uns und
+                Microsoft zu. Für Details siehe unsere{" "}
                 <Link
                   href="/datenschutz"
                   className="underline hover:text-[#FE5454] transition-colors"
@@ -48,14 +57,15 @@ export default function Footer() {
                 .
               </p>
               <p>
-                Ich verpflichte mich, deine Privatsphäre zu schützen. Ich nutze die Informationen, 
-                die du bereitstellst, um dich über relevante Inhalte, Produkte und Dienstleistungen 
-                zu informieren. Du kannst dich jederzeit abmelden.
+                Ich verpflichte mich, deine Privatsphäre zu schützen. Ich nutze
+                die Informationen, die du bereitstellst, um dich über relevante
+                Inhalte, Produkte und Dienstleistungen zu informieren. Du kannst
+                dich jederzeit abmelden.
               </p>
               <p>
                 Diese Website ist kein Teil von LinkedIn oder Microsoft INC.
-                Außerdem wird diese Website NICHT von LinkedIn in irgendeiner Weise unterstützt. 
-                LINKEDIN ist eine Marke von LINKEDIN.
+                Außerdem wird diese Website NICHT von LinkedIn in irgendeiner
+                Weise unterstützt. LINKEDIN ist eine Marke von LINKEDIN.
               </p>
             </div>
           </div>
