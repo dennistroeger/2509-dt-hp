@@ -1,0 +1,66 @@
+{
+  "redirects": [    
+    
+    {
+      "source": "/clay",
+      "destination": "https://clay.com?via=393abb",
+      "permanent": false
+    },
+    {
+      "source": "/ocean",
+      "destination": "https://www.ocean.io?aff=Dzj8sWqrhYS0",
+      "permanent": false
+    },
+    {
+      "source": "/bettercontact",
+      "destination": "https://bettercontact.rocks?fpr=dennis24",
+      "permanent": false
+    },
+    {
+      "source": "/instantly",
+      "destination": "https://instantly.ai/?via=dennis",
+      "permanent": false
+    },
+    {
+      "source": "/heyreach",
+      "destination": "https://heyreach.io/?via=dennisbh",
+      "permanent": false
+    },
+    {
+      "source": "/lemlist",
+      "destination": "https://get.lemlist.com/0vyu3mkjde4s",
+      "permanent": false
+    },
+    {
+      "source": "/n8n",
+      "destination": "https://n8n.partnerlinks.io/6ruiowq4rp7u",
+      "permanent": false
+    },
+    {
+      "source": "/fathom",
+      "destination": "https://fathom.partnerlinks.io/wjmi3cguftrk",
+      "permanent": false
+    },
+    {
+      "source": "/attio",
+      "destination": "https://www.attio.com?r=H3VNFvGpK1WU_99v",
+      "permanent": false
+    },
+    {
+      "source": "/clay-intro",
+      "destination": "https://youtu.be/qFiCEaLBeEI",
+      "permanent": false
+    },
+    {
+      "source": "/breakcold",
+      "destination": "https://www.breakcold.com/?via=dennis39",
+      "permanent": false
+    },
+    {
+      "source": "/gamma",
+      "destination": "https://try.gamma.app/ot7by7mktygr",
+      "permanent": false
+    }
+    
+  ]
+}
