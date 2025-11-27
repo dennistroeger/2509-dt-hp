@@ -56,8 +56,8 @@ export default function Home() {
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-slate-600 font-normal max-w-xl leading-relaxed">
               Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen
-              Kunden. Wir zeigen dir, wie du das ohne "Salesy"-Nachrichten
-              automatisierst.
+              Kunden. Wir zeigen dir, wie du das ohne
+              &quot;Salesy&quot;-Nachrichten automatisierst.
             </p>
 
             {/* CTA Group */}
@@ -68,7 +68,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 <span className="relative font-medium tracking-wide">
-                  Lass' uns sprechen
+                  Lass&apos; uns sprechen
                 </span>
                 <svg
                   className="w-4 h-4 ml-2 relative group-hover:translate-x-1 transition-transform"
