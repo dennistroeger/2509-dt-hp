@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book a Free Strategy Session",
+  title: "Kostenloses Strategiegespräch buchen",
   description:
-    "Learn in this free strategy session how you can predictably win high-paying clients with LinkedIn.",
+    "Erfahre in diesem kostenlosen Strategiegespräch, wie du planbar hochpreisige Kunden über LinkedIn gewinnst.",
 };
 
 export default function WorkshopLayout({
@@ -13,4 +13,3 @@ export default function WorkshopLayout({
 }) {
   return children;
 }
-

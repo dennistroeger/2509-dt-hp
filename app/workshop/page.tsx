@@ -66,16 +66,25 @@ export default function BookACallPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+    <div className="min-h-screen font-body text-slate-900 bg-[#F5F5F7] overflow-x-hidden selection:bg-[#fe5454] selection:text-white relative">
+      {/* Background Ambience */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[90vw] h-[90vw] bg-red-200/30 rounded-full blur-[120px] animate-blob mix-blend-multiply opacity-50"></div>
+        <div className="absolute top-[20%] right-[-20%] w-[80vw] h-[80vw] bg-orange-200/30 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply opacity-50"></div>
+        <div className="absolute bottom-[-20%] left-[10%] w-[70vw] h-[70vw] bg-pink-200/30 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-multiply opacity-50"></div>
+        {/* Grain overlay for texture */}
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-8 md:p-12">
           <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-              Book a Free Strategy Session
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#1d1d1f] mb-4 font-heading">
+              Kostenloses Strategiegespräch buchen
             </h1>
-            <p className="text-lg text-black max-w-2xl mx-auto">
-              Learn in this free strategy session how you can predictably win
-              high-paying clients with LinkedIn.
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Erfahre in diesem kostenlosen Strategiegespräch, wie du planbar
+              hochpreisige Kunden über LinkedIn gewinnst.
             </p>
           </div>
 
@@ -89,23 +98,40 @@ export default function BookACallPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-black mb-2">
-                What can you expect in the strategy session?
+            <div className="bg-slate-50/50 rounded-lg p-6 border border-slate-100">
+              <h3 className="text-lg font-semibold text-[#1d1d1f] mb-4 font-heading">
+                Was erwartet dich im Strategiegespräch?
               </h3>
-              <ul className="text-black space-y-1 text-left max-w-md mx-auto">
-                <li>• An analysis of your current LinkedIn strategy</li>
-                <li>• Concrete steps to reach your ideal clients</li>
-                <li>• Strategies for content that generates inquiries</li>
-                <li>• A clear plan for the next 90 days</li>
-                <li>• Answers to your specific questions</li>
+              <ul className="text-slate-600 space-y-2 text-left max-w-md mx-auto">
+                <li className="flex items-start">
+                  <span className="text-[#fe5454] mr-2">•</span>
+                  Eine Analyse deiner aktuellen LinkedIn-Strategie
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#fe5454] mr-2">•</span>
+                  Konkrete Schritte, um deine Wunschkunden zu erreichen
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#fe5454] mr-2">•</span>
+                  Strategien für Inhalte, die Anfragen generieren
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#fe5454] mr-2">•</span>
+                  Ein klarer Plan für die nächsten 90 Tage
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#fe5454] mr-2">•</span>
+                  Antworten auf deine individuellen Fragen
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <Footer />
+      <div className="relative z-10 border-t border-slate-200/60 bg-white/40 backdrop-blur-xl">
+        <Footer />
+      </div>
     </div>
   );
 }

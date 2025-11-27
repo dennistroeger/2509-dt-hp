@@ -3,7 +3,8 @@ import Footer from "./components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "High-Intent Meeting System™",
+  title:
+    "Premium-Kunden per DM gewinnen | Für KI-Experten & Berater | Gründer The Inbox Playbook",
 
   keywords:
     "Hackathon Acquisition System, LinkedIn, Acquisition, Sales, Marketing, Consulting, AI, Automation",
@@ -19,57 +20,94 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans text-slate-900 bg-[#F5F5F7] overflow-x-hidden selection:bg-[#0071e3] selection:text-white">
-      {/* Background Elements - Subtle / Liquid */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-blue-100/40 rounded-full blur-[120px] animate-blob mix-blend-multiply"></div>
-        <div className="absolute top-[10%] right-[-10%] w-[60%] h-[60%] bg-purple-100/40 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply"></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-[60%] h-[60%] bg-indigo-100/40 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-multiply"></div>
+    <div className="min-h-screen font-body text-slate-900 bg-[#F5F5F7] overflow-x-hidden selection:bg-[#fe5454] selection:text-white relative">
+      {/* Background Ambience */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[90vw] h-[90vw] bg-red-200/30 rounded-full blur-[120px] animate-blob mix-blend-multiply opacity-50"></div>
+        <div className="absolute top-[20%] right-[-20%] w-[80vw] h-[80vw] bg-orange-200/30 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply opacity-50"></div>
+        <div className="absolute bottom-[-20%] left-[10%] w-[70vw] h-[70vw] bg-pink-200/30 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-multiply opacity-50"></div>
+        {/* Grain overlay for texture */}
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
       </div>
 
-      {/* Main Content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-20">
-        {/* Glass Container - Apple Style */}
-        <div className="glass-apple w-full max-w-5xl mx-auto rounded-[2.5rem] p-1 transition-all duration-500 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.1)]">
-          <div className="bg-white/30 rounded-[2.4rem] p-8 sm:p-16 flex flex-col items-center text-center relative overflow-hidden group">
-            {/* Subtle Inner Glow */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/40 via-transparent to-white/40 pointer-events-none opacity-50"></div>
-
-            {/* Headline Badge */}
-            <div className="relative inline-flex items-center px-5 py-2 rounded-full bg-white/60 border border-white/60 backdrop-blur-xl mb-10 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
-              <span className="text-[11px] font-bold tracking-[0.15em] text-slate-500 uppercase">
-                Für KI-Experten & Consultants
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+          {/* Left Column: Text Content */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-8 animate-float-slow">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/60 border border-white/40 backdrop-blur-md shadow-sm">
+              <span className="flex h-2 w-2 relative mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fe5454] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#fe5454]"></span>
+              </span>
+              <span className="text-[11px] font-bold tracking-[0.15em] text-slate-600 uppercase font-heading">
+                Für KI-Experten & Berater
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-12 text-[#1d1d1f] drop-shadow-sm">
-              So wird aus einem <br className="hidden sm:block" />
-              <span className="inline-block relative">
-                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-br from-[#0071e3] to-[#9b5de5] px-2">
-                  ‚Hey 👋‘
-                </span>
-              </span>{" "}
-              Umsatz
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.0] text-[#1d1d1f] font-heading">
+              Generiere <br />
+              <span className="text-gradient">5+ qualifizierte</span>
+              <br />
+              Termine pro Woche
             </h1>
 
-            {/* Description */}
-            <p className="relative text-xl sm:text-2xl text-[#1d1d1f] font-medium max-w-2xl mb-12 leading-relaxed tracking-wide">
-              Bisher sind Termine mit Neukunden für dich mit hohem Aufwand
-              verbunden und unvorhersehbar? Direktnachrichten auf LinkedIn sind
-              oft der schnellste und einfachste Weg, um planbar Termine zu
-              buchen. Wie das funktioniert, verrate ich dir in diesem Video.
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl text-slate-600 font-normal max-w-xl leading-relaxed">
+              Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen
+              Kunden. Wir zeigen dir, wie du das ohne "Salesy"-Nachrichten
+              automatisierst.
             </p>
 
-            {/* Video Container - Apple Card Style */}
-            <div className="relative w-full max-w-3xl mb-16 group/video transition-transform duration-700 hover:scale-[1.01]">
-              <div className="absolute -inset-6 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-[2.5rem] blur-2xl opacity-0 group-hover/video:opacity-100 transition duration-1000"></div>
-              <div className="relative rounded-[1.5rem] overflow-hidden shadow-[0_20px_40px_-12px_rgba(0,0,0,0.12)] border border-white/40 bg-white/40 backdrop-blur-2xl">
+            {/* CTA Group */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-4">
+              <Link
+                href="/workshop"
+                className="group relative inline-flex items-center justify-center px-8 py-4 rounded-full overflow-hidden bg-[#fe5454] text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-red-500/25"
+              >
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <span className="relative font-medium tracking-wide">
+                  Lass' uns sprechen
+                </span>
+                <svg
+                  className="w-4 h-4 ml-2 relative group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+
+              <div className="flex items-center gap-2 px-6 py-4 rounded-full bg-white/40 border border-white/40 backdrop-blur-sm">
+                <span className="text-sm font-medium text-slate-600">
+                  Nur 3 Plätze / Woche
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Visual / Video */}
+          <div className="lg:col-span-5 relative mt-12 lg:mt-0 w-full">
+            {/* Decorative background for the video */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#fe5454]/10 to-orange-500/10 rounded-[2.5rem] blur-2xl -z-10"></div>
+
+            <div className="glass-panel rounded-[2rem] p-3 shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:-rotate-1">
+              <div className="relative rounded-[1.5rem] overflow-hidden bg-black/5 aspect-[16/9] shadow-inner">
                 <iframe
-                  src="https://player.mux.com/A3boCcTmLKzqTw3QE3LVg5wKl9Ri1KYrae7021qo005pM?metadata-video-title=Leads_With_AI&video-title=Leads_With_AI&accent-color=%230071e3"
+                  src="https://player.mux.com/A3boCcTmLKzqTw3QE3LVg5wKl9Ri1KYrae7021qo005pM?metadata-video-title=Leads_With_AI&video-title=Leads_With_AI&accent-color=%23fe5454"
                   style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
                     width: "100%",
-                    aspectRatio: "16/9",
+                    height: "100%",
                   }}
                   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                   allowFullScreen
@@ -77,40 +115,10 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
-
-            {/* Call to Action */}
-            <div className="flex flex-col items-center gap-8 w-full relative z-20">
-              <Link
-                href="/workshop"
-                className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full overflow-hidden bg-[#0071e3] hover:bg-[#0077ED] transition-all duration-300 shadow-[0_4px_14px_0_rgba(0,113,227,0.39)] hover:shadow-[0_6px_20px_rgba(0,113,227,0.23)] hover:scale-[1.02]"
-              >
-                <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <div className="flex flex-col items-center relative z-10">
-                  <span className="text-[10px] font-semibold text-white/80 uppercase tracking-widest mb-1">
-                    Für AI & Automation Consultants
-                  </span>
-                  <span className="text-lg font-medium text-white tracking-wide">
-                    Jetzt bewerben
-                  </span>
-                </div>
-              </Link>
-
-              {/* Scarcity */}
-              <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/50 border border-white/40 backdrop-blur-md shadow-sm">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34c759] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#34c759]"></span>
-                </span>
-                <span className="text-sm font-medium text-[#1d1d1f]/70">
-                  Nur 3 Plätze pro Woche verfügbar
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
       <div className="relative z-10 border-t border-slate-200/60 bg-white/40 backdrop-blur-xl">
         <Footer />
       </div>

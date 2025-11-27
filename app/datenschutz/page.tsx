@@ -3,8 +3,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Win Premium Customers with LinkedIn",
+  title: "Datenschutzerklärung",
+  description: "Datenschutzinformationen für Histack.io",
 };
 
 export default function Datenschutz() {
@@ -13,25 +13,39 @@ export default function Datenschutz() {
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8">
-            Privacy Policy
+            Datenschutzerklärung
           </h1>
 
           <div className="space-y-8">
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Hosting and Data Storage
+                Allgemeine Hinweise
+              </h2>
+              <div className="text-black leading-relaxed">
+                <p>
+                  Die folgenden Hinweise geben einen einfachen Überblick
+                  darüber, was mit Ihren personenbezogenen Daten passiert, wenn
+                  Sie diese Website besuchen. Personenbezogene Daten sind alle
+                  Daten, mit denen Sie persönlich identifiziert werden können.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-black mb-4">
+                Hosting und Datenspeicherung
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  This website is hosted on the <strong>Vercel</strong>{" "}
-                  platform. Vercel is a hosting service provider based in the
-                  USA. When you visit our website, certain data is automatically
-                  transmitted to Vercel, including your IP address, browser
-                  type, operating system, and access times.
+                  Diese Website wird bei <strong>Vercel</strong> gehostet.
+                  Vercel ist ein Hosting-Dienstleister mit Sitz in den USA. Wenn
+                  Sie unsere Website besuchen, werden automatisch bestimmte
+                  Daten an Vercel übermittelt, darunter Ihre IP-Adresse,
+                  Browsertyp, Betriebssystem und Zugriffszeiten.
                 </p>
                 <p>
-                  For more information about privacy at Vercel, please see the
-                  Vercel Privacy Policy:{" "}
+                  Weitere Informationen zum Datenschutz bei Vercel finden Sie in
+                  der Datenschutzerklärung von Vercel:{" "}
                   <a
                     href="https://vercel.com/legal/privacy-policy"
                     target="_blank"
@@ -46,23 +60,59 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Email Data Processing
+                Kommunikation und Dokumente (Google Workspace)
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  For processing email newsletters and email marketing, we use
-                  the <strong>Brevo</strong> service (formerly Sendinblue). When
-                  you subscribe to our newsletter or send us an email, your
-                  email address and associated data are stored on Brevo&apos;s
-                  servers.
+                  Wir nutzen <strong>Google Workspace</strong> (ehemals G Suite)
+                  von Google Ireland Limited, Gordon House, Barrow Street,
+                  Dublin 4, Irland, für unsere E-Mail-Kommunikation,
+                  Kalenderverwaltung und Dokumentenspeicherung.
                 </p>
                 <p>
-                  Brevo is a French provider with high data protection standards
-                  and GDPR compliance. Your data is transmitted and stored
-                  securely and encrypted.
+                  Wenn Sie uns per E-Mail kontaktieren, werden Ihre
+                  E-Mail-Adresse und die in der E-Mail enthaltenen Informationen
+                  auf den Servern von Google gespeichert. Google verarbeitet
+                  Daten auch in den USA. Wir haben mit Google entsprechende
+                  Verträge zur Auftragsverarbeitung abgeschlossen, die die
+                  Einhaltung europäischer Datenschutzstandards sicherstellen
+                  (Standardvertragsklauseln).
                 </p>
                 <p>
-                  For more information about privacy at Brevo, please see:{" "}
+                  Weitere Informationen finden Sie in der Datenschutzerklärung
+                  von Google:{" "}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:text-red-700 underline"
+                  >
+                    https://policies.google.com/privacy
+                  </a>
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-black mb-4">
+                E-Mail-Marketing und Newsletter
+              </h2>
+              <div className="space-y-4 text-black leading-relaxed">
+                <p>
+                  Für den Versand von Newslettern und E-Mail-Marketing nutzen
+                  wir den Dienst <strong>Brevo</strong> (ehemals Sendinblue).
+                  Wenn Sie sich für unseren Newsletter anmelden oder uns eine
+                  E-Mail senden, werden Ihre E-Mail-Adresse und zugehörige Daten
+                  auf den Servern von Brevo gespeichert.
+                </p>
+                <p>
+                  Brevo ist ein französischer Anbieter mit hohen
+                  Datenschutzstandards und DSGVO-Konformität. Ihre Daten werden
+                  sicher und verschlüsselt übertragen und gespeichert.
+                </p>
+                <p>
+                  Weitere Informationen zum Datenschutz bei Brevo finden Sie
+                  hier:{" "}
                   <a
                     href="https://www.brevo.com/de/legal/privacypolicy/"
                     target="_blank"
@@ -77,27 +127,30 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Usage Analytics with Microsoft Clarity
+                Analyse mit Microsoft Clarity
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  We work with Microsoft Clarity and Microsoft Advertising to
-                  capture how you use and interact with our website. This is
-                  done through behavioral metrics, heatmaps, and session replays
-                  to improve and market our products/services. Website usage
-                  data is collected using first- and third-party cookies and
-                  other tracking technologies to determine the popularity of
-                  products/services and online activities. Additionally, we use
-                  this information for website optimization, fraud/security
-                  purposes, and advertising. For more information about how
-                  Microsoft collects and uses your data, please see the{" "}
+                  Wir arbeiten mit Microsoft Clarity und Microsoft Advertising
+                  zusammen, um zu erfassen, wie Sie unsere Website nutzen und
+                  mit ihr interagieren. Dies geschieht durch Verhaltensmetriken,
+                  Heatmaps und Sitzungswiederholungen, um unsere
+                  Produkte/Dienstleistungen zu verbessern und zu vermarkten.
+                  Nutzungsdaten der Website werden unter Verwendung von Cookies
+                  von Erst- und Drittanbietern sowie anderen
+                  Tracking-Technologien erfasst, um die Beliebtheit von
+                  Produkten/Dienstleistungen und Online-Aktivitäten zu
+                  bestimmen. Zusätzlich verwenden wir diese Informationen zur
+                  Website-Optimierung, für Betrugs-/Sicherheitszwecke und
+                  Werbung. Weitere Informationen darüber, wie Microsoft Ihre
+                  Daten erhebt und verwendet, finden Sie in der{" "}
                   <a
                     href="https://privacy.microsoft.com/de-de/privacystatement"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-red-600 hover:text-red-700 underline"
                   >
-                    Microsoft Privacy Statement
+                    Datenschutzerklärung von Microsoft
                   </a>
                   .
                 </p>
@@ -106,52 +159,57 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Unsubscribe from Newsletter
+                Newsletter abbestellen
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  You can <strong>unsubscribe</strong> from the newsletter at
-                  any time without any disadvantages. Unsubscribing is free and
-                  can be done in several ways:
+                  Sie können den Newsletter jederzeit{" "}
+                  <strong>abbestellen</strong>, ohne dass Ihnen hierfür
+                  Nachteile entstehen. Die Abmeldung ist kostenlos und auf
+                  mehreren Wegen möglich:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    Click on the &quot;Unsubscribe&quot; link at the end of each
-                    newsletter email
+                    Klick auf den &quot;Abmelden&quot;-Link am Ende jeder
+                    Newsletter-E-Mail
                   </li>
                   <li>
-                    Send an email to{" "}
+                    Senden Sie eine E-Mail an{" "}
                     <a
                       href="mailto:info@histack.io"
                       className="text-red-600 hover:text-red-700 underline"
                     >
                       info@histack.io
                     </a>{" "}
-                    with the subject &quot;Unsubscribe newsletter&quot;
+                    mit dem Betreff &quot;Newsletter abbestellen&quot;
                   </li>
-                  <li>Contact us through the contact form on our website</li>
+                  <li>
+                    Kontaktieren Sie uns über das Kontaktformular auf unserer
+                    Website
+                  </li>
                 </ul>
                 <p>
-                  After unsubscribing, your email data will be deleted from our
-                  newsletter system, unless there are other legal reasons for
-                  storage.
+                  Nach der Abmeldung werden Ihre E-Mail-Daten aus unserem
+                  Newsletter-System gelöscht, sofern keine anderen rechtlichen
+                  Gründe für die Speicherung vorliegen.
                 </p>
               </div>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Your Rights
+                Ihre Rechte
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  You have the right to information, correction, deletion, and
-                  restriction of processing of your personal data. You also have
-                  the right to data portability and to object to processing.
+                  Sie haben das Recht auf Auskunft, Berichtigung, Löschung und
+                  Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.
+                  Zudem haben Sie das Recht auf Datenübertragbarkeit sowie ein
+                  Widerspruchsrecht gegen die Verarbeitung.
                 </p>
                 <p>
-                  If you have questions about data protection or wish to
-                  exercise your rights, please contact us at:{" "}
+                  Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte
+                  wahrnehmen möchten, kontaktieren Sie uns bitte unter:{" "}
                   <a
                     href="mailto:info@histack.io"
                     className="text-red-600 hover:text-red-700 underline"
@@ -164,26 +222,27 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Changes to the Privacy Policy
+                Änderungen der Datenschutzerklärung
               </h2>
               <div className="text-black leading-relaxed">
                 <p>
-                  We reserve the right to update this Privacy Policy as needed.
-                  The current version can always be found on this page. We will
-                  notify you of significant changes in a timely manner.
+                  Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu
+                  aktualisieren. Die aktuelle Version finden Sie immer auf
+                  dieser Seite. Über wesentliche Änderungen werden wir Sie
+                  rechtzeitig informieren.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-black mb-4">Contact</h2>
+              <h2 className="text-xl font-semibold text-black mb-4">Kontakt</h2>
               <div className="text-black">
                 <p>
                   <strong>Histack</strong>
                 </p>
                 <p>CEO: Konstantin Ristl</p>
                 <p>
-                  Email:{" "}
+                  E-Mail:{" "}
                   <a
                     href="mailto:info@histack.io"
                     className="text-red-600 hover:text-red-700 underline"
@@ -200,7 +259,7 @@ export default function Datenschutz() {
               href="/"
               className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
             >
-              ← Back to Home
+              ← Zurück zur Startseite
             </Link>
           </div>
         </div>
