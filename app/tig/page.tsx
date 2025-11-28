@@ -4,9 +4,30 @@ import Footer from "../components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Inbox Guide | 5-Phasen-Modell für LinkedIn Outreach",
+  title: "Generiere 5+ qualifizierte Termine pro Woche",
   description:
-    "Das 5-Phasen-Modell, mit dem unsere Kunden regelmäßig 16+ Termine / Monat buchen - ganz ohne Ads.",
+    "Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen Kunden. Wir zeigen dir, wie du das ohne \"Salesy\"-Nachrichten automatisierst.",
+  openGraph: {
+    title: "Generiere 5+ qualifizierte Termine pro Woche",
+    description:
+      "Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen Kunden. Wir zeigen dir, wie du das ohne \"Salesy\"-Nachrichten automatisierst.",
+    images: [
+      {
+        url: "/images/Animation_Inbox.gif",
+        width: 1200,
+        height: 630,
+        alt: "The Inbox Guide - LinkedIn Outreach System",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Generiere 5+ qualifizierte Termine pro Woche",
+    description:
+      "Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen Kunden. Wir zeigen dir, wie du das ohne \"Salesy\"-Nachrichten automatisierst.",
+    images: ["/images/Animation_Inbox.gif"],
+  },
 };
 
 const Infobox = ({
@@ -281,69 +302,69 @@ export default function TigPage() {
             </div>
 
             {/* Phase 1 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
-              <div className="inline-block px-4 py-1 rounded-full bg-[#fe5454]/10 text-[#fe5454] font-bold text-sm tracking-wide mb-2">
-                PHASE 1
-              </div>
+          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+            <div className="inline-block px-4 py-1 rounded-full bg-[#fe5454]/10 text-[#fe5454] font-bold text-sm tracking-wide mb-2">
+              PHASE 1
+            </div>
               <h3 className="text-3xl font-bold font-heading">
-                Interessenten finden (Signal-basiert)
+              Interessenten finden (Signal-basiert)
               </h3>
-              <p className="text-lg text-slate-600">
-                Ziel: Identifiziere aktive Leute in deiner Nische, mit denen man
-                am einfachsten ins Gespräch kommt.
-              </p>
+            <p className="text-lg text-slate-600">
+              Ziel: Identifiziere aktive Leute in deiner Nische, mit denen man
+              am einfachsten ins Gespräch kommt.
+            </p>
 
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div className="glass-card p-6 rounded-xl">
+              <div className="glass-card p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-3">
-                    Methode A - Wettbewerber-Kontakte
+                  Methode A - Wettbewerber-Kontakte
                   </h4>
                   <ol className="list-decimal pl-5 space-y-2 text-sm text-slate-700">
-                    <li>
-                      Finde einen Influencer oder Wettbewerber in deiner Nische.
-                    </li>
-                    <li>Öffne deren Kontakte.</li>
-                    <li>Filtere nach deinem ICP (Ideal Customer Profile).</li>
-                    <li>Füge die besten Treffer zu deiner Liste hinzu.</li>
-                  </ol>
-                </div>
+                  <li>
+                    Finde einen Influencer oder Wettbewerber in deiner Nische.
+                  </li>
+                  <li>Öffne deren Kontakte.</li>
+                  <li>Filtere nach deinem ICP (Ideal Customer Profile).</li>
+                  <li>Füge die besten Treffer zu deiner Liste hinzu.</li>
+                </ol>
+              </div>
 
-                <div className="glass-card p-6 rounded-xl">
+              <div className="glass-card p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-3">
-                    Methode B - Engagement Scrape
+                  Methode B - Engagement Scrape
                   </h4>
                   <ol className="list-decimal pl-5 space-y-2 text-sm text-slate-700">
-                    <li>Suche einen Influencer oder Wettbewerber.</li>
-                    <li>Öffne deren beste Posts.</li>
+                  <li>Suche einen Influencer oder Wettbewerber.</li>
+                  <li>Öffne deren beste Posts.</li>
                     <li>
                       Checke Likes und Kommentare (Das sind aktive Nutzer!).
                     </li>
-                    <li>Identifiziere deinen ICP von dort.</li>
-                  </ol>
-                </div>
+                  <li>Identifiziere deinen ICP von dort.</li>
+                </ol>
+            </div>
 
                 <div className="glass-card p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-3">
-                    Methode C - Unternehmenswebseiten scrapen
+                Methode C - Unternehmenswebseiten scrapen
                   </h4>
                   <p className="text-sm text-slate-700 mb-3">
-                    Scrapeli.io erlaubt es, dass du die Follower von
+                Scrapeli.io erlaubt es, dass du die Follower von
                     Unternehmensseiten auf LinkedIn scrapen kannst.
-                  </p>
-                  <a
-                    href="https://scrapeli.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+              </p>
+              <a
+                href="https://scrapeli.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                     className="text-[#fe5454] hover:underline text-sm font-medium block mb-2"
-                  >
-                    👉 https://scrapeli.io/ aufrufen
-                  </a>
+              >
+                👉 https://scrapeli.io/ aufrufen
+              </a>
                   <ul className="list-disc pl-5 text-sm text-slate-700">
                     <li>Wunschmenge an Followern wählen</li>
-                    <li>24h warten</li>
-                  </ul>
+                <li>24h warten</li>
+              </ul>
                 </div>
-              </div>
+            </div>
 
               <div className="bg-slate-50/50 p-6 rounded-xl">
                 <h4 className="font-bold mb-2">Tools, die ich verwende:</h4>
@@ -351,13 +372,13 @@ export default function TigPage() {
                   <li>RapidAPI (für Profile)</li>
                   <li>Serper (für Google Suche)</li>
                   <li>ScrapeLi.io (für Company Page Follower)</li>
-                  <li>
-                    Breakcold (oder Google Sheet) - Tracke: Akzeptanzrate,
-                    Einladungen, Antworten.
-                  </li>
-                </ul>
-              </div>
+                <li>
+                  Breakcold (oder Google Sheet) - Tracke: Akzeptanzrate,
+                  Einladungen, Antworten.
+                </li>
+              </ul>
             </div>
+          </div>
 
             {/* Phase 2 */}
             <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
@@ -385,11 +406,11 @@ export default function TigPage() {
                   </h4>
                   <p className="text-slate-600">Es muss klar aussagen:</p>
                   <ul className="list-disc pl-5 space-y-2 text-slate-700 font-medium">
-                    <li>Wen du unterstützt</li>
-                    <li>Welches Problem du löst</li>
-                    <li>Welches Ergebnis du lieferst</li>
-                  </ul>
-                </div>
+                  <li>Wen du unterstützt</li>
+                  <li>Welches Problem du löst</li>
+                  <li>Welches Ergebnis du lieferst</li>
+                </ul>
+              </div>
                 <div className="bg-white/40 p-6 rounded-xl text-center border border-white/60">
                   <span className="block text-sm text-slate-500 uppercase tracking-wider mb-1">
                     Tägliches Ziel
@@ -467,24 +488,24 @@ export default function TigPage() {
                 Ziel: Antwortrate durch den &quot;Mere-Exposure-Effect&quot;
                 (Vertrautheit) erhöhen.
               </p>
-            </div>
+          </div>
 
-            {/* Phase 4 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+          {/* Phase 4 */}
+          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
               <div className="inline-block px-4 py-1 rounded-full bg-[#9C88FF]/10 text-[#9C88FF] font-bold text-sm tracking-wide mb-2">
-                PHASE 4
-              </div>
+              PHASE 4
+            </div>
               <h3 className="text-3xl font-bold font-heading">
-                Gespräche starten (Ohne Pitching)
+              Gespräche starten (Ohne Pitching)
               </h3>
               <p className="text-slate-700">
                 Wenn sie annehmen, warte kurz (oder bis zum nächsten
                 Content-Stück).
               </p>
 
-              <div className="space-y-6">
+            <div className="space-y-6">
                 <h4 className="text-2xl font-bold">
-                  Gesprächseinstiege (Opener)
+                Gesprächseinstiege (Opener)
                 </h4>
 
                 <Infobox variant="amber">
@@ -494,7 +515,7 @@ export default function TigPage() {
                   als &quot;Copy & Paste&quot;.
                 </Infobox>
 
-                <div className="space-y-4">
+              <div className="space-y-4">
                   {[
                     {
                       title: "Nachricht 1",
@@ -523,11 +544,11 @@ export default function TigPage() {
                     >
                       <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">
                         {msg.title}
-                      </span>
+                  </span>
                       <p className="text-slate-800 italic font-medium">
                         {msg.text}
-                      </p>
-                    </div>
+                  </p>
+                </div>
                   ))}
                 </div>
 
@@ -544,7 +565,7 @@ export default function TigPage() {
                         ❌ Keine langen Textblöcke
                       </li>
                     </ul>
-                  </div>
+                </div>
                   <div className="bg-white/40 p-4 rounded-xl border border-white/60">
                     <h5 className="font-bold mb-2">
                       4.1 - Schnellen Rapport aufbauen
@@ -558,8 +579,8 @@ export default function TigPage() {
                     </ul>
                     <p className="text-xs text-slate-500 mt-2">
                       Signal: Sie teilen Details/stellen Fragen.
-                    </p>
-                  </div>
+                  </p>
+                </div>
                 </div>
 
                 <div className="border-t border-slate-200 pt-8">
@@ -569,20 +590,20 @@ export default function TigPage() {
                   <p className="text-slate-700 mb-6">
                     Du verkaufst nicht. Du lernst (Diagnose vor Rezept). Passe
                     auch diese Fragen an deinen Kontext an.
-                  </p>
+              </p>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
                       <h5 className="font-bold mb-2 text-slate-900">
                         Kernfragen:
                       </h5>
                       <ul className="list-disc pl-5 space-y-2 text-slate-700 italic">
-                        <li>„Wie gewinnst du aktuell Kunden auf LinkedIn?“</li>
+                    <li>„Wie gewinnst du aktuell Kunden auf LinkedIn?“</li>
                         <li>„Was ist gerade die größte Hürde dabei?“</li>
                         <li>„Ist es eine Priorität, das jetzt zu lösen?“</li>
-                      </ul>
-                    </div>
-                    <div>
+                  </ul>
+                </div>
+                <div>
                       <h5 className="font-bold mb-2 text-slate-900">
                         Signale:
                       </h5>
@@ -634,15 +655,15 @@ export default function TigPage() {
                       Erfolge, weil sie früher echte Gespräche führen.“
                     </p>
                   </div>
-                </div>
               </div>
             </div>
+          </div>
 
-            {/* Phase 5 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+          {/* Phase 5 */}
+          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
               <div className="inline-block px-4 py-1 rounded-full bg-[#FFD54F]/20 text-[#FF8F00] font-bold text-sm tracking-wide mb-2">
-                PHASE 5
-              </div>
+              PHASE 5
+            </div>
               <h3 className="text-3xl font-bold font-heading">
                 Zum Call überleiten (Sanft & Natürlich)
               </h3>
@@ -651,10 +672,10 @@ export default function TigPage() {
                 <div className="bg-white/40 p-5 rounded-xl border border-slate-200/60 shadow-sm">
                   <h4 className="font-bold text-slate-900 mb-2">Soft Ask</h4>
                   <p className="italic text-slate-700 text-sm">
-                    „Wir haben jetzt ein bisschen geschrieben – Lust, nächste
+                  „Wir haben jetzt ein bisschen geschrieben – Lust, nächste
                     Woche kurz zu telefonieren, um das zu vertiefen?“
-                  </p>
-                </div>
+                </p>
+              </div>
                 <div className="bg-white/40 p-5 rounded-xl border border-slate-200/60 shadow-sm">
                   <h4 className="font-bold text-slate-900 mb-2">
                     Wert versprechen
@@ -663,13 +684,13 @@ export default function TigPage() {
                     „Ich führe dich gerne kurz durch das System. Selbst wenn wir
                     nicht zusammenarbeiten, nimmst du auf jeden Fall einen
                     klaren Fahrplan mit.“
-                  </p>
-                </div>
+                </p>
+              </div>
                 <div className="bg-white/40 p-5 rounded-xl border border-slate-200/60 shadow-sm">
                   <h4 className="font-bold text-slate-900 mb-2">Link</h4>
                   <p className="italic text-slate-700 text-sm">
-                    „Hier ist mein Kalender, falls das einfacher ist: [Link]“
-                  </p>
+                  „Hier ist mein Kalender, falls das einfacher ist: [Link]“
+                </p>
                 </div>
               </div>
             </div>
@@ -689,7 +710,7 @@ export default function TigPage() {
                   <div className="bg-slate-100 p-6 rounded-xl border border-slate-200 flex-1 w-full">
                     <span className="text-xs uppercase font-bold text-slate-500 mb-2 block">
                       Follow-Up 1
-                    </span>
+                  </span>
                     <h4 className="font-bold text-lg mb-2">
                       Nach 3 Tagen ohne Antwort
                     </h4>
@@ -702,7 +723,7 @@ export default function TigPage() {
                   <div className="bg-slate-100 p-6 rounded-xl border border-slate-200 flex-1 w-full">
                     <span className="text-xs uppercase font-bold text-slate-500 mb-2 block">
                       Follow-Up 2
-                    </span>
+                  </span>
                     <h4 className="font-bold text-lg mb-2">
                       Nach weiteren 4 Tagen
                     </h4>
@@ -727,16 +748,16 @@ export default function TigPage() {
                       height={300}
                       className="object-cover"
                     />
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
             {/* What now */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 text-center space-y-8 bg-gradient-to-b from-white/80 to-white/60">
-              <h2 className="text-3xl sm:text-4xl font-bold font-heading">
-                Was jetzt zu tun ist
-              </h2>
+          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 text-center space-y-8 bg-gradient-to-b from-white/80 to-white/60">
+            <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+              Was jetzt zu tun ist
+            </h2>
               <p className="text-lg text-slate-600">
                 Du hast jetzt zwei Möglichkeiten:
               </p>
@@ -744,22 +765,22 @@ export default function TigPage() {
               <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-4 text-left">
                 <div className="p-8 rounded-2xl border border-slate-200/60 bg-white/40 backdrop-blur-sm">
                   <h3 className="text-xl font-bold mb-3 text-slate-900">
-                    Option 1 - Mach es allein
-                  </h3>
+                  Option 1 - Mach es allein
+                </h3>
                   <p className="text-slate-600 leading-relaxed">
                     Du kennst jetzt die Theorie. Du wirst herausfinden, wie du
                     die Variablen testest, aber es wird Zeit kosten, deine
                     Baseline zu finden.
-                  </p>
-                </div>
+                </p>
+              </div>
 
                 <div className="p-8 rounded-2xl border-2 border-[#fe5454]/20 bg-white/60 backdrop-blur-sm shadow-xl relative overflow-hidden group hover:border-[#fe5454]/40 transition-all">
                   <div className="absolute top-0 right-0 bg-[#fe5454] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
                     Empfohlen
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-slate-900">
-                    Option 2 - Arbeite mit mir
-                  </h3>
+                  Option 2 - Arbeite mit mir
+                </h3>
                   <p className="text-slate-600 mb-4">Du bekommst:</p>
                   <ul className="space-y-2 text-sm text-slate-700 mb-6">
                     <li className="flex items-center">
@@ -776,18 +797,18 @@ export default function TigPage() {
                     </li>
                   </ul>
                 </div>
-              </div>
+            </div>
 
               <div className="pt-4">
                 <p className="text-lg font-medium text-slate-800 mb-6">
                   Wenn das Sinn ergibt:
                 </p>
-                <Link
-                  href="/workshop"
+              <Link
+                href="/workshop"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#fe5454] text-white font-medium hover:bg-[#e04545] transition-all shadow-lg shadow-red-500/30 hover:scale-[1.02] text-lg"
-                >
-                  👉 Hier klicken für den Call
-                </Link>
+              >
+                👉 Hier klicken für den Call
+              </Link>
               </div>
             </div>
           </div>
