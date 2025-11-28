@@ -87,6 +87,17 @@ export default function TigPage() {
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
               Das 5-Phasen-Modell für 16+ Termine / Monat (Organic Outreach)
             </p>
+
+            <div className="flex justify-center my-4">
+              <Image
+                src="/images/Animation_White_TIP.gif"
+                alt="The Inbox Guide Animation"
+                width={300}
+                height={200}
+                className="rounded-lg shadow-md"
+                unoptimized
+              />
+            </div>
           </div>
 
           <Infobox title="Wichtiger Hinweis vorab:" variant="amber">
