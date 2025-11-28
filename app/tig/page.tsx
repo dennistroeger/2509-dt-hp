@@ -88,15 +88,7 @@ export default function TigPage() {
               Das 5-Phasen-Modell für 16+ Termine / Monat (Organic Outreach)
             </p>
 
-            <div className="flex justify-center my-4 w-full px-4">
-              <div className="w-full max-w-[300px] sm:max-w-[400px]">
-                <img
-                  src="/images/Animation_White_TIP.gif"
-                  alt="The Inbox Guide Animation"
-                  className="rounded-lg shadow-md w-full h-auto"
-                  loading="eager"
-                />
-              </div>
+
             </div>
           </div>
 
