@@ -159,6 +159,35 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
+                Webstatistiken mit Plausible Analytics
+              </h2>
+              <div className="space-y-4 text-black leading-relaxed">
+                <p>
+                  Wir nutzen <strong>Plausible Analytics</strong> auf einer
+                  Self-Hosted Instanz, um statistische Auswertungen der
+                  Seitenaufrufe zu erhalten. Plausible Analytics ist ein
+                  datenschutzfreundlicher Webanalysedienst, der keine Cookies
+                  verwendet und keine personenbezogenen Daten speichert.
+                </p>
+                <p>
+                  Da wir Plausible Analytics auf unseren eigenen Servern
+                  betreiben, bleiben alle Daten unter unserer Kontrolle und
+                  werden nicht an Dritte weitergegeben. Es werden lediglich
+                  anonymisierte, aggregierte Statistiken erfasst, wie z.B. die
+                  Anzahl der Seitenaufrufe, die Herkunft der Besucher (ohne
+                  IP-Adresse zu speichern) und die am häufigsten besuchten
+                  Seiten.
+                </p>
+                <p>
+                  Plausible Analytics ist DSGVO-konform und respektiert die
+                  Privatsphäre der Besucher. Es werden keine Cookies gesetzt und
+                  keine Fingerprinting-Technologien verwendet.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Newsletter abbestellen
               </h2>
               <div className="space-y-4 text-black leading-relaxed">
