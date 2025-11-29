@@ -33,7 +33,7 @@ export default function Home() {
       <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           {/* Left Column: Text Content */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-8 animate-float-slow">
+          <div className="lg:col-span-6 flex flex-col items-start text-left space-y-8 animate-float-slow">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/60 border border-white/40 backdrop-blur-md shadow-sm">
               <span className="flex h-2 w-2 relative mr-2">
@@ -94,14 +94,18 @@ export default function Home() {
           </div>
 
           {/* Right Column: Visual / Video */}
-          <div className="lg:col-span-5 relative mt-12 lg:mt-0 w-full">
+          <div className="lg:col-span-6 relative mt-12 lg:mt-0 w-full">
             {/* Decorative background for the video */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#fe5454]/10 to-orange-500/10 rounded-[2.5rem] blur-2xl -z-10"></div>
 
-            <div className="glass-panel rounded-[2rem] p-3 shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:-rotate-1">
-              <div className="relative rounded-[1.5rem] overflow-hidden bg-black/5 aspect-[16/9] shadow-inner">
+            <div className="glass-panel rounded-[2rem] p-2 shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:-rotate-1">
+              <div className="relative rounded-[1.5rem] overflow-hidden bg-black/5 shadow-inner" style={{ paddingBottom: "56.25%", height: 0 }}>
                 <iframe
-                  src="https://player.mux.com/A3boCcTmLKzqTw3QE3LVg5wKl9Ri1KYrae7021qo005pM?metadata-video-title=Leads_With_AI&video-title=Leads_With_AI&accent-color=%23fe5454"
+                  src="https://www.loom.com/embed/ad20713ad514492e8f4ff67c7736a73f"
+                  frameBorder="0"
+                  webkitAllowFullScreen
+                  mozAllowFullScreen
+                  allowFullScreen
                   style={{
                     position: "absolute",
                     top: 0,
@@ -109,8 +113,6 @@ export default function Home() {
                     width: "100%",
                     height: "100%",
                   }}
-                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                  allowFullScreen
                   className="w-full h-full"
                 ></iframe>
               </div>
