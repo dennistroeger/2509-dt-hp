@@ -103,8 +103,6 @@ export default function Home() {
                 <iframe
                   src="https://www.loom.com/embed/ad20713ad514492e8f4ff67c7736a73f"
                   frameBorder="0"
-                  webkitAllowFullScreen
-                  mozAllowFullScreen
                   allowFullScreen
                   style={{
                     position: "absolute",
