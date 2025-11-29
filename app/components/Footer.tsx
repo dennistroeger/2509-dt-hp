@@ -44,19 +44,6 @@ export default function Footer() {
             </p>
             <div className="text-xs text-slate-500 text-center md:text-right max-w-md space-y-3">
               <p>
-                Wir nutzen Microsoft Clarity, um zu verstehen, wie du unsere
-                Website nutzt und um unsere Produkte und Werbung zu verbessern.
-                Durch die Nutzung stimmst du der Datenerhebung durch uns und
-                Microsoft zu. Für Details siehe unsere{" "}
-                <Link
-                  href="/datenschutz"
-                  className="underline hover:text-[#FE5454] transition-colors"
-                >
-                  Datenschutzbestimmungen
-                </Link>
-                .
-              </p>
-              <p>
                 Ich verpflichte mich, deine Privatsphäre zu schützen. Ich nutze
                 die Informationen, die du bereitstellst, um dich über relevante
                 Inhalte, Produkte und Dienstleistungen zu informieren. Du kannst

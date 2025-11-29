@@ -127,38 +127,6 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
-                Analyse mit Microsoft Clarity
-              </h2>
-              <div className="space-y-4 text-black leading-relaxed">
-                <p>
-                  Wir arbeiten mit Microsoft Clarity und Microsoft Advertising
-                  zusammen, um zu erfassen, wie Sie unsere Website nutzen und
-                  mit ihr interagieren. Dies geschieht durch Verhaltensmetriken,
-                  Heatmaps und Sitzungswiederholungen, um unsere
-                  Produkte/Dienstleistungen zu verbessern und zu vermarkten.
-                  Nutzungsdaten der Website werden unter Verwendung von Cookies
-                  von Erst- und Drittanbietern sowie anderen
-                  Tracking-Technologien erfasst, um die Beliebtheit von
-                  Produkten/Dienstleistungen und Online-Aktivitäten zu
-                  bestimmen. Zusätzlich verwenden wir diese Informationen zur
-                  Website-Optimierung, für Betrugs-/Sicherheitszwecke und
-                  Werbung. Weitere Informationen darüber, wie Microsoft Ihre
-                  Daten erhebt und verwendet, finden Sie in der{" "}
-                  <a
-                    href="https://privacy.microsoft.com/de-de/privacystatement"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-red-600 hover:text-red-700 underline"
-                  >
-                    Datenschutzerklärung von Microsoft
-                  </a>
-                  .
-                </p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-black mb-4">
                 Webstatistiken mit Plausible Analytics
               </h2>
               <div className="space-y-4 text-black leading-relaxed">

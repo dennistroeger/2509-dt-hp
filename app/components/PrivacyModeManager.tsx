@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import Clarity from "@microsoft/clarity";
 
 const PRIVACY_COOKIE_NAME = "privacy-mode";
 
@@ -27,10 +26,6 @@ export default function PrivacyModeManager() {
         ad_storage: shouldBePrivate ? "denied" : "granted",
         analytics_storage: shouldBePrivate ? "denied" : "granted",
       });
-    }
-
-    if (!shouldBePrivate) {
-      Clarity.init("tnxc0fa3u7");
     }
   }, []);
 
