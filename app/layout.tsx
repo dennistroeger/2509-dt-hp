@@ -95,12 +95,14 @@ export default async function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PDJCH7GP');`}
+})(window,document,'script','dataLayer','GTM-TB527P97');`}
       </Script>
-      <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
+      >
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PDJCH7GP"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TB527P97"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
