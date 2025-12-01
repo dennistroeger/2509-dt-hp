@@ -156,6 +156,47 @@ export default function Datenschutz() {
 
             <section>
               <h2 className="text-xl font-semibold text-black mb-4">
+                Video-Kommunikation mit Loom
+              </h2>
+              <div className="space-y-4 text-black leading-relaxed">
+                <p>
+                  Wir nutzen <strong>Loom</strong> von Loom, Inc., 85 2nd
+                  Street, San Francisco, CA 94105, USA, für die Erstellung und
+                  den Versand von Video-Nachrichten und Video-Präsentationen.
+                </p>
+                <p>
+                  Wenn Sie ein Loom-Video von uns erhalten oder selbst ein Video
+                  erstellen und mit uns teilen, werden die Video-Daten auf den
+                  Servern von Loom gespeichert. Loom verarbeitet Daten in den
+                  USA. Wir haben mit Loom entsprechende Verträge zur
+                  Auftragsverarbeitung abgeschlossen, die die Einhaltung
+                  europäischer Datenschutzstandards sicherstellen
+                  (Standardvertragsklauseln).
+                </p>
+                <p>
+                  Loom erfasst technische Daten wie IP-Adressen,
+                  Geräteinformationen und Nutzungsstatistiken. Wenn Sie selbst
+                  Videos erstellen, werden auch Ihre Videoaufnahmen,
+                  Audioaufnahmen und Bildschirmaufnahmen gespeichert, sofern Sie
+                  diese mit uns teilen.
+                </p>
+                <p>
+                  Weitere Informationen zum Datenschutz bei Loom finden Sie in
+                  der Datenschutzerklärung von Loom:{" "}
+                  <a
+                    href="https://www.loom.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:text-red-700 underline"
+                  >
+                    https://www.loom.com/privacy
+                  </a>
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-black mb-4">
                 Newsletter abbestellen
               </h2>
               <div className="space-y-4 text-black leading-relaxed">

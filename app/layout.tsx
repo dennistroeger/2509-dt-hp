@@ -97,6 +97,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TB527P97');`}
       </Script>
+      <Script
+        id="plausible-analytics"
+        strategy="afterInteractive"
+        defer
+        data-domain="theinboxplaybook.com"
+        src="https://ijv90sca.rpcld.com/js/script.js"
+      />
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
       >
