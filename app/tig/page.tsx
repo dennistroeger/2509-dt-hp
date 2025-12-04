@@ -73,6 +73,12 @@ export default function TigPage() {
               The Inbox <span className="text-gradient">Guide</span>
             </h1>
 
+            <p className="text-lg sm:text-xl text-black max-w-2xl mx-auto font-medium opacity-90">
+              Ein komplettes Wachstumssystem, das dich auf LinkedIn skaliert —
+              keine Werbung, kein Betteln bei kalten Leads, und jede Menge KI,
+              um Zeit zu sparen und Burnout zu vermeiden.
+            </p>
+
             <p className="text-xl text-black max-w-2xl mx-auto font-medium">
               Die genaue Anleitung, wie wir mit LinkedIn planbar 5+ Termine pro
               Woche gewinnen

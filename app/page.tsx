@@ -55,9 +55,9 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-slate-600 font-normal max-w-xl leading-relaxed">
-              Direktnachrichten auf LinkedIn sind der schnellste Weg zu neuen
-              Kunden. Wir zeigen dir, wie du das ohne
-              &quot;Salesy&quot;-Nachrichten automatisierst.
+              Ein komplettes Wachstumssystem, das dich auf LinkedIn skaliert —
+              keine Werbung, kein Anbetteln kalter Leads, und jede Menge KI, um
+              Zeit zu sparen und Burnout zu vermeiden.
             </p>
 
             {/* CTA Group */}
@@ -99,7 +99,10 @@ export default function Home() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#fe5454]/10 to-orange-500/10 rounded-[2.5rem] blur-2xl -z-10"></div>
 
             <div className="glass-panel rounded-[2rem] p-2 shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:-rotate-1">
-              <div className="relative rounded-[1.5rem] overflow-hidden bg-black/5 shadow-inner" style={{ paddingBottom: "56.25%", height: 0 }}>
+              <div
+                className="relative rounded-[1.5rem] overflow-hidden bg-black/5 shadow-inner"
+                style={{ paddingBottom: "56.25%", height: 0 }}
+              >
                 <iframe
                   src="https://www.loom.com/embed/ad20713ad514492e8f4ff67c7736a73f?hideEmbedTopBar=true"
                   frameBorder="0"
