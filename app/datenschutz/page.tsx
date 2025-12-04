@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import CookieSettingsButton from "../components/CookieSettingsButton";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
@@ -255,6 +256,22 @@ export default function Datenschutz() {
                     info@histack.io
                   </a>
                 </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-black mb-4">
+                Cookie-Einstellungen
+              </h2>
+              <div className="space-y-4 text-black leading-relaxed">
+                <p>
+                  Sie können Ihre Cookie-Einstellungen jederzeit ändern. Klicken
+                  Sie auf den Button unten, um die Cookie-Banner erneut
+                  anzuzeigen und Ihre Präferenzen anzupassen.
+                </p>
+                <div className="pt-2">
+                  <CookieSettingsButton />
+                </div>
               </div>
             </section>
 

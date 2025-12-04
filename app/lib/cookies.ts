@@ -97,3 +97,11 @@ export function shouldShowBanner(): boolean {
   return getCookieConsent() === null;
 }
 
+/**
+ * Clear cookie consent (to show banner again)
+ */
+export function clearCookieConsent(): void {
+  if (typeof window === 'undefined') return;
+  document.cookie = `${COOKIE_NAME}=; path=/; max-age=0; SameSite=Lax`;
+}
+
