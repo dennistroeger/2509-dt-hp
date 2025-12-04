@@ -15,9 +15,13 @@ export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [consent, setConsentState] = useState<CookieConsent | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check if banner should be shown
+    // Set mounted to true to prevent hydration issues
+    setMounted(true);
+    
+    // Check if banner should be shown (only on client side)
     const shouldShow = shouldShowBanner();
     setShowBanner(shouldShow);
 
@@ -29,7 +33,23 @@ export default function CookieConsent() {
     if (existingConsent) {
       loadScriptsByConsent();
     }
+
+    // Listen for custom event to show banner (from CookieSettingsButton)
+    const handleShowBanner = () => {
+      setShowBanner(true);
+    };
+    
+    window.addEventListener('showCookieBanner', handleShowBanner);
+    
+    return () => {
+      window.removeEventListener('showCookieBanner', handleShowBanner);
+    };
   }, []);
+
+  // Don't render anything until mounted (prevents hydration mismatch)
+  if (!mounted) {
+    return null;
+  }
 
   const handleAcceptAll = () => {
     acceptAllCookies();

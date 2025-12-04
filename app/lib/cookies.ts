@@ -21,17 +21,31 @@ export function getCookieConsent(): CookieConsent | null {
   if (typeof window === 'undefined') return null;
 
   try {
-    const cookieValue = document.cookie
-      .split('; ')
-      .find((row) => row.startsWith(`${COOKIE_NAME}=`))
-      ?.split('=')[1];
+    // More robust cookie parsing that handles edge cases
+    const cookies = document.cookie.split(';');
+    let cookieValue: string | undefined;
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(`${COOKIE_NAME}=`)) {
+        cookieValue = cookie.substring(COOKIE_NAME.length + 1);
+        break;
+      }
+    }
 
     if (!cookieValue) return null;
 
     const decoded = decodeURIComponent(cookieValue);
-    return JSON.parse(decoded) as CookieConsent;
+    const parsed = JSON.parse(decoded) as CookieConsent;
+    
+    // Validate the parsed consent object
+    if (parsed && typeof parsed.functional === 'boolean' && typeof parsed.marketing === 'boolean') {
+      return parsed;
+    }
+    
+    return null;
   } catch (error) {
-    console.error('Error reading cookie consent:', error);
+    // Silently fail - cookie might be malformed or not exist
     return null;
   }
 }
