@@ -99,7 +99,7 @@ export default function Imprint() {
                   Erstellers.
                 </p>
                 <p className="mt-4">
-                  COPYRIGHT 2024® ALL RIGHTS RESERVED | Histack.io
+                  COPYRIGHT 2025® ALL RIGHTS RESERVED | Histack.io
                 </p>
               </div>
             </section>

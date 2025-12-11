@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Premium-Kunden per DM gewinnen | Für KI-Experten & Berater | Gründer The Inbox Playbook",
+    "Premium-Kunden per DM gewinnen | Für KI-Experten, Berater & Agenturen | Gründer The Inbox Playbook",
 
   keywords:
     "Hackathon Acquisition System, LinkedIn, Acquisition, Sales, Marketing, Consulting, AI, Automation",
@@ -41,7 +41,7 @@ export default function Home() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#fe5454]"></span>
               </span>
               <span className="text-[11px] font-bold tracking-[0.15em] text-slate-600 uppercase font-heading">
-                Für KI-Experten & Berater
+                Für Berater & Agenturen
               </span>
             </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-slate-600 font-normal max-w-xl leading-relaxed">
-              Ein komplettes Wachstumssystem, das dich auf LinkedIn skaliert —
+              Ein komplettes Wachstumssystem, das dich auf LinkedIn skaliert -
               keine Werbung, kein Anbetteln kalter Leads, und jede Menge KI, um
               Zeit zu sparen und Burnout zu vermeiden.
             </p>

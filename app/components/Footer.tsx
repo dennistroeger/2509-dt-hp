@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="border-t border-slate-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 gap-8">
             <p className="text-sm text-slate-400 text-center md:text-left font-mono uppercase tracking-wider">
-              COPYRIGHT 2024® ALLE RECHTE VORBEHALTEN | dennisdebus.com
+              COPYRIGHT 2025® ALLE RECHTE VORBEHALTEN | dennisdebus.com
             </p>
             <div className="text-xs text-slate-500 text-center md:text-right max-w-md space-y-3">
               <p>
