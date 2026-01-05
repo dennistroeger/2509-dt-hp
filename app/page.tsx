@@ -126,37 +126,35 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
                 <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 font-heading">
-                  Echte Ergebnisse statt <br />
-                  <span className="text-[#FE5454]">vager Versprechen.</span>
+                  Kein Rätselraten mehr. <br />
+                  <span className="text-[#FE5454]">Sondern ein System.</span>
                 </h2>
                 <div className="space-y-6">
                   <div className="p-8 rounded-3xl bg-slate-900 text-white space-y-6 shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#FE5454]/10 blur-3xl"></div>
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#FE5454]/20 border border-[#FE5454]/30 text-[#FE5454] text-[10px] font-bold uppercase tracking-widest">
-                      Neu & Exklusiv
+                      Beta-Phase
                     </div>
                     <h3 className="text-2xl font-bold font-heading leading-tight">
-                      Wir lassen Ergebnisse sprechen, <br />
-                      <span className="text-slate-400">
-                        statt langer Texte.
-                      </span>
+                      Wir bauen die Zukunft <br />
+                      <span className="text-slate-400">deiner Akquise.</span>
                     </h3>
                     <p className="text-lg text-slate-300 leading-relaxed">
                       Cyrano ist die nächste Evolutionsstufe unserer
                       Outreach-Strategie. Das System ist brandneu – deshalb
                       suchen wir aktuell die ersten 10 Partner, die mit uns
-                      solche Ergebnisse (siehe rechts) produzieren wollen.
+                      diese neue Ära des B2B-Vertriebs prägen wollen.
                     </p>
                     <div className="flex items-center gap-4 pt-4 border-t border-white/10">
                       <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-xl">
-                        🚀
+                        🏗️
                       </div>
                       <div>
                         <p className="text-sm font-bold">
-                          Werde unsere nächste Case-Study
+                          Werde unser Beta-Partner
                         </p>
                         <p className="text-xs text-slate-500">
-                          Sichere dir den Beta-Vorteil
+                          Sichere dir den First-Mover Vorteil
                         </p>
                       </div>
                     </div>
@@ -172,14 +170,14 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                     <p className="text-white text-sm font-bold italic">
-                      Live-Ansicht: 5 Termine an einem Tag durch das System.
+                      Das Ziel: So sieht ein Terminkalender mit Cyrano aus.
                     </p>
                   </div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 px-6 py-4 bg-white rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                  <div className="w-3 h-3 rounded-full bg-[#FE5454] animate-pulse"></div>
                   <p className="text-[12px] text-slate-900 font-bold uppercase tracking-tight">
-                    Live Ergebnisse
+                    Beta-Phase läuft
                   </p>
                 </div>
               </div>
@@ -332,6 +330,55 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 5.5 Software Showcase */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 sm:py-40 bg-[#F5F5F7] overflow-hidden">
+          <div className="max-w-6xl mx-auto flex flex-col items-center">
+            <div className="text-center max-w-3xl mx-auto space-y-6 mb-20">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-widest uppercase shadow-sm">
+                Product Deep-Dive
+              </div>
+              <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 font-heading">
+                Dein neuer <span className="text-[#FE5454]">Sidekick.</span>
+              </h2>
+              <p className="text-xl text-slate-600 leading-relaxed">
+                Cyrano analysiert das Profil deines Wunschkunden und liefert dir
+                in Sekunden 3 maßgeschneiderte Gesprächsaufhänger – eloquent,
+                psychologisch fundiert und unwiderstehlich.
+              </p>
+            </div>
+
+            <div className="relative w-full max-w-2xl mx-auto">
+              {/* Background Glows */}
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#FE5454]/10 rounded-full blur-[100px]"></div>
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px]"></div>
+
+              <div className="glass-panel p-3 md:p-6 rounded-[2.5rem] shadow-3xl bg-white border border-white relative z-10 overflow-hidden">
+                <img
+                  src="/images/screenshot ders software.png"
+                  alt="Screenshot der Cyrano Software - DM Sidekick"
+                  className="w-full h-auto rounded-xl shadow-2xl border border-slate-100 transition-transform duration-1000 hover:scale-[1.02]"
+                />
+              </div>
+
+              {/* Float Badge */}
+              <div className="absolute -bottom-10 -right-10 hidden md:flex flex-col p-6 rounded-[2rem] bg-white border border-slate-100 shadow-2xl z-20 max-w-[240px] animate-float">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-600 text-sm font-bold">
+                    ✓
+                  </div>
+                  <p className="text-sm font-bold text-slate-900">
+                    Live Analyse
+                  </p>
+                </div>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Basierend auf echten LinkedIn-Daten und deinem individuellen
+                  Copywriting-Stil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 6. Angebot Sektion (The Grand Slam Offer) */}
         <section
           id="stack"
@@ -369,8 +416,8 @@ export default function Home() {
                         value: "3.500 €",
                       },
                       {
-                        item: "Cyrano AI-Software (Lifetime Beta Access)",
-                        value: "1.200 €",
+                        item: "3 Monate 'Cyrano' Software-Lizenz",
+                        value: "450 €",
                       },
                       {
                         item: "The Inbox Playbook Lifetime Library",
@@ -406,7 +453,7 @@ export default function Home() {
                       Gesamtwert:
                     </span>
                     <span className="text-2xl font-bold line-through text-slate-600 tracking-tight">
-                      6.597 €
+                      5.847 €
                     </span>
                   </div>
                 </div>
@@ -491,7 +538,7 @@ export default function Home() {
                 },
                 {
                   q: "Wie schnell sehe ich Ergebnisse?",
-                  a: "Das ist keine 'Get Rich Quick' Nummer. Die ersten validen Termine kommen meist in Woche 3 oder 4, sobald die Kampagnen angelaufen sind.",
+                  a: "Da wir uns aktuell in der Beta-Phase befinden, optimieren wir das System gemeinsam mit dir. Die ersten validen Termine kommen meist in Woche 3 oder 4, sobald die individuellen Kampagnen angelaufen sind.",
                 },
               ].map((faq, i) => (
                 <div
