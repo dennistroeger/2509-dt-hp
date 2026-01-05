@@ -391,7 +391,7 @@ export default function Home() {
                       },
                       {
                         item: "BONUS: Individuelles Copywriting (2x 60 Min. Strategie-Beratung)",
-                        value: "1.000 €",
+                        value: "400 €",
                       },
                     ].map((li, i) => (
                       <li
@@ -415,7 +415,7 @@ export default function Home() {
                       Gesamtwert:
                     </span>
                     <span className="text-2xl font-bold line-through text-slate-600 tracking-tight">
-                      7.197 €
+                      6.597 €
                     </span>
                   </div>
                 </div>
@@ -527,9 +527,9 @@ export default function Home() {
               <span className="text-[#FE5454]">System-Check?</span>
             </h2>
             <p className="text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
-              Lass uns in 15 Minuten prüfen, wie wir dein LinkedIn-Profil in
-              eine Terminkalender-Maschine verwandeln. 100% Strategie, 0%
-              Verkaufsdruck.
+              In 20 Minuten erfährst du, wie unser Vertriebssystem dir hilft,
+              dein LinkedIn-Profil in eine Terminkalender-Maschine verwandeln.
+              100% Strategie, 0% Verkaufsdruck.
             </p>
             <div className="pt-10 flex flex-col items-center gap-6">
               <Link
