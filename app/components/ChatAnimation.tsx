@@ -122,32 +122,54 @@ export function ChatAnimation() {
           </div>
 
           {/* Suggestion Content */}
-          <div className="p-4 flex-1 bg-slate-50">
+          <div className="p-4 flex-1 bg-slate-50 overflow-y-auto custom-scrollbar">
             <div
-              className={`transition-all duration-500 delay-300 ${
+              className={`transition-all duration-500 delay-300 space-y-3 ${
                 step >= 3
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-2"
               }`}
             >
-              <div className="bg-white p-3 rounded-lg border border-blue-200 shadow-sm mb-3 cursor-pointer hover:border-blue-400 transition-colors group">
-                <div className="text-xs text-blue-600 font-bold mb-2 uppercase tracking-wide">
-                  Empfohlene Antwort
+              <div className="text-xs text-slate-400 font-bold uppercase tracking-widest mb-1">
+                3 KI-Vorschläge bereit
+              </div>
+
+              {/* Suggestion 1 (Selected) */}
+              <div className="bg-white p-3 rounded-lg border-2 border-blue-500 shadow-md cursor-pointer relative overflow-hidden group">
+                <div className="absolute top-0 right-0 bg-blue-500 text-white text-[8px] px-1.5 py-0.5 rounded-bl font-bold">
+                  BESTER MATCH
                 </div>
-                <p className="text-slate-700 text-sm mb-3">
-                  Gerne! Wir analysieren erst deine aktuelle Pipeline und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
+                <div className="text-[10px] text-blue-600 font-bold mb-1 uppercase tracking-wide">
+                  Option 1: Direkt & Charmant
+                </div>
+                <p className="text-slate-700 text-[13px] leading-snug mb-2">
+                  Gerne! Wir analysieren erst deine aktuelle Pipeline und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min?
                 </p>
                 <div className="flex justify-end">
-                  <button className="text-[10px] bg-blue-50 text-blue-600 px-2 py-1 rounded font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <button className="text-[10px] bg-blue-600 text-white px-2 py-1 rounded font-bold shadow-sm">
                     Übernehmen ↵
                   </button>
                 </div>
               </div>
-              
-              <div className="flex gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-slate-300"></div>
-                <div className="h-1.5 w-1.5 rounded-full bg-slate-300"></div>
-                <div className="h-1.5 w-1.5 rounded-full bg-slate-300"></div>
+
+              {/* Suggestion 2 */}
+              <div className="bg-white/60 p-3 rounded-lg border border-slate-200 opacity-60 scale-95 origin-top transition-all hover:opacity-100 hover:scale-100 cursor-pointer">
+                <div className="text-[10px] text-slate-500 font-bold mb-1 uppercase tracking-wide">
+                  Option 2: Case Study Fokus
+                </div>
+                <p className="text-slate-600 text-[13px] leading-snug">
+                  Klar! Ich kann dir zeigen, wie wir für eine ähnliche Agentur 12 Termine in 30 Tagen generiert haben...
+                </p>
+              </div>
+
+              {/* Suggestion 3 */}
+              <div className="bg-white/60 p-3 rounded-lg border border-slate-200 opacity-40 scale-90 origin-top transition-all hover:opacity-100 hover:scale-100 cursor-pointer">
+                <div className="text-[10px] text-slate-500 font-bold mb-1 uppercase tracking-wide">
+                  Option 3: Kurz & Knapp
+                </div>
+                <p className="text-slate-600 text-[13px] leading-snug">
+                  Danke! Am besten schauen wir uns das kurz in einer Demo an. Passt dir Dienstag?
+                </p>
               </div>
             </div>
           </div>
