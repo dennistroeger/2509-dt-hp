@@ -99,18 +99,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 2. Social Proof Bar */}
-        <section className="py-16 bg-[#F5F5F7] border-y border-slate-200">
+        {/* 2. Tech Stack Bar */}
+        <section className="py-12 bg-[#F5F5F7] border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <p className="text-sm font-bold text-slate-400 uppercase tracking-[0.3em] mb-2">
-                Aktueller Status
-              </p>
-              <div className="text-3xl md:text-4xl font-bold font-heading text-slate-900">
-                <span className="text-[#FE5454]">1.240+</span> generierte
-                B2B-Termine für unsere Kunden.
-              </div>
-            </div>
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale contrast-125">
               <span className="font-bold text-2xl tracking-tighter">
                 LinkedIn
