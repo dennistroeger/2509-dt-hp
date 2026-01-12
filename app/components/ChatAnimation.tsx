@@ -82,7 +82,7 @@ export function ChatAnimation() {
               </div>
               <div className="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-none shadow-md max-w-md">
                 <p className="text-sm leading-relaxed">
-                  Gerne! Wir analysieren erst deine aktuelle Pipeline und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
+                  Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export function ChatAnimation() {
             <div className="w-full h-full rounded-lg border border-slate-200 bg-slate-50 p-3 flex items-center text-slate-400 text-sm">
               {step >= 4 && step < 5 ? (
                 <span className="text-slate-800 animate-pulse">
-                  Gerne! Wir analysieren erst deine aktuelle Pipeline...|
+                  Gerne! Wir analysieren erst deinen aktuellen Prozess...|
                 </span>
               ) : (
                 "Nachricht schreiben..."
@@ -143,7 +143,7 @@ export function ChatAnimation() {
                   Option 1: Direkt & Charmant
                 </div>
                 <p className="text-slate-700 text-[13px] leading-snug mb-2">
-                  Gerne! Wir analysieren erst deine aktuelle Pipeline und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min?
+                  Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min?
                 </p>
                 <div className="flex justify-end">
                   <button className="text-[10px] bg-blue-600 text-white px-2 py-1 rounded font-bold shadow-sm">
@@ -155,7 +155,7 @@ export function ChatAnimation() {
               {/* Suggestion 2 */}
               <div className="bg-white/60 p-3 rounded-lg border border-slate-200 opacity-60 scale-95 origin-top transition-all hover:opacity-100 hover:scale-100 cursor-pointer">
                 <div className="text-[10px] text-slate-500 font-bold mb-1 uppercase tracking-wide">
-                  Option 2: Case Study Fokus
+                  Option 2: Erfolgsbeispiel
                 </div>
                 <p className="text-slate-600 text-[13px] leading-snug">
                   Klar! Ich kann dir zeigen, wie wir für eine ähnliche Agentur 12 Termine in 30 Tagen generiert haben...
@@ -168,7 +168,7 @@ export function ChatAnimation() {
                   Option 3: Kurz & Knapp
                 </div>
                 <p className="text-slate-600 text-[13px] leading-snug">
-                  Danke! Am besten schauen wir uns das kurz in einer Demo an. Passt dir Dienstag?
+                  Danke! Am besten schauen wir uns das kurz in einer Video-Vorstellung an. Passt dir Dienstag?
                 </p>
               </div>
             </div>

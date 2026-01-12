@@ -6,7 +6,7 @@ import { ChatAnimation } from "./components/ChatAnimation";
 export const metadata: Metadata = {
   title: "The Inbox Playbook | 5-10 qualifizierte B2B-Termine pro Monat",
   description:
-    "Wir bauen dein LinkedIn-System auf, bis die Pipeline steht. Hybride Strategie aus KI-gestützter Software und High-Level Consulting. 100% Ergebnis-Garantie.",
+    "Wir bauen dein LinkedIn-System auf, bis der Kundenfluss steht. Hybride Strategie aus KI-gestützter Software und High-Level Consulting. 100% Ergebnis-Garantie.",
 };
 
 export default function Home() {
@@ -69,8 +69,8 @@ export default function Home() {
               {/* Subheadline */}
               <p className="text-xl sm:text-2xl text-slate-600 font-normal max-w-3xl mx-auto leading-relaxed">
                 Wir installieren dein „Cyrano-System“: Die erste hybride Lösung
-                aus KI-Outreach und High-Level Strategie, die deine Akquise
-                übernimmt, während du dich auf das Closing konzentrierst.
+                aus KI-gestützter Kundenansprache und High-Level Strategie, die deine Akquise
+                übernimmt, während du dich auf die Verkaufsgespräche konzentrierst.
               </p>
 
               {/* CTA Group */}
@@ -141,7 +141,7 @@ export default function Home() {
                     </h3>
                     <p className="text-lg text-slate-300 leading-relaxed">
                       Cyrano ist die nächste Evolutionsstufe unserer
-                      Outreach-Strategie. Das System ist brandneu – deshalb
+                      Strategie zur Kundengewinnung. Das System ist brandneu – deshalb
                       suchen wir aktuell die ersten 10 Partner, die mit uns
                       diese neue Ära des B2B-Vertriebs prägen wollen.
                     </p>
@@ -165,7 +165,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white rounded-[2.5rem] border-8 border-slate-100 shadow-2xl flex items-center justify-center overflow-hidden group">
                   <img
                     src="/images/kalendereinträge.png"
-                    alt="Voller Terminkalender durch Cyrano Outreach"
+                    alt="Voller Terminkalender durch Cyrano Kundengewinnung"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
@@ -208,23 +208,23 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  title: "Kein Bot-Vibe",
-                  text: "Die Software passt sich zu 100% deinem Schreibstil und Funnel an. Keine generischen Nachrichten, sondern Outreach, der nach dir klingt.",
+                  title: "Kein Roboter-Gefühl",
+                  text: "Die Software passt sich zu 100% deinem Schreibstil und Verkaufsprozess an. Keine generischen Phrasen, sondern Nachrichten, die nach dir klingen.",
                   icon: "🎭",
                 },
                 {
-                  title: "Full-Funnel Fit",
-                  text: "Ob Demo-Call, Whitepaper oder Direkt-Sale: Cyrano steuert deine Leads exakt dorthin, wo dein Prozess am stärksten ist.",
+                  title: "Passt in jeden Ablauf",
+                  text: "Ob Erstgespräch, Info-Material oder Direktverkauf: Cyrano steuert deine Interessenten exakt dorthin, wo dein Prozess am stärksten ist.",
                   icon: "⚙️",
                 },
                 {
-                  title: "High-Intent Leads",
-                  text: "Wir helfen dir mit den richtigen Sales Navigator Einstellungen und der LinkedIn-Suche kaufbereite Leads zu finden.",
+                  title: "Kaufbereite Kontakte",
+                  text: "Wir helfen dir mit den richtigen Filtern und der LinkedIn-Suche genau die Entscheider zu finden, die jetzt Bedarf haben.",
                   icon: "🎯",
                 },
                 {
-                  title: "Follow-Up Automatik",
-                  text: "Das Geld liegt im Follow-up. Wer manuell arbeitet, vergisst 50% der Deals. Cyrano lässt niemanden durch das Netz fallen.",
+                  title: "Automatisches Nachfassen",
+                  text: "Der Erfolg liegt im Dranbleiben. Wer manuell arbeitet, vergisst 50% der Chancen. Cyrano lässt niemanden durch das Netz fallen.",
                   icon: "⌛",
                 },
               ].map((item, idx) => (
@@ -262,7 +262,7 @@ export default function Home() {
                     Inspiriert von <strong>Cyrano de Bergerac</strong>, dem
                     Dichter, der einem Freund half, die richtigen Worte für
                     seine Angebetete zu finden. Genau das sind wir für dich: Der
-                    unsichtbare Souffleur für perfekten Outreach.
+                    unsichtbare Souffleur für die perfekte Ansprache.
                   </p>
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function Home() {
                 Der Fahrplan
               </div>
               <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 font-heading">
-                3 Phasen zur Pipeline-Dominanz
+                3 Phasen zum vollen Terminkalender
               </h2>
             </div>
 
@@ -301,9 +301,9 @@ export default function Home() {
                 },
                 {
                   step: "03",
-                  title: "Gezielter Outreach",
+                  title: "Gezielte Ansprache",
                   duration: "Ab Woche 3",
-                  text: "Start der 'Cyrano'-Kampagnen. Personalisierte Ansprache statt Massennachrichten. Wir generieren die ersten qualifizierten Termine.",
+                  text: "Start der 'Cyrano'-Kampagnen. Personalisierte Nachrichten statt Massenversand. Wir generieren die ersten qualifizierten Termine.",
                 },
               ].map((item, idx) => (
                 <div
@@ -372,7 +372,7 @@ export default function Home() {
                 </div>
                 <p className="text-xs text-slate-500 leading-relaxed">
                   Basierend auf echten LinkedIn-Daten und deinem individuellen
-                  Copywriting-Stil.
+                  Schreibstil.
                 </p>
               </div>
             </div>
@@ -428,7 +428,7 @@ export default function Home() {
                         value: "500 €",
                       },
                       {
-                        item: "BONUS: Individuelles Copywriting (2x 60 Min. Strategie-Beratung)",
+                        item: "BONUS: Individuelles Werbetexten (2x 60 Min. Strategie-Beratung)",
                         value: "400 €",
                       },
                     ].map((li, i) => (
