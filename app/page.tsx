@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen font-body text-slate-900 bg-white overflow-x-hidden selection:bg-[#FE5454] selection:text-white relative">
-      {/* Background Ambience */}
+      {/* Background Ambiente */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] w-[70vw] h-[70vw] bg-[#FE5454]/5 rounded-full blur-[120px] mix-blend-multiply opacity-50"></div>
         <div className="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-blue-50/30 rounded-full blur-[120px] mix-blend-multiply opacity-50"></div>
@@ -25,7 +25,7 @@ export default function Home() {
           href="https://cal.com/dennis-debus/"
           className="group relative flex items-center gap-3 px-6 py-4 rounded-full bg-slate-900 text-white font-bold shadow-2xl transition-all hover:scale-105 hover:bg-[#FE5454]"
         >
-          <span className="text-sm">Jetzt System-Demo sichern</span>
+          <span className="text-sm">STRATEGIE-GESPRÄCH VEREINBAREN</span>
           <svg
             className="w-4 h-4 transition-transform group-hover:translate-x-1"
             fill="none"
@@ -60,17 +60,17 @@ export default function Home() {
 
               {/* Headline */}
               <h1 className="text-5xl sm:text-7xl lg:text-[92px] font-extrabold tracking-tight leading-[1.05] text-slate-900 font-heading">
-                5-10 qualifizierte B2B-Termine <br />
+                Souveräne LinkedIn-Akquise. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">
-                  in deinem Kalender – garantiert.
+                  Planbare Termine statt Zufall.
                 </span>
               </h1>
 
-              {/* Subheadline */}
+              {/* Subheadline Update */}
               <p className="text-xl sm:text-2xl text-slate-600 font-normal max-w-3xl mx-auto leading-relaxed">
-                Wir installieren dein „Cyrano-System“: Die erste hybride Lösung
-                aus KI-gestützter Kundenansprache und High-Level Strategie, die deine Akquise
-                übernimmt, während du dich auf die Verkaufsgespräche konzentrierst.
+                Das 12-Wochen Mentoring-Programm inkl. KI-Wingman
+                &quot;Cyrano&quot;. Wir liefern die Strategie, du führst die
+                Gespräche. Nie wieder sprachlos im Chat.
               </p>
 
               {/* CTA Group */}
@@ -80,7 +80,7 @@ export default function Home() {
                     href="https://cal.com/dennis-debus/"
                     className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full bg-[#FE5454] text-white font-bold text-lg transition-all hover:bg-red-500 hover:scale-[1.02] shadow-[0_20px_50px_rgba(254,84,84,0.3)]"
                   >
-                    JETZT SYSTEM-DEMO SICHERN
+                    POTENZIAL-ANALYSE BUCHEN
                   </Link>
                   <p className="text-xs text-slate-400 font-medium tracking-wide">
                     Kein Verkaufs-Pitch. In 15 Min zum individuellen Fahrplan.
@@ -100,22 +100,56 @@ export default function Home() {
         </section>
 
         {/* 2. Tech Stack Bar */}
-        <section className="py-12 bg-[#F5F5F7] border-y border-slate-200">
+        <section className="py-16 bg-[#F5F5F7] border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale contrast-125">
-              <span className="font-bold text-2xl tracking-tighter">
-                LinkedIn
-              </span>
-              <span className="font-bold text-2xl tracking-tighter">
-                Sales Navigator
-              </span>
-              <span className="font-bold text-2xl tracking-tighter">
-                OpenAI
-              </span>
-              <span className="font-bold text-2xl tracking-tighter">
-                HubSpot
-              </span>
-              <span className="font-bold text-2xl tracking-tighter">Slack</span>
+            <p className="text-center text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">
+              Nahtlose Integration in deinen Workflow
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:opacity-100 transition-all duration-500">
+              <div className="flex items-center gap-2 group">
+                <div className="w-8 h-8 bg-[#0077B5] rounded flex items-center justify-center text-white font-bold text-xs transition-transform group-hover:scale-110">
+                  in
+                </div>
+                <span className="font-bold text-2xl tracking-tighter">
+                  LinkedIn
+                </span>
+              </div>
+              <div className="flex items-center gap-2 group">
+                <div className="w-8 h-8 bg-[#0077B5] rounded flex items-center justify-center text-white font-bold text-[8px] transition-transform group-hover:scale-110">
+                  NAV
+                </div>
+                <span className="font-bold text-2xl tracking-tighter">
+                  Sales Navigator
+                </span>
+              </div>
+              <div className="flex items-center gap-2 group">
+                <div className="w-8 h-8 bg-[#10A37F] rounded flex items-center justify-center text-white transition-transform group-hover:scale-110">
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5153-4.9022 6.0462 6.0462 0 0 0-4.385-3.1097 6.0293 6.0293 0 0 0-5.4327 1.2916 6.0718 6.0718 0 0 0-4.081 3.2033 6.0402 6.0402 0 0 0 .199 5.3456 6.0227 6.0227 0 0 0 .5153 4.9022 6.0462 6.0462 0 0 0 4.385 3.1097 6.0293 6.0293 0 0 0 5.4327-1.2916 6.0718 6.0718 0 0 0 4.081-3.2033 6.0402 6.0402 0 0 0-.199-5.3456z" />
+                  </svg>
+                </div>
+                <span className="font-bold text-2xl tracking-tighter">
+                  OpenAI
+                </span>
+              </div>
+              <div className="flex items-center gap-2 group">
+                <div className="w-8 h-8 bg-[#FF7A59] rounded flex items-center justify-center text-white transition-transform group-hover:scale-110">
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M11.2 12.1v2.5L9 16.5l-2.2-1.9v-2.5l2.2-1.9 2.2 2z" />
+                  </svg>
+                </div>
+                <span className="font-bold text-2xl tracking-tighter">
+                  HubSpot
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -140,8 +174,8 @@ export default function Home() {
                       <span className="text-slate-400">deiner Akquise.</span>
                     </h3>
                     <p className="text-lg text-slate-300 leading-relaxed">
-                      Cyrano ist die nächste Evolutionsstufe unserer
-                      Strategie zur Kundengewinnung. Das System ist brandneu – deshalb
+                      Cyrano ist die nächste Evolutionsstufe unserer Strategie
+                      zur Kundengewinnung. Das System ist brandneu – deshalb
                       suchen wir aktuell die ersten 10 Partner, die mit uns
                       diese neue Ära des B2B-Vertriebs prägen wollen.
                     </p>
@@ -182,6 +216,47 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Chat Proofs (Added for Trust) */}
+            <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  sender: "Interessent",
+                  msg: "Spannender Ansatz. Hättest du am Donnerstag Zeit für einen kurzen Austausch?",
+                  time: "14:22",
+                },
+                {
+                  sender: "Interessent",
+                  msg: "Endlich mal keine 08/15 Nachricht. Das Thema KI-Outreach beschäftigt uns gerade sehr.",
+                  time: "Gestern",
+                },
+                {
+                  sender: "Interessent",
+                  msg: "Können wir dazu mal telefonieren? Deine Nachricht hat genau einen Nerv getroffen.",
+                  time: "11:05",
+                },
+              ].map((chat, i) => (
+                <div
+                  key={i}
+                  className="p-6 rounded-3xl bg-slate-50 border border-slate-100 space-y-4 hover:bg-white hover:shadow-xl transition-all duration-500"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-slate-200"></div>
+                    <div className="flex-1">
+                      <div className="h-2 w-16 bg-slate-200 rounded"></div>
+                    </div>
+                    <span className="text-[10px] text-slate-400 font-mono">
+                      {chat.time}
+                    </span>
+                  </div>
+                  <div className="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100">
+                    <p className="text-sm text-slate-600 font-medium italic">
+                      &quot;{chat.msg}&quot;
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -193,15 +268,14 @@ export default function Home() {
                 Die Realität
               </div>
               <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 font-heading">
-                Du hast kein Sales-Problem. <br />
+                Das Problem ist nicht fehlende Disziplin. <br />
                 <span className="text-slate-400">
-                  Dir fehlt die Infrastruktur.
+                  Das Problem ist das &quot;Blank Page Syndrome&quot;.
                 </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                Die meisten B2B-Unternehmer verbringen 80% ihrer Zeit mit
-                Profilsuche und Nachrichten tippen. Das ist keine Arbeit für
-                einen CEO. Das ist Arbeit für ein System.
+                Du starrst auf den blinkenden Cursor und weißt nicht, was du
+                schreiben sollst, ohne wie ein schmieriger Verkäufer zu klingen.
               </p>
             </div>
 
@@ -248,9 +322,10 @@ export default function Home() {
         {/* 4. Cyrano Origin Box */}
         <section className="px-4 py-12 bg-[#F5F5F7]">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-panel p-10 md:p-12 rounded-[3rem] border-white shadow-xl flex flex-col md:flex-row gap-10 items-center">
-              <div className="w-24 h-24 shrink-0 rounded-full bg-white flex items-center justify-center text-5xl shadow-inner">
-                🤥
+            <div className="relative glass-panel p-10 md:p-12 rounded-[3rem] border-white shadow-xl flex flex-col md:flex-row gap-10 items-center overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FE5454]/5 blur-3xl -z-10"></div>
+              <div className="w-24 h-24 shrink-0 rounded-3xl bg-slate-900 flex items-center justify-center text-5xl shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                <span className="filter drop-shadow-lg">🖋️</span>
               </div>
               <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-3xl font-bold font-heading text-slate-900 leading-tight">
@@ -260,9 +335,14 @@ export default function Home() {
                 <div className="prose prose-slate text-slate-600 text-lg leading-relaxed">
                   <p>
                     Inspiriert von <strong>Cyrano de Bergerac</strong>, dem
-                    Dichter, der einem Freund half, die richtigen Worte für
-                    seine Angebetete zu finden. Genau das sind wir für dich: Der
-                    unsichtbare Souffleur für die perfekte Ansprache.
+                    meisterhaften Dichter und Fechter, der im Schatten stand, um
+                    seinem Freund die perfekten Worte für seine Briefe
+                    einzuflüstern.
+                  </p>
+                  <p className="text-base text-slate-500 italic font-medium">
+                    Genau das ist unsere Software für dich: Dein unsichtbarer
+                    Souffleur, der sicherstellt, dass jede Nachricht ein
+                    Volltreffer ist.
                   </p>
                 </div>
               </div>
@@ -289,21 +369,21 @@ export default function Home() {
               {[
                 {
                   step: "01",
-                  title: "Wunschkunden definieren",
-                  duration: "Woche 1",
-                  text: "Wir analysieren deine besten Kunden und erstellen ein präzises Profil. Wer kauft am schnellsten? Wer zahlt am meisten?",
+                  title: "Setup & Positionierung",
+                  duration: "Woche 1-2",
+                  text: "Wir schärfen dein Profil und definieren deine Wunschkunden. Dein Fundament muss stehen, bevor wir Traffic draufgeben.",
                 },
                 {
                   step: "02",
-                  title: "Quellen erschließen",
-                  duration: "Woche 2",
-                  text: "Wir identifizieren die exakten Datenquellen im Sales Navigator. Wo halten sich diese Entscheider auf? Wie filtern wir Streuverluste raus?",
+                  title: "Cyrano Installation",
+                  duration: "Woche 3",
+                  text: "Du erhältst Zugang zur Software. Wir richten gemeinsam die Filter im Sales Navigator ein und trainieren die KI auf deine Tonalität.",
                 },
                 {
                   step: "03",
-                  title: "Gezielte Ansprache",
-                  duration: "Ab Woche 3",
-                  text: "Start der 'Cyrano'-Kampagnen. Personalisierte Nachrichten statt Massenversand. Wir generieren die ersten qualifizierten Termine.",
+                  title: "Routine & Skalierung",
+                  duration: "Woche 4-12",
+                  text: "Tägliche Routine: 15 Min für 5-10 Termine. Wir optimieren deine Chats in wöchentlichen Calls, bis der Prozess sitzt.",
                 },
               ].map((item, idx) => (
                 <div
@@ -412,23 +492,28 @@ export default function Home() {
                   <ul className="space-y-5">
                     {[
                       {
-                        item: "8 Wochen High-Level Consulting (1:1)",
+                        item: "12 Wochen Mentoring & Implementation (Done-With-You)",
                         value: "3.500 €",
                       },
                       {
-                        item: "3 Monate 'Cyrano' Software-Lizenz",
-                        value: "450 €",
+                        item: "12 Wochen 'Cyrano' Software-Lizenz (Pro Plan)",
+                        value: "Geschenkt",
+                        highlight: true,
                       },
                       {
-                        item: "The Inbox Playbook Lifetime Library",
+                        item: "The Inbox Playbook Video Library",
                         value: "997 €",
                       },
                       {
-                        item: "Sales Navigator Deep-Dive Setup",
-                        value: "500 €",
+                        item: "Wöchentliche Live Q&A Calls & WhatsApp Support",
+                        value: "Priceless",
                       },
                       {
-                        item: "BONUS: Individuelles Werbetexten (2x 60 Min. Strategie-Beratung)",
+                        item: "4x 30 Min. Deep-Dive persönlich mit einem der Gründer",
+                        value: "Inkludiert",
+                      },
+                      {
+                        item: "BONUS: Individuelles Skript-Review (2x)",
                         value: "400 €",
                       },
                     ].map((li, i) => (
@@ -442,7 +527,13 @@ export default function Home() {
                           </div>
                           {li.item}
                         </div>
-                        <span className="text-slate-500 text-sm italic">
+                        <span
+                          className={`text-sm italic ${
+                            li.value === "Geschenkt"
+                              ? "text-[#FE5454] font-bold"
+                              : "text-slate-500"
+                          }`}
+                        >
                           {li.value}
                         </span>
                       </li>
@@ -482,7 +573,7 @@ export default function Home() {
                   href="https://cal.com/dennis-debus/"
                   className="flex items-center justify-center w-full py-6 rounded-full bg-white text-slate-900 font-black text-xl hover:bg-[#FE5454] hover:text-white transition-all hover:scale-[1.05] shadow-2xl"
                 >
-                  JETZT PLATZ SICHERN
+                  POTENZIAL-ANALYSE BUCHEN
                 </Link>
 
                 <div className="space-y-6 pt-10 border-t border-white/10 text-left">
@@ -498,11 +589,11 @@ export default function Home() {
                   <div className="flex gap-4 p-6 rounded-2xl bg-[#FE5454]/10 border border-[#FE5454]/20">
                     <p className="text-sm text-slate-200 leading-relaxed font-medium">
                       <span className="text-[#FE5454] font-bold uppercase block mb-1">
-                        Aggressive Ergebnis-Garantie:
+                        Erfolgs-Garantie:
                       </span>
-                      Wenn du in den ersten 60 Tagen keine qualifizierten
-                      Termine im Kalender hast, arbeiten wir kostenlos weiter.
-                      Das gesamte Risiko liegt bei uns.
+                      Wenn du in den ersten 12 Wochen keine qualifizierten
+                      Termine im Kalender hast, arbeiten wir kostenlos weiter,
+                      bis der Prozess sitzt. Das gesamte Risiko liegt bei uns.
                     </p>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-[#FE5454] font-bold uppercase text-[10px] tracking-widest">
@@ -530,7 +621,11 @@ export default function Home() {
               {[
                 {
                   q: "Wie viel Zeit brauche ich?",
-                  a: "Rechne mit ca. 3 Stunden pro Woche für das Setup in den ersten 2 Wochen. Sobald das System läuft, reduziert sich dein Aufwand auf ca. 30 Minuten pro Tag.",
+                  a: "In den ersten 2 Wochen ca. 3 Stunden für das Setup. Danach ist Cyrano dein Zeitsparer: 15-20 Minuten pro Tag reichen, um deine Pipeline zu füllen.",
+                },
+                {
+                  q: "Ist das Software oder Coaching?",
+                  a: "Beides. Wir glauben, dass ein Tool ohne Skill nutzlos ist. Deshalb lernst du in 12 Wochen das Handwerk, und Cyrano ist dein Werkzeug, das wir dir für die Laufzeit kostenlos zur Verfügung stellen.",
                 },
                 {
                   q: "Ist das Kaltakquise?",
@@ -538,7 +633,7 @@ export default function Home() {
                 },
                 {
                   q: "Wie schnell sehe ich Ergebnisse?",
-                  a: "Da wir uns aktuell in der Beta-Phase befinden, optimieren wir das System gemeinsam mit dir. Die ersten validen Termine kommen meist in Woche 3 oder 4, sobald die individuellen Kampagnen angelaufen sind.",
+                  a: "Die ersten validen Termine kommen meist in Woche 3 oder 4, sobald die individuellen Kampagnen angelaufen sind. Durch das 12-Wochen Mentoring stellen wir sicher, dass der Prozess dauerhaft sitzt.",
                 },
               ].map((faq, i) => (
                 <div
@@ -574,7 +669,7 @@ export default function Home() {
                 href="https://cal.com/dennis-debus/"
                 className="inline-flex items-center justify-center px-12 py-6 rounded-full bg-slate-900 text-white font-black text-2xl transition-all hover:bg-[#FE5454] hover:scale-105 shadow-[0_30px_60px_rgba(0,0,0,0.2)]"
               >
-                JETZT SYSTEM-DEMO SICHERN
+                STRATEGIE-GESPRÄCH VEREINBAREN
               </Link>
               <div className="flex items-center gap-2 text-slate-400 font-bold uppercase text-[10px] tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-[#FE5454] animate-pulse"></span>

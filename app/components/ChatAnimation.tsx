@@ -19,51 +19,69 @@ export function ChatAnimation() {
   }, []);
 
   return (
-    <div className="relative w-full aspect-[16/9] md:aspect-[2/1] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 font-sans text-left">
+    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2/1] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 font-sans text-left transition-all duration-700">
       {/* Browser Chrome */}
       <div className="absolute top-0 left-0 right-0 h-8 bg-slate-50 border-b border-slate-200 flex items-center px-4 gap-2 z-20">
-        <div className="w-2.5 h-2.5 rounded-full bg-red-400/80"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-amber-400/80"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-green-400/80"></div>
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-red-400/80"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-amber-400/80"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-green-400/80"></div>
+        </div>
+        <div className="mx-auto bg-white border border-slate-200 rounded px-3 py-0.5 text-[10px] text-slate-400 flex items-center gap-2">
+          <span className="opacity-50">🔒</span> linkedin.com/messaging/thread/...
+        </div>
       </div>
 
       <div className="absolute inset-0 top-8 flex bg-slate-50/50">
-        {/* Sidebar Mockup */}
-        <div className="w-16 md:w-64 border-r border-slate-200 bg-white hidden md:block">
+        {/* Sidebar Mockup - Hidden on mobile to save space */}
+        <div className="w-16 md:w-64 border-r border-slate-200 bg-white hidden lg:block">
           <div className="p-4 space-y-4">
-            <div className="h-8 w-8 rounded bg-blue-600 mb-8"></div>
-            <div className="h-4 w-3/4 bg-slate-100 rounded"></div>
-            <div className="h-4 w-1/2 bg-slate-100 rounded"></div>
-            <div className="h-4 w-5/6 bg-slate-100 rounded"></div>
+            <div className="h-8 w-8 rounded bg-[#0077B5] mb-8 flex items-center justify-center text-white text-xs font-bold">in</div>
+            <div className="space-y-3">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className={`flex items-center gap-3 p-2 rounded ${i === 1 ? 'bg-slate-50' : ''}`}>
+                  <div className="h-8 w-8 shrink-0 bg-slate-100 rounded-full"></div>
+                  <div className="flex-1 space-y-1 hidden md:block">
+                    <div className="h-2 w-3/4 bg-slate-200 rounded"></div>
+                    <div className="h-1.5 w-1/2 bg-slate-100 rounded"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Chat Area */}
         <div className="flex-1 flex flex-col relative bg-white">
           {/* Chat Header */}
-          <div className="h-14 border-b border-slate-100 flex items-center px-6 justify-between bg-white">
+          <div className="h-14 border-b border-slate-100 flex items-center px-4 sm:px-6 justify-between bg-white">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-200"></div>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-slate-200 to-slate-300"></div>
               <div>
-                <div className="h-3 w-24 bg-slate-200 rounded mb-1"></div>
-                <div className="h-2 w-16 bg-slate-100 rounded"></div>
+                <div className="h-3 w-24 sm:w-32 bg-slate-200 rounded mb-1"></div>
+                <div className="h-2 w-16 sm:w-24 bg-slate-100 rounded"></div>
               </div>
+            </div>
+            <div className="flex gap-4 opacity-30 hidden sm:flex">
+              <div className="w-4 h-4 rounded-full bg-slate-400"></div>
+              <div className="w-4 h-4 rounded-full bg-slate-400"></div>
+              <div className="w-4 h-4 rounded-full bg-slate-400"></div>
             </div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-6 space-y-6 bg-slate-50/30">
+          <div className="flex-1 p-4 sm:p-6 space-y-6 bg-slate-50/30 overflow-hidden">
             {/* Incoming Message */}
             <div
-              className={`flex gap-4 transition-all duration-500 transform ${
+              className={`flex gap-3 sm:gap-4 transition-all duration-700 transform ${
                 step >= 1
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
+                  : "opacity-0 translate-y-8"
               }`}
             >
               <div className="w-8 h-8 rounded-full bg-slate-200 shrink-0"></div>
-              <div className="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none shadow-sm max-w-md">
-                <p className="text-slate-600 text-sm leading-relaxed">
+              <div className="bg-white border border-slate-200 p-3 sm:p-4 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] sm:max-w-md">
+                <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">
                   Hey Dennis, danke für die Vernetzung! Klingt spannend was ihr macht. Wie genau sieht der Prozess aus?
                 </p>
               </div>
@@ -71,18 +89,18 @@ export function ChatAnimation() {
 
             {/* Outgoing Message (Final State) */}
             <div
-              className={`flex gap-4 flex-row-reverse transition-all duration-500 transform ${
+              className={`flex gap-3 sm:gap-4 flex-row-reverse transition-all duration-700 transform ${
                 step >= 5
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
+                  : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="w-8 h-8 rounded-full bg-blue-100 shrink-0 flex items-center justify-center text-[10px] font-bold text-blue-600">
-                YOU
+              <div className="w-8 h-8 rounded-full bg-[#FE5454]/10 shrink-0 flex items-center justify-center text-[10px] font-bold text-[#FE5454]">
+                DU
               </div>
-              <div className="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-none shadow-md max-w-md">
-                <p className="text-sm leading-relaxed">
-                  Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
+              <div className="bg-slate-900 text-white p-3 sm:p-4 rounded-2xl rounded-tr-none shadow-md max-w-[85%] sm:max-w-md">
+                <p className="text-[13px] sm:text-sm leading-relaxed">
+                  Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser &quot;Cyrano&quot;-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
                 </p>
               </div>
             </div>
@@ -90,7 +108,7 @@ export function ChatAnimation() {
 
           {/* Input Area */}
           <div className="h-20 border-t border-slate-100 p-4 bg-white relative z-10">
-            <div className="w-full h-full rounded-lg border border-slate-200 bg-slate-50 p-3 flex items-center text-slate-400 text-sm">
+            <div className="w-full h-full rounded-xl border border-slate-200 bg-slate-50 p-3 flex items-center text-slate-400 text-[13px] sm:text-sm">
               {step >= 4 && step < 5 ? (
                 <span className="text-slate-800 animate-pulse">
                   Gerne! Wir analysieren erst deinen aktuellen Prozess...|
@@ -104,7 +122,7 @@ export function ChatAnimation() {
 
         {/* Cyrano Helper Sideview */}
         <div
-          className={`absolute top-8 right-4 bottom-20 w-72 bg-white rounded-xl shadow-2xl border border-blue-100 transition-all duration-700 ease-out transform origin-right z-30 flex flex-col overflow-hidden ${
+          className={`absolute top-8 right-0 sm:right-4 bottom-20 w-full sm:w-72 bg-white rounded-none sm:rounded-xl shadow-2xl border-l sm:border border-blue-100 transition-all duration-700 ease-out transform origin-right z-30 flex flex-col overflow-hidden ${
             step >= 2 ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         >
