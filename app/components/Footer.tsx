@@ -16,7 +16,7 @@ export default function Footer() {
               </p>
             </div>
             <Link
-              href="https://cal.com/dennis-debus/"
+              href="https://cal.com/dennis-debus/lets-talk"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white font-bold transition-all hover:bg-[#FE5454] hover:scale-105 shadow-xl"
             >
               Potenzial-Check buchen ➔

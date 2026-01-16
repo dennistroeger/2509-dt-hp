@@ -49,7 +49,7 @@ export default function Header() {
 
           <div className="flex items-center">
             <Link
-              href="https://cal.com/dennis-debus/"
+              href="https://cal.com/dennis-debus/lets-talk"
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium transition-all hover:bg-[#FE5454] hover:scale-[1.02]"
             >
               Potenzial-Check

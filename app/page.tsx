@@ -22,7 +22,7 @@ export default function Home() {
       {/* Floating CTA (Desktop only) */}
       <div className="fixed bottom-8 right-8 z-50 hidden lg:block animate-fade-in">
         <Link
-          href="https://cal.com/dennis-debus/"
+          href="https://cal.com/dennis-debus/lets-talk"
           className="group relative flex items-center gap-3 px-6 py-4 rounded-full bg-slate-900 text-white font-bold shadow-2xl transition-all hover:scale-105 hover:bg-[#FE5454]"
         >
           <span className="text-sm">STRATEGIE-GESPRÄCH VEREINBAREN</span>
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
                 <div className="space-y-3">
                   <Link
-                    href="https://cal.com/dennis-debus/"
+                    href="https://cal.com/dennis-debus/lets-talk"
                     className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full bg-[#FE5454] text-white font-bold text-lg transition-all hover:bg-red-500 hover:scale-[1.02] shadow-[0_20px_50px_rgba(254,84,84,0.3)]"
                   >
                     POTENZIAL-ANALYSE BUCHEN
@@ -487,18 +487,21 @@ export default function Home() {
 
                 <div className="space-y-6">
                   <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">
-                    Was du heute installierst:
+                    Was alles im Paket enthalten ist:
                   </p>
                   <ul className="space-y-5">
                     {[
                       {
-                        item: "12 Wochen Mentoring & Implementation (Done-With-You)",
+                        item: "12 Wochen Mentoring & Implementation",
                         value: "3.500 €",
                       },
                       {
+                        item: "1h Kickoff für technisches Setup & erste To-dos",
+                        value: "500 €",
+                      },
+                      {
                         item: "12 Wochen 'Cyrano' Software-Lizenz (Pro Plan)",
-                        value: "Geschenkt",
-                        highlight: true,
+                        value: "450 €",
                       },
                       {
                         item: "The Inbox Playbook Video Library",
@@ -506,15 +509,11 @@ export default function Home() {
                       },
                       {
                         item: "Wöchentliche Live Q&A Calls & WhatsApp Support",
-                        value: "Priceless",
+                        value: "997 €",
                       },
                       {
-                        item: "4x 30 Min. Deep-Dive persönlich mit einem der Gründer",
-                        value: "Inkludiert",
-                      },
-                      {
-                        item: "BONUS: Individuelles Skript-Review (2x)",
-                        value: "400 €",
+                        item: "3x 30 Min. persönliche Beratung",
+                        value: "600 €",
                       },
                     ].map((li, i) => (
                       <li
@@ -527,13 +526,7 @@ export default function Home() {
                           </div>
                           {li.item}
                         </div>
-                        <span
-                          className={`text-sm italic ${
-                            li.value === "Geschenkt"
-                              ? "text-[#FE5454] font-bold"
-                              : "text-slate-500"
-                          }`}
-                        >
+                        <span className="text-slate-500 text-sm italic">
                           {li.value}
                         </span>
                       </li>
@@ -544,7 +537,7 @@ export default function Home() {
                       Gesamtwert:
                     </span>
                     <span className="text-2xl font-bold line-through text-slate-600 tracking-tight">
-                      5.847 €
+                      6.844 €
                     </span>
                   </div>
                 </div>
@@ -570,7 +563,7 @@ export default function Home() {
                 </div>
 
                 <Link
-                  href="https://cal.com/dennis-debus/"
+                  href="https://cal.com/dennis-debus/lets-talk"
                   className="flex items-center justify-center w-full py-6 rounded-full bg-white text-slate-900 font-black text-xl hover:bg-[#FE5454] hover:text-white transition-all hover:scale-[1.05] shadow-2xl"
                 >
                   POTENZIAL-ANALYSE BUCHEN
@@ -598,7 +591,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-center gap-2 text-[#FE5454] font-bold uppercase text-[10px] tracking-widest">
                     <span className="w-2 h-2 rounded-full bg-[#FE5454] animate-pulse"></span>
-                    Nur noch 3 Plätze für Januar verfügbar
+                    Nur noch 3 Plätze für Februar verfügbar
                   </div>
                 </div>
               </div>
@@ -666,7 +659,7 @@ export default function Home() {
             </p>
             <div className="pt-10 flex flex-col items-center gap-6">
               <Link
-                href="https://cal.com/dennis-debus/"
+                href="https://cal.com/dennis-debus/lets-talk"
                 className="inline-flex items-center justify-center px-12 py-6 rounded-full bg-slate-900 text-white font-black text-2xl transition-all hover:bg-[#FE5454] hover:scale-105 shadow-[0_30px_60px_rgba(0,0,0,0.2)]"
               >
                 STRATEGIE-GESPRÄCH VEREINBAREN
