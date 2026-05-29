@@ -19,7 +19,7 @@ export function ChatAnimation() {
   }, []);
 
   return (
-    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2/1] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 font-sans text-left transition-all duration-700">
+    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2/1] bg-paper border border-rule overflow-hidden font-sans text-left">
       {/* Browser Chrome */}
       <div className="absolute top-0 left-0 right-0 h-8 bg-slate-50 border-b border-slate-200 flex items-center px-4 gap-2 z-20">
         <div className="flex gap-1.5">
@@ -56,7 +56,7 @@ export function ChatAnimation() {
           {/* Chat Header */}
           <div className="h-14 border-b border-slate-100 flex items-center px-4 sm:px-6 justify-between bg-white">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-slate-200 to-slate-300"></div>
+              <div className="w-8 h-8 rounded-full bg-rule shrink-0"></div>
               <div>
                 <div className="h-3 w-24 sm:w-32 bg-slate-200 rounded mb-1"></div>
                 <div className="h-2 w-16 sm:w-24 bg-slate-100 rounded"></div>
@@ -95,10 +95,10 @@ export function ChatAnimation() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="w-8 h-8 rounded-full bg-[#FE5454]/10 shrink-0 flex items-center justify-center text-[10px] font-bold text-[#FE5454]">
+              <div className="w-8 h-8 rounded-full bg-accent/10 shrink-0 flex items-center justify-center text-[10px] font-bold text-accent">
                 DU
               </div>
-              <div className="bg-slate-900 text-white p-3 sm:p-4 rounded-2xl rounded-tr-none shadow-md max-w-[85%] sm:max-w-md">
+              <div className="bg-ink text-paper p-3 sm:p-4 border border-ink max-w-[85%] sm:max-w-md">
                 <p className="text-[13px] sm:text-sm leading-relaxed">
                   Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser &quot;Cyrano&quot;-System auf. Hast du nächste Woche 15 Min für einen kurzen Check?
                 </p>
@@ -127,10 +127,10 @@ export function ChatAnimation() {
           }`}
         >
           {/* Helper Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white">
+          <div className="bg-ink p-4 text-paper border-b border-white/10">
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-              <span className="text-xs font-bold tracking-wider uppercase">
+              <div className="w-2 h-2 bg-accent"></div>
+              <span className="section-label text-rule">
                 Cyrano AI
               </span>
             </div>
@@ -153,18 +153,18 @@ export function ChatAnimation() {
               </div>
 
               {/* Suggestion 1 (Selected) */}
-              <div className="bg-white p-3 rounded-lg border-2 border-blue-500 shadow-md cursor-pointer relative overflow-hidden group">
-                <div className="absolute top-0 right-0 bg-blue-500 text-white text-[8px] px-1.5 py-0.5 rounded-bl font-bold">
+              <div className="bg-white p-3 border-2 border-accent relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-accent text-paper text-[8px] px-1.5 py-0.5 font-bold section-label">
                   BESTER MATCH
                 </div>
-                <div className="text-[10px] text-blue-600 font-bold mb-1 uppercase tracking-wide">
+                <div className="text-[10px] text-accent font-bold mb-1 uppercase tracking-wide font-mono">
                   Option 1: Direkt & Charmant
                 </div>
-                <p className="text-slate-700 text-[13px] leading-snug mb-2">
+                <p className="text-ink text-[13px] leading-snug mb-2">
                   Gerne! Wir analysieren erst deinen aktuellen Prozess und setzen dann unser "Cyrano"-System auf. Hast du nächste Woche 15 Min?
                 </p>
                 <div className="flex justify-end">
-                  <button className="text-[10px] bg-blue-600 text-white px-2 py-1 rounded font-bold shadow-sm">
+                  <button className="text-[10px] btn-accent px-2 py-1">
                     Übernehmen ↵
                   </button>
                 </div>

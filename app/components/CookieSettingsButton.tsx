@@ -18,7 +18,7 @@ export default function CookieSettingsButton() {
   return (
     <button
       onClick={handleOpenCookieSettings}
-      className="inline-flex items-center px-6 py-3 bg-[#fe5454] text-white rounded-lg font-medium hover:bg-[#e64545] transition-colors shadow-sm hover:shadow-md"
+      className="btn-accent text-sm px-6 py-3"
     >
       <svg
         className="w-5 h-5 mr-2"

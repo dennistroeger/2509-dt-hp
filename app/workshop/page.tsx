@@ -11,16 +11,14 @@ export default function BookACallPage() {
       const cal = await getCalApi({ namespace: "30min" });
       cal("ui", {
         cssVarsPerTheme: {
-          light: { "cal-brand": "#FF5044" },
-          dark: { "cal-brand": "#FF5044" },
+          light: { "cal-brand": "#FF3D2E" },
+          dark: { "cal-brand": "#FF3D2E" },
         },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
     })();
 
-    // Track custom conversion for download page
-    // Get LinkedIn tracking ID from cookie
     const getCookie = (name: string) => {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
@@ -30,7 +28,6 @@ export default function BookACallPage() {
 
     const liFatId = getCookie("li_fat_id");
 
-    // Send conversion via API route
     const sendConversion = async () => {
       try {
         const response = await fetch("/api/linkedin/conversion", {
@@ -56,82 +53,60 @@ export default function BookACallPage() {
     };
 
     if (liFatId) {
-      // Send conversion with real LinkedIn tracking ID
       sendConversion();
     } else if (process.env.NODE_ENV === "development") {
-      // Send test conversion in development mode
       console.log("🧪 Testing LinkedIn conversion tracking (no real liFatId)");
       sendConversion();
     }
   }, []);
 
   return (
-    <div className="min-h-screen font-body text-slate-900 bg-[#F5F5F7] overflow-x-hidden selection:bg-[#fe5454] selection:text-white relative">
-      {/* Background Ambience */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[90vw] h-[90vw] bg-red-200/30 rounded-full blur-[120px] animate-blob mix-blend-multiply opacity-50"></div>
-        <div className="absolute top-[20%] right-[-20%] w-[80vw] h-[80vw] bg-orange-200/30 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply opacity-50"></div>
-        <div className="absolute bottom-[-20%] left-[10%] w-[70vw] h-[70vw] bg-pink-200/30 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-multiply opacity-50"></div>
-        {/* Grain overlay for texture */}
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl font-bold text-[#1d1d1f] mb-4 font-heading">
+    <div className="page-shell overflow-x-hidden">
+      <div className="max-w-4xl mx-auto py-24 section-pad">
+        <div className="flex gap-0 mb-12">
+          <div className="hatched-bar mr-6 sm:mr-10 shrink-0" aria-hidden="true" />
+          <div className="space-y-4 max-w-2xl">
+            <p className="section-label">Strategiegespräch</p>
+            <h1 className="text-3xl sm:text-5xl font-black text-ink font-heading leading-tight">
               Kostenloses Strategiegespräch buchen
             </h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Erfahre in diesem kostenlosen Strategiegespräch, wie du planbar
-              hochpreisige Kunden über LinkedIn gewinnst.
+            <p className="text-lg text-slate leading-relaxed">
+              Erfahre, wie du planbar hochpreisige Kunden über LinkedIn gewinnst.
             </p>
           </div>
+        </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Cal
-              namespace="30min"
-              calLink="dennis-debus/30min"
-              style={{ width: "100%", height: "100%", overflow: "scroll" }}
-              config={{ layout: "month_view", theme: "auto" }}
-            />
-          </div>
+        <div className="editorial-card p-6 md:p-10 bg-white mb-12">
+          <Cal
+            namespace="30min"
+            calLink="dennis-debus/30min"
+            style={{ width: "100%", height: "100%", overflow: "scroll" }}
+            config={{ layout: "month_view", theme: "auto" }}
+          />
+        </div>
 
-          <div className="mt-12 text-center">
-            <div className="bg-slate-50/50 rounded-lg p-6 border border-slate-100">
-              <h3 className="text-lg font-semibold text-[#1d1d1f] mb-4 font-heading">
-                Was erwartet dich im Strategiegespräch?
-              </h3>
-              <ul className="text-slate-600 space-y-2 text-left max-w-md mx-auto">
-                <li className="flex items-start">
-                  <span className="text-[#fe5454] mr-2">•</span>
-                  Eine Analyse deiner aktuellen LinkedIn-Strategie
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#fe5454] mr-2">•</span>
-                  Konkrete Schritte, um deine Wunschkunden zu erreichen
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#fe5454] mr-2">•</span>
-                  Strategien für Inhalte, die Anfragen generieren
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#fe5454] mr-2">•</span>
-                  Ein klarer Plan für die nächsten 90 Tage
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#fe5454] mr-2">•</span>
-                  Antworten auf deine individuellen Fragen
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="editorial-card p-8 space-y-6">
+          <h3 className="text-xl font-bold text-ink font-heading">
+            Was erwartet dich im Strategiegespräch?
+          </h3>
+          <ul className="text-slate space-y-3">
+            {[
+              "Eine Analyse deiner aktuellen LinkedIn-Strategie",
+              "Konkrete Schritte, um deine Wunschkunden zu erreichen",
+              "Strategien für Inhalte, die Anfragen generieren",
+              "Ein klarer Plan für die nächsten 90 Tage",
+              "Antworten auf deine individuellen Fragen",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="text-accent font-mono shrink-0">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-slate-200/60 bg-white/40 backdrop-blur-xl">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

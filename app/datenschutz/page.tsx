@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function Datenschutz() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8">
+    <div className="page-shell">
+      <div className="max-w-4xl mx-auto py-24 section-pad">
+        <div className="editorial-card p-8 md:p-12 bg-white">
+          <h1 className="text-3xl sm:text-4xl font-black text-ink font-heading mb-8">
             Datenschutzerklärung
           </h1>
 

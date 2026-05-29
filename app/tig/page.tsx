@@ -56,10 +56,10 @@ const Infobox = ({
 
 export default function TigPage() {
   return (
-    <div className="min-h-screen font-body text-slate-900 bg-[#F5F5F7] overflow-x-hidden selection:bg-[#fe5454] selection:text-white relative">
+    <div className="min-h-screen font-body text-ink bg-paper overflow-x-hidden selection:bg-[#FF3D2E] selection:text-white relative">
       {/* Background Ambience */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[90vw] h-[90vw] bg-[#fe5454]/8 rounded-full blur-[120px] animate-blob mix-blend-multiply opacity-40"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[90vw] h-[90vw] bg-[#FF3D2E]/8 rounded-full blur-[120px] animate-blob mix-blend-multiply opacity-40"></div>
         <div className="absolute top-[20%] right-[-20%] w-[80vw] h-[80vw] bg-[#9C88FF]/8 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply opacity-40"></div>
         <div className="absolute bottom-[-20%] left-[10%] w-[70vw] h-[70vw] bg-[#00D4AA]/8 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-multiply opacity-40"></div>
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
@@ -86,48 +86,48 @@ export default function TigPage() {
           </div>
 
           {/* Was du lernen wirst */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
             <h2 className="text-3xl font-bold font-heading">
               Was du lernen wirst
             </h2>
             <ul className="space-y-4 text-lg text-black leading-relaxed">
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Wie du mit kaltem Outreach planbar 5+ Termine pro Woche
                   generierst – ohne monatelang Content zu posten
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Das exakte 5-Phasen-System, welches wir unseren Kunden
                   mitgeben.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Warum &quot;Content allein&quot; auf LinkedIn nicht mehr
                   funktioniert (und was stattdessen wirklich zählt)
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Die Signal-basierten Methoden, um hochinteressierte
                   Interessenten zu finden, bevor deine Konkurrenz sie entdeckt
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Gesprächseinstiege, die sich menschlich anfühlen und keine
                   Spam-Vibes verbreiten
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-[#fe5454] font-bold mt-1">✓</span>
+                <span className="mr-3 text-[#FF3D2E] font-bold mt-1">✓</span>
                 <span>
                   Follow-up-Strategien mit nachweislich 80% Antwortrate
                 </span>
@@ -136,7 +136,7 @@ export default function TigPage() {
           </div>
 
           {/* Einleitung: Die Realität */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
             <h2 className="text-3xl font-bold font-heading">
               Einleitung: Die Realität
             </h2>
@@ -182,7 +182,7 @@ export default function TigPage() {
                   LinkedIn als Gesamtsystem begreifen und alle verfügbaren Tools
                   miteinander verbinden:
                 </p>
-                <ul className="list-disc pl-5 space-y-2 marker:text-[#fe5454]">
+                <ul className="list-disc pl-5 space-y-2 marker:text-[#FF3D2E]">
                   <li>Outreach über Direktnachrichten starten</li>
                   <li>Parallel dazu eine Content-Strategie aufbauen</li>
                   <li>Später Ads einsetzen</li>
@@ -196,7 +196,7 @@ export default function TigPage() {
           </div>
 
           {/* Warum mir zuhören? */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
             <h2 className="text-3xl font-bold font-heading">
               Warum mir zuhören?
             </h2>
@@ -244,7 +244,7 @@ export default function TigPage() {
                 Als wir fertig waren, traf mich die Erkenntnis – das ist eine
                 klare Nische mit einem brennenden Problem.
               </p>
-              <div className="bg-[#fe5454]/10 p-6 rounded-xl border border-[#fe5454]/20 mt-6">
+              <div className="bg-[#FF3D2E]/10 p-6 rounded-xl border border-[#FF3D2E]/20 mt-6">
                 <p className="font-bold text-lg mb-2">
                   Ich buchte den Sales Navigator, suchte nach Executive Search
                   CEOs und schrieb 40 Nachrichten. Das Ergebnis:
@@ -263,7 +263,7 @@ export default function TigPage() {
           </div>
 
           {/* Das neue Mindset */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-8">
             <h2 className="text-3xl font-bold font-heading">
               Das neue Mindset
             </h2>
@@ -333,7 +333,7 @@ export default function TigPage() {
                 <p className="text-black mb-3 leading-relaxed">
                   Zwei Dinge passieren, wenn du dem anderen hilfst:
                 </p>
-                <ul className="list-disc pl-5 space-y-2 marker:text-[#fe5454]">
+                <ul className="list-disc pl-5 space-y-2 marker:text-[#FF3D2E]">
                   <li>Du wirst als Experte wahrgenommen</li>
                   <li>Du nutzt die Kraft der Reziprozität</li>
                 </ul>
@@ -359,7 +359,7 @@ export default function TigPage() {
           </div>
 
           {/* Häufige Ausreden */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
             <h2 className="text-3xl font-bold font-heading">
               Häufige Ausreden
             </h2>
@@ -379,7 +379,7 @@ export default function TigPage() {
               </div>
 
               <div className="bg-white/50 p-6 rounded-xl border border-slate-200/60">
-                <h3 className="font-bold text-lg mb-2 text-slate-900">
+                <h3 className="font-bold text-lg mb-2 text-ink">
                   &quot;Das dauert zu lange&quot;
                 </h3>
                 <p className="text-slate-700">
@@ -392,7 +392,7 @@ export default function TigPage() {
               </div>
 
               <div className="bg-white/50 p-6 rounded-xl border border-slate-200/60">
-                <h3 className="font-bold text-lg mb-2 text-slate-900">
+                <h3 className="font-bold text-lg mb-2 text-ink">
                   &quot;Leads werden kalt&quot;
                 </h3>
                 <p className="text-slate-700">
@@ -406,7 +406,7 @@ export default function TigPage() {
               </div>
 
               <div className="bg-white/50 p-6 rounded-xl border border-slate-200/60">
-                <h3 className="font-bold text-lg mb-2 text-slate-900">
+                <h3 className="font-bold text-lg mb-2 text-ink">
                   &quot;Outsourcing funktioniert nicht&quot;
                 </h3>
                 <p className="text-slate-700">
@@ -422,7 +422,7 @@ export default function TigPage() {
           </div>
 
           {/* Wir denken wissenschaftlich */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
             <h2 className="text-3xl font-bold font-heading">
               Wir denken wissenschaftlich
             </h2>
@@ -464,8 +464,8 @@ export default function TigPage() {
             </div>
 
             {/* Phase 1 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
-              <div className="inline-block px-4 py-1 rounded-full bg-[#fe5454]/10 text-[#fe5454] font-bold text-sm tracking-wide mb-2">
+            <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-8">
+              <div className="inline-block px-4 py-1 rounded-full bg-[#FF3D2E]/10 text-[#FF3D2E] font-bold text-sm tracking-wide mb-2">
                 PHASE 1
               </div>
               <h3 className="text-3xl font-bold font-heading">
@@ -477,7 +477,7 @@ export default function TigPage() {
               </p>
 
               <div className="grid gap-6 md:grid-cols-2">
-                <div className="glass-card p-6 rounded-xl">
+                <div className="editorial-card p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-3">
                     Methode A - Wettbewerber-Kontakte
                   </h4>
@@ -491,7 +491,7 @@ export default function TigPage() {
                   </ol>
                 </div>
 
-                <div className="glass-card p-6 rounded-xl">
+                <div className="editorial-card p-6 rounded-xl">
                   <h4 className="font-bold text-lg mb-3">
                     Methode B - Engagement Scrape
                   </h4>
@@ -508,7 +508,7 @@ export default function TigPage() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 rounded-xl">
+              <div className="editorial-card p-6 rounded-xl">
                 <h4 className="font-bold text-lg mb-4">
                   Methode C - High-Intent-Signale
                 </h4>
@@ -666,7 +666,7 @@ export default function TigPage() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 rounded-xl">
+              <div className="editorial-card p-6 rounded-xl">
                 <h4 className="font-bold text-lg mb-4">
                   Methode D - Der Sales Navigator
                 </h4>
@@ -760,7 +760,7 @@ export default function TigPage() {
             </div>
 
             {/* Phase 2 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+            <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
               <div className="inline-block px-4 py-1 rounded-full bg-[#9C88FF]/10 text-[#9C88FF] font-bold text-sm tracking-wide mb-2">
                 PHASE 2
               </div>
@@ -803,7 +803,7 @@ export default function TigPage() {
             </div>
 
             {/* Phase 3 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-6">
+            <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-6">
               <div className="inline-block px-4 py-1 rounded-full bg-[#00D4AA]/10 text-[#00D4AA] font-bold text-sm tracking-wide mb-2">
                 PHASE 3
               </div>
@@ -838,21 +838,21 @@ export default function TigPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#fe5454]/10 p-6 rounded-xl border border-[#fe5454]/20">
+                <div className="bg-[#FF3D2E]/10 p-6 rounded-xl border border-[#FF3D2E]/20">
                   <h4 className="font-bold text-[#c93636] mb-3 text-lg">
                     Don&apos;t:
                   </h4>
                   <ul className="space-y-3 text-black leading-relaxed">
                     <li className="flex gap-2">
-                      <span className="text-[#fe5454] font-bold">✕</span>{" "}
+                      <span className="text-[#FF3D2E] font-bold">✕</span>{" "}
                       &quot;Toller Post!&quot;
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-[#fe5454] font-bold">✕</span> Alles
+                      <span className="text-[#FF3D2E] font-bold">✕</span> Alles
                       kommentieren
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-[#fe5454] font-bold">✕</span> Kalt
+                      <span className="text-[#FF3D2E] font-bold">✕</span> Kalt
                       anschreiben ohne Aufwärmen (außer sie haben dein Profil
                       besucht)
                     </li>
@@ -865,7 +865,7 @@ export default function TigPage() {
             </div>
 
             {/* Phase 4 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+            <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-8">
               <div className="inline-block px-4 py-1 rounded-full bg-[#9C88FF]/10 text-[#9C88FF] font-bold text-sm tracking-wide mb-2">
                 PHASE 4
               </div>
@@ -950,7 +950,7 @@ export default function TigPage() {
                         ✔ Einfach zu beantworten
                       </li>
                       <li className="text-[#00D4AA]">✔ Menschlicher Tonfall</li>
-                      <li className="text-[#fe5454]">❌ Lange Absätze</li>
+                      <li className="text-[#FF3D2E]">❌ Lange Absätze</li>
                     </ul>
                   </div>
                   <div className="bg-white/40 p-4 rounded-xl border border-white/60">
@@ -1067,7 +1067,7 @@ export default function TigPage() {
             </div>
 
             {/* Phase 5 */}
-            <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+            <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-8">
               <div className="inline-block px-4 py-1 rounded-full bg-[#FFD54F]/20 text-[#FF8F00] font-bold text-sm tracking-wide mb-2">
                 PHASE 5
               </div>
@@ -1124,7 +1124,7 @@ export default function TigPage() {
           </div>
 
           {/* Follow-Up Protokoll */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 space-y-8">
+          <div className="editorial-card rounded-[2rem] p-8 sm:p-12 space-y-8">
             <h2 className="text-3xl font-bold font-heading">
               Follow-Up Protokoll
             </h2>
@@ -1165,30 +1165,30 @@ export default function TigPage() {
           </div>
 
           {/* Was jetzt zu tun ist */}
-          <div className="glass-panel rounded-[2rem] p-8 sm:p-12 text-center space-y-8 bg-gradient-to-b from-white/80 to-white/60">
+          <div className="editorial-card p-8 sm:p-12 space-y-8 bg-white">
             <h2 className="text-3xl sm:text-4xl font-bold font-heading">
               Was jetzt zu tun ist
             </h2>
             <p className="text-lg text-black">An diesem Punkt verstehst du:</p>
             <ul className="text-left max-w-2xl mx-auto space-y-3 text-black leading-relaxed">
               <li className="flex items-start">
-                <span className="mr-2 text-[#fe5454]">✓</span>
+                <span className="mr-2 text-[#FF3D2E]">✓</span>
                 <span>Vernetzung-Anfragen senden</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-[#fe5454]">✓</span>
+                <span className="mr-2 text-[#FF3D2E]">✓</span>
                 <span>Gespräche starten</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-[#fe5454]">✓</span>
+                <span className="mr-2 text-[#FF3D2E]">✓</span>
                 <span>Chats am Laufen halten</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-[#fe5454]">✓</span>
+                <span className="mr-2 text-[#FF3D2E]">✓</span>
                 <span>Antworten in Calls verwandeln</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2 text-[#fe5454]">✓</span>
+                <span className="mr-2 text-[#FF3D2E]">✓</span>
                 <span>Follow-ups machen</span>
               </li>
             </ul>
@@ -1208,8 +1208,8 @@ export default function TigPage() {
                 </p>
               </div>
 
-              <div className="p-8 rounded-2xl border-2 border-[#fe5454]/20 bg-white/60 backdrop-blur-sm shadow-xl relative overflow-hidden group hover:border-[#fe5454]/40 transition-all">
-                <div className="absolute top-0 right-0 bg-[#fe5454] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+              <div className="p-8 rounded-2xl border-2 border-[#FF3D2E]/20 bg-white/60 backdrop-blur-sm shadow-xl relative overflow-hidden group hover:border-[#FF3D2E]/40 transition-all">
+                <div className="absolute top-0 right-0 bg-[#FF3D2E] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
                   Empfohlen
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-black">
@@ -1218,17 +1218,17 @@ export default function TigPage() {
                 <p className="text-black mb-4">Du bekommst:</p>
                 <ul className="space-y-3 text-sm text-black mb-6 leading-relaxed">
                   <li className="flex items-center">
-                    <span className="text-[#fe5454] mr-2">✓</span> Das volle
+                    <span className="text-[#FF3D2E] mr-2">✓</span> Das volle
                     Protokoll
                   </li>
                   <li className="flex items-center">
-                    <span className="text-[#fe5454] mr-2">✓</span> Iterationen
+                    <span className="text-[#FF3D2E] mr-2">✓</span> Iterationen
                   </li>
                   <li className="flex items-center">
-                    <span className="text-[#fe5454] mr-2">✓</span> Struktur
+                    <span className="text-[#FF3D2E] mr-2">✓</span> Struktur
                   </li>
                   <li className="flex items-center">
-                    <span className="text-[#fe5454] mr-2">✓</span>{" "}
+                    <span className="text-[#FF3D2E] mr-2">✓</span>{" "}
                     Vorhersehbaren Call-Flow
                   </li>
                 </ul>
@@ -1241,7 +1241,7 @@ export default function TigPage() {
               </p>
               <Link
                 href="/workshop"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#fe5454] text-white font-medium hover:bg-[#e04545] transition-all shadow-lg shadow-red-500/30 hover:scale-[1.02] text-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#FF3D2E] text-white font-medium hover:bg-[#e04545] transition-all shadow-lg shadow-red-500/30 hover:scale-[1.02] text-lg"
               >
                 👉 Hier klicken für den Call
               </Link>

@@ -123,14 +123,14 @@ export default function CookieConsent() {
             <button
               id="accept-all"
               onClick={handleAcceptAll}
-              className="bg-[#fe5454] text-white border-none px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#e64545] transition-colors"
+              className="bg-[#FF3D2E] text-white border-none px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#e64545] transition-colors"
             >
               Alle Cookies
             </button>
             <button
               id="reject-all"
               onClick={handleRejectAll}
-              className="bg-transparent text-[#fe5454] border-2 border-[#fe5454] px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#fe5454]/5 transition-colors"
+              className="bg-transparent text-[#FF3D2E] border-2 border-[#FF3D2E] px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#FF3D2E]/5 transition-colors"
             >
               Keine Cookies
             </button>
@@ -167,7 +167,7 @@ export default function CookieConsent() {
                 </p>
               </div>
               <div className="ml-4">
-                <div className="w-12 h-6 bg-[#fe5454] rounded-full relative cursor-not-allowed opacity-60">
+                <div className="w-12 h-6 bg-[#FF3D2E] rounded-full relative cursor-not-allowed opacity-60">
                   <div className="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function CookieConsent() {
                   onClick={toggleMarketing}
                   className={`relative w-12 h-6 rounded-full transition-colors ${
                     consent?.marketing
-                      ? "bg-[#fe5454]"
+                      ? "bg-[#FF3D2E]"
                       : "bg-gray-300"
                   }`}
                   aria-label="Toggle Marketing Cookies"
@@ -207,7 +207,7 @@ export default function CookieConsent() {
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <button
               onClick={handleSavePreferences}
-              className="bg-[#fe5454] text-white border-none px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#e64545] transition-colors"
+              className="bg-[#FF3D2E] text-white border-none px-6 py-3 rounded-lg font-bold cursor-pointer hover:bg-[#e64545] transition-colors"
             >
               Einstellungen speichern
             </button>
