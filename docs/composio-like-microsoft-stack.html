@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Composio-like Agent Integration Platform on Microsoft Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#d6e4f0',
+        primaryTextColor: '#0f1c2e',
+        primaryBorderColor: '#3a5f7d',
+        lineColor: '#3a5f7d',
+        secondaryColor: '#f0ebe3',
+        tertiaryColor: '#eef3f7',
+        background: '#f7f4ef',
+        mainBkg: '#ffffff',
+        nodeBorder: '#3a5f7d',
+        clusterBkg: '#eef3f7',
+        titleColor: '#0f1c2e',
+        edgeLabelBackground: '#f7f4ef'
+      },
+      flowchart: { curve: 'basis', htmlLabels: true },
+      securityLevel: 'loose'
+    });
+  </script>
+  <style>
+    :root {
+      --ink: #0f1c2e;
+      --muted: #4a5a6a;
+      --line: #c9d2db;
+      --paper: #f7f4ef;
+      --card: #ffffff;
+      --accent: #0b6e99;
+      --accent-soft: #d6e4f0;
+      --warn: #8a4b12;
+      --code-bg: #eef2f6;
+      --shadow: 0 1px 0 rgba(15, 28, 46, 0.04);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #dce8f2 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #ebe4d8 0%, transparent 50%),
+        var(--paper);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .shell {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    header.doc-hero {
+      padding: 1.5rem 0 2rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 2.25rem;
+    }
+
+    header.doc-hero .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "IBM Plex Serif", Georgia, serif;
+      line-height: 1.25;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.55rem);
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin: 2.75rem 0 1rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    h2:first-of-type { border-top: 0; }
+    h3 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    h4 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin: 0.85rem 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: #085578; }
+    strong { font-weight: 600; }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 2rem 0;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1rem;
+      padding-left: 1.35rem;
+    }
+    li { margin: 0.35rem 0; }
+    li::marker { color: var(--accent); }
+
+    blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.1rem;
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      color: var(--ink);
+    }
+
+    code {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.88em;
+      background: var(--code-bg);
+      padding: 0.12em 0.35em;
+      border-radius: 4px;
+    }
+
+    pre:not(.mermaid) {
+      background: #142033;
+      color: #e8eef5;
+      padding: 1rem 1.1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      box-shadow: var(--shadow);
+      margin: 1.25rem 0;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    pre:not(.mermaid) code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0 1.75rem;
+      font-size: 0.95rem;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.85rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--accent-soft);
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #1a3348;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) td { background: #fbfaf8; }
+
+    pre.mermaid {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      box-shadow: var(--shadow);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      text-align: center;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0 0 2rem;
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      margin: 0 0 0.75rem;
+      border: 0;
+      padding: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    @media (min-width: 720px) {
+      .toc ol { columns: 2; column-gap: 2rem; }
+    }
+
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      table { display: block; overflow-x: auto; }
+      th, td { white-space: nowrap; }
+    }
+
+    @media print {
+      body { background: white; }
+      .shell { max-width: none; padding: 0; }
+      pre, table { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="doc-hero">
+      <div class="eyebrow">Research brief · Microsoft stack</div>
+    </header>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol id="toc-list"></ol>
+    </nav>
+    <article id="content">
+<h1>Rebuilding a Composio-like Agent Integration Platform on Microsoft Stack</h1>
+<p>Research brief for an in-house platform that connects AI agents to <strong>40–50 external services</strong>, with per-user OAuth, tool discovery, credential-safe execution, and MCP support — designed for a Microsoft-centric company.</p>
+<p><strong>Audience:</strong> engineering leadership, architects, platform teams<br><strong>Scope:</strong> how tools like <a href="https://composio.dev">Composio</a> work under the hood, what to build vs reuse, Microsoft Azure/Entra mapping, GitHub reference repos, implementation plan, and build-cost ranges.</p>
+<hr>
+<h2>1. Executive summary</h2>
+<p>Composio (and peers like Nango, Pipedream Connect, Arcade) are <strong>not</strong> “just API wrappers.” They are an <strong>auth + execution broker</strong> for agents:</p>
+<ol>
+<li>The LLM never sees OAuth tokens.</li>
+<li>Tools are described as <strong>JSON Schema actions</strong> grouped into <strong>toolkits</strong> (apps).</li>
+<li>A <strong>session / tool router</strong> lets the agent <em>search → connect → execute</em> without loading thousands of tool definitions into context.</li>
+<li>Optional <strong>MCP</strong> endpoints expose the same surface to Claude, Cursor, Copilot Studio, etc.</li>
+</ol>
+<p>For a Microsoft shop with ~40–50 services, the pragmatic path is usually:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When it fits</th>
+<th>Rough all-in build cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>A. Buy + wrap</strong> (Composio / Nango Enterprise on Azure BYOC)</td>
+<td>Fastest to value; you own UX and Entra SSO</td>
+<td>$80k–$200k integration + vendor fees</td>
+</tr>
+<tr>
+<td><strong>B. Hybrid Microsoft native</strong> (APIM Credential Manager + MCP + Azure Functions tool executors)</td>
+<td>Strong Entra/compliance needs; limited third-party catalog</td>
+<td>$250k–$550k for platform + first 40–50 connectors</td>
+</tr>
+<tr>
+<td><strong>C. Full in-house Composio clone</strong></td>
+<td>Hard data-residency / IP / multi-tenant product requirements</td>
+<td>$600k–$1.5M+ year-1, then heavy maintenance</td>
+</tr>
+</tbody></table>
+<p><strong>Recommendation for most Microsoft companies:</strong> start with <strong>B (hybrid)</strong>, optionally stand on <strong>Nango open-source auth/proxy</strong> (or APIM Credential Manager) rather than reinventing OAuth for 50 providers. Build the <strong>agent session / meta-tools / MCP gateway</strong> yourselves on Azure.</p>
+<hr>
+<h2>2. How Composio-like platforms work in the background</h2>
+<h3>2.1 Core concepts (Composio v3 terminology)</h3>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>User ID</strong></td>
+<td>Stable ID from <em>your</em> app; connections are isolated under it</td>
+<td><code>user.id</code> UUID</td>
+</tr>
+<tr>
+<td><strong>Toolkit</strong></td>
+<td>One external product / API surface</td>
+<td><code>github</code>, <code>gmail</code>, <code>slack</code></td>
+</tr>
+<tr>
+<td><strong>Tool</strong></td>
+<td>One LLM-callable action with input/output JSON Schema</td>
+<td><code>GITHUB_CREATE_ISSUE</code></td>
+</tr>
+<tr>
+<td><strong>Auth config</strong></td>
+<td>App-level OAuth client (client id/secret, scopes, redirect)</td>
+<td>Your GitHub OAuth App</td>
+</tr>
+<tr>
+<td><strong>Connected account</strong></td>
+<td>One user’s granted tokens for a toolkit (multi-account OK)</td>
+<td>Work Gmail + personal Gmail</td>
+</tr>
+<tr>
+<td><strong>Session</strong></td>
+<td>Runtime context: user + allowed toolkits + auth + execution state</td>
+<td><code>composio.create(userId)</code></td>
+</tr>
+<tr>
+<td><strong>Meta tools</strong></td>
+<td>Small fixed set for discovery/auth/execute (keeps context small)</td>
+<td><code>COMPOSIO_SEARCH_TOOLS</code>, <code>COMPOSIO_MANAGE_CONNECTIONS</code>, execute</td>
+</tr>
+<tr>
+<td><strong>Provider / MCP</strong></td>
+<td>Adapter to OpenAI/Anthropic/LangChain <strong>or</strong> MCP URL</td>
+<td><code>@composio/openai</code>, <code>session.mcp.url</code></td>
+</tr>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>Inbound event subscription (webhooks)</td>
+<td>New Slack message → your agent</td>
+</tr>
+</tbody></table>
+<p>Sources: <a href="https://docs.composio.dev/docs/how-composio-works">How Composio works</a>, <a href="https://docs.composio.dev/docs/sessions-vs-direct-execution">Sessions vs direct execution</a>, <a href="https://composio.dev/content/secure-ai-agent-infrastructure-guide">Secure AI agent infrastructure guide</a>.</p>
+<h3>2.2 The critical security pattern: brokered credentials</h3>
+<pre><code>┌─────────┐   tool call (slug + args)   ┌──────────────────┐   API + Bearer   ┌────────────┐
+│  LLM /  │ ──────────────────────────► │  Execution broker │ ───────────────► │ Salesforce │
+│  Agent  │ ◄────────────────────────── │  (never returns   │ ◄─────────────── │ / GitHub / │
+└─────────┘   sanitized JSON result     │   tokens to LLM)  │                  │ Slack …    │
+                                        └────────┬─────────┘                  └────────────┘
+                                                 │
+                                        ┌────────▼─────────┐
+                                        │ Encrypted token  │
+                                        │ store + refresh  │
+                                        └──────────────────┘
+</code></pre>
+<p>If tokens enter the model context, prompt injection can exfiltrate them (OWASP LLM risk). Composio’s model is: <strong>LLM decides <em>what</em>; broker does <em>how</em>.</strong></p>
+<h3>2.3 Runtime flow (session / tool router)</h3>
+<p>Typical agent loop:</p>
+<ol>
+<li>App creates a <strong>session</strong> for <code>user_id</code> (optionally restrict toolkits).</li>
+<li>Agent receives <strong>meta tools only</strong> (search / manage connections / multi-execute), not 50k tool schemas.</li>
+<li>Agent calls <strong>search</strong> with a use-case → broker returns relevant tool slugs + schemas (+ optional “skills”).</li>
+<li>If no connected account → <strong>authorize</strong> / Connect Link → user completes OAuth → tokens stored under user.</li>
+<li>Agent <strong>executes</strong> tool → broker loads connection, refreshes token, calls upstream API, truncates/normalizes response (often via a <strong>sandbox</strong> for large payloads).</li>
+<li>Multi-turn: reuse <code>session_id</code> so auth, tool memory, and workbench files persist.</li>
+</ol>
+<h3>2.4 Direct execution vs sessions</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Who picks tools</th>
+<th>Auth</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Session + meta tools</strong></td>
+<td>Agent at runtime</td>
+<td>In-chat connect</td>
+<td>Autonomous agents</td>
+</tr>
+<tr>
+<td><strong>Direct tools</strong></td>
+<td>Your code up front</td>
+<td>You manage links</td>
+<td>Deterministic workflows</td>
+</tr>
+<tr>
+<td><strong>MCP</strong></td>
+<td>Client lists/calls tools</td>
+<td>Session-scoped URL/headers</td>
+<td>Cursor, Claude, Copilot</td>
+</tr>
+</tbody></table>
+<h3>2.5 What the platform must implement (subsystem list)</h3>
+<ol>
+<li><strong>Provider catalog</strong> — OAuth metadata per API (auth URL, token URL, refresh, scopes, base URL).</li>
+<li><strong>Auth / Connect UI</strong> — white-label consent, PKCE, callback, BYO OAuth apps.</li>
+<li><strong>Connection store</strong> — encrypted access/refresh tokens, multi-account, revoke.</li>
+<li><strong>Token refresher</strong> — proactive + on-401 refresh; clock skew; rotating refresh tokens.</li>
+<li><strong>Tool catalog</strong> — versioned JSON Schema tools; tags; deprecation; scopes required per tool.</li>
+<li><strong>Execution proxy</strong> — inject credentials, retries, rate limits, idempotency, audit logs.</li>
+<li><strong>Tool router / session service</strong> — meta tools, search index, connected-account binding.</li>
+<li><strong>MCP gateway</strong> — per-user or per-session MCP endpoint, auth to <em>your</em> IdP.</li>
+<li><strong>Triggers</strong> — webhook registration, signature verify, fan-out to queues.</li>
+<li><strong>Observability</strong> — per-tenant fairness, OpenTelemetry, PII redaction in logs.</li>
+<li><strong>Admin / developer portal</strong> — enable toolkits, scopes, version pins, kill switches.</li>
+<li><em>(Optional)</em> <strong>Sync engine</strong> — for RAG/data freshness (Nango’s strength; Composio focuses on actions).</li>
+</ol>
+<hr>
+<h2>3. Mermaid overview — target Microsoft architecture</h2>
+<h3>3.1 System context</h3>
+<pre class="mermaid">flowchart TB
+  subgraph Clients
+    Agent[Azure OpenAI / Foundry Agent]
+    Copilot[Copilot Studio / VS Code MCP]
+    AppUI[Company App - Connect UI]
+  end
+
+  subgraph Platform["Company Integration Platform (Azure)"]
+    APIM[Azure API Management<br/>MCP + JWT + policies]
+    Session[Session / Tool Router<br/>.NET or Node on Container Apps]
+    Catalog[Tool Catalog API]
+    AuthBroker[Auth Broker + Connect]
+    Exec[Tool Executor Workers<br/>Azure Functions / Container Apps]
+    Creds[(APIM Credential Manager<br/>and/or Key Vault + Cosmos)]
+    Bus[Service Bus / Event Grid]
+  end
+
+  subgraph External
+    S1[Service 1..N<br/>Slack, SFDC, GitHub…]
+    Entra[Microsoft Entra ID]
+  end
+
+  Agent -->|tools/call| APIM
+  Copilot -->|MCP| APIM
+  AppUI -->|OAuth start/callback| AuthBroker
+  APIM --> Session
+  Session --> Catalog
+  Session --> Exec
+  AuthBroker --> Creds
+  Exec --> Creds
+  Exec -->|authenticated HTTP| S1
+  APIM -->|validate-azure-ad-token| Entra
+  AuthBroker --> Entra
+  S1 -->|webhooks| Bus
+  Bus --> Session</pre><h3>3.2 Sequence — agent tool call with OAuth</h3>
+<pre class="mermaid">sequenceDiagram
+  participant U as End user
+  participant A as Agent (LLM)
+  participant G as APIM / MCP Gateway
+  participant R as Tool Router
+  participant C as Credential Store
+  participant X as External API
+
+  U->>A: "Create a Jira ticket for this"
+  A->>G: tools/call SEARCH_TOOLS
+  G->>R: search(use_case)
+  R-->>A: JIRA_CREATE_ISSUE schema
+
+  alt No connected account
+    A->>G: MANAGE_CONNECTIONS / authorize
+    G->>R: create Connect Link
+    R-->>U: OAuth consent URL
+    U->>X: Login + consent
+    X->>R: auth code callback
+    R->>C: store encrypted tokens
+  end
+
+  A->>G: tools/call JIRA_CREATE_ISSUE(args)
+  G->>R: execute(user, tool, args)
+  R->>C: get/refresh access token
+  R->>X: POST /issue + Bearer
+  X-->>R: JSON
+  R-->>A: sanitized result (no secrets)
+  A-->>U: "Ticket PROJ-123 created"</pre><h3>3.3 Logical data model</h3>
+<pre class="mermaid">erDiagram
+  USER ||--o{ CONNECTED_ACCOUNT : owns
+  TOOLKIT ||--o{ AUTH_CONFIG : has
+  AUTH_CONFIG ||--o{ CONNECTED_ACCOUNT : issues
+  TOOLKIT ||--o{ TOOL : contains
+  TOOL ||--o{ TOOL_VERSION : versions
+  USER ||--o{ SESSION : opens
+  SESSION }o--o{ TOOLKIT : allows
+  SESSION }o--o{ CONNECTED_ACCOUNT : pins
+  CONNECTED_ACCOUNT ||--o{ TRIGGER_INSTANCE : subscribes
+  TOOL ||--o{ EXECUTION_LOG : produces
+
+  USER {
+    string user_id PK
+    string entra_oid
+  }
+  TOOLKIT {
+    string slug PK
+    string auth_type
+    string base_url
+  }
+  TOOL {
+    string slug PK
+    string toolkit_slug FK
+    json input_schema
+    json output_schema
+  }
+  CONNECTED_ACCOUNT {
+    string id PK
+    string user_id FK
+    string toolkit_slug
+    bytes encrypted_tokens
+    datetime expires_at
+  }
+  SESSION {
+    string session_id PK
+    string user_id FK
+    json config
+  }</pre><hr>
+<h2>4. Tools / Azure services you need</h2>
+<h3>4.1 Platform building blocks (Microsoft stack)</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Recommended Azure / Microsoft component</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Edge / MCP / policies</td>
+<td><strong>Azure API Management</strong></td>
+<td>Expose MCP servers; <code>validate-azure-ad-token</code>; outbound <code>get-authorization-context</code> via <strong>Credential Manager</strong></td>
+</tr>
+<tr>
+<td>Company identity</td>
+<td><strong>Microsoft Entra ID</strong></td>
+<td>SSO for admins + agent clients; app registrations per external OAuth <em>app</em> you own</td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td><strong>Azure Key Vault</strong></td>
+<td>Client secrets, encryption keys; Prefer APIM Credential Manager for <em>user</em> OAuth tokens where supported</td>
+</tr>
+<tr>
+<td>User token store (if not APIM)</td>
+<td><strong>Cosmos DB</strong> or <strong>Azure SQL</strong> + envelope encryption</td>
+<td>Store refresh tokens encrypted; never log plaintext</td>
+</tr>
+<tr>
+<td>Session + catalog APIs</td>
+<td><strong>Azure Container Apps</strong> or <strong>App Service</strong> (.NET 8 / Node)</td>
+<td>Tool router, search, connect links</td>
+</tr>
+<tr>
+<td>Tool executors</td>
+<td><strong>Azure Functions</strong> (Durable for long jobs)</td>
+<td>One Function App per toolkit <em>or</em> generic OpenAPI executor</td>
+</tr>
+<tr>
+<td>Async / webhooks</td>
+<td><strong>Service Bus</strong> + <strong>Event Grid</strong></td>
+<td>Triggers, retries, poison queues</td>
+</tr>
+<tr>
+<td>Search over tools</td>
+<td><strong>Azure AI Search</strong> or in-DB full-text</td>
+<td>Power <code>SEARCH_TOOLS</code> meta-tool</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td><strong>Azure Monitor</strong> + OpenTelemetry</td>
+<td>Per-connection latency, 401/429 rates</td>
+</tr>
+<tr>
+<td>Agent runtime</td>
+<td><strong>Azure AI Foundry / Azure OpenAI</strong></td>
+<td>Agents that call your MCP or function tools</td>
+</tr>
+<tr>
+<td>Optional workflows</td>
+<td><strong>Logic Apps Standard</strong></td>
+<td>Human/ops automations; not a substitute for the agent broker</td>
+</tr>
+<tr>
+<td>Optional K8s MCP plane</td>
+<td><strong><a href="https://github.com/microsoft/mcp-gateway">microsoft/mcp-gateway</a></strong></td>
+<td>Session-aware MCP reverse proxy on AKS</td>
+</tr>
+<tr>
+<td>Admin UI</td>
+<td><strong>React / Blazor</strong> on App Service / Static Web Apps</td>
+<td>Enable toolkits, view connections, audit</td>
+</tr>
+</tbody></table>
+<h3>4.2 Software you should <em>not</em> reinvent first</h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Prefer</th>
+<th>Avoid building year-1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OAuth for 900+ providers</td>
+<td><strong>Nango</strong> self-host/BYOC, or APIM Credential Manager + curated providers</td>
+<td>Hand-rolling 50 OAuth quirks</td>
+</tr>
+<tr>
+<td>MCP reverse proxy</td>
+<td>microsoft/mcp-gateway or APIM MCP</td>
+<td>Custom sticky-session proxy</td>
+</tr>
+<tr>
+<td>LLM ↔ tool schema adapters</td>
+<td>OpenAI/Anthropic/MCP standards</td>
+<td>Per-framework one-offs without a provider layer</td>
+</tr>
+</tbody></table>
+<h3>4.3 Connector implementation toolkit (per service)</h3>
+<p>For each of the 40–50 services, you typically need:</p>
+<ol>
+<li><strong>OAuth app</strong> (or API key / JWT / basic) registered at the vendor.</li>
+<li><strong>Auth config</strong> in your broker (client id/secret in Key Vault, scopes, redirect URI = your Connect callback).</li>
+<li><strong>Tool definitions</strong> — either:<ul>
+<li>Hand-authored JSON Schema tools (LLM-optimized names/descriptions), or</li>
+<li>Generated from <strong>OpenAPI</strong> then curated (descriptions matter a lot for agents).</li>
+</ul>
+</li>
+<li><strong>Executor</strong> — thin HTTP client calling the vendor API through the proxy.</li>
+<li><strong>Tests</strong> — auth refresh, rate-limit, schema golden files, sandbox account.</li>
+<li><strong>Optional triggers</strong> — webhook receiver + verification secret.</li>
+</ol>
+<hr>
+<h2>5. How existing GitHub projects deal with this</h2>
+<h3>5.1 Primary references</h3>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>License / model</th>
+<th>What to learn / reuse</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/ComposioHQ/composio">ComposioHQ/composio</a></td>
+<td>SDK-focused monorepo</td>
+<td>Session API, provider adapters, tool type schemas (<code>ToolSchema</code> with JSON Schema I/O, versions, scopes). <strong>Server/catalog is mostly hosted</strong> — SDK is the public surface.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NangoHQ/nango">NangoHQ/nango</a></td>
+<td>Open source (Elastic License; free self-host limited)</td>
+<td><strong>Best OSS blueprint</strong>: Auth → Connection → Proxy → Actions/Syncs → MCP. Self-hostable. Write TypeScript functions per integration.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NangoHQ/github-api-integration">NangoHQ/github-api-integration</a></td>
+<td>Example app</td>
+<td>End-to-end pattern: Connect UI + sync + actions + agent over hosted MCP.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/microsoft/mcp-gateway">microsoft/mcp-gateway</a></td>
+<td>Microsoft OSS</td>
+<td>K8s MCP gateway: adapters, tools registry, Entra auth hooks, optional Foundry agents/sessions.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Azure-Samples/AI-Gateway">Azure-Samples/AI-Gateway</a></td>
+<td>Samples</td>
+<td>Labs for <strong>APIM + MCP + Credential Manager</strong> (GitHub Issues, ServiceNow). Closest “Microsoft native Composio slice.”</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/azure/api-management/secure-mcp-servers">MicrosoftDocs APIM secure MCP</a></td>
+<td>Docs</td>
+<td>Production pattern: Entra JWT in, Credential Manager token out.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mdspinali/mcp-entra-proxy">mdspinali/mcp-entra-proxy</a></td>
+<td>Community</td>
+<td>Bridges MCP RFC 8707 <code>resource</code> param vs Entra v2 rejecting it — relevant if MCP clients talk to Entra-protected servers.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/atrawog/mcp-oauth-gateway">atrawog/mcp-oauth-gateway</a></td>
+<td>Community</td>
+<td>OAuth 2.1 + PKCE + dynamic client registration in front of unmodified MCP servers.</td>
+</tr>
+<tr>
+<td>Logic Apps connector extensibility</td>
+<td><a href="https://learn.microsoft.com/en-us/azure/logic-apps/custom-connector-overview">MS Learn</a></td>
+<td>Useful for <strong>workflow</strong> connectors; weaker fit as the <em>agent tool router</em> (prefer Functions + MCP).</td>
+</tr>
+</tbody></table>
+<h3>5.2 How Nango structures the problem (recommended mental model)</h3>
+<p>Nango’s three primitives map cleanly to a Composio rebuild:</p>
+<ol>
+<li><strong>Auth</strong> — Provider → Integration (your OAuth app) → Connection (per-user credentials).</li>
+<li><strong>Proxy</strong> — <code>connectionId</code> + path → inject token → upstream.</li>
+<li><strong>Functions</strong> — Actions (tool calls) and Syncs (data replication); can be exposed as <strong>MCP tools</strong>.</li>
+</ol>
+<p>Composio adds agent-native layers on top: <strong>sessions, meta-tool search, response shaping, sandbox</strong>. If you self-host Nango on Azure for Auth+Proxy+Actions, you still build Session/Search/MCP productization — or use Nango’s MCP + your Entra-facing gateway.</p>
+<h3>5.3 How Composio structures tools (schema ideas to copy)</h3>
+<p>From their public SDK types:</p>
+<ul>
+<li>Toolkit: <code>slug</code>, <code>name</code>, <code>logo</code>, auth metadata.</li>
+<li>Tool: <code>slug</code> (<code>TOOLKIT_ACTION</code>), <code>description</code>, <code>inputParameters</code> / <code>outputParameters</code> (JSON Schema), <code>tags</code>, <code>version</code>, <code>scopes</code>, <code>isNoAuth</code>.</li>
+<li>Version pins: dated <code>YYYYMMDD_NN</code> for deterministic code; <code>latest</code> for agents.</li>
+</ul>
+<p><strong>Design rule:</strong> spend time on tool <em>descriptions</em> and parameter names — agent quality depends more on this than on clever routing.</p>
+<h3>5.4 Peer landscape (for build-vs-buy)</h3>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Strength</th>
+<th>Weakness for Microsoft rebuild</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Composio</strong></td>
+<td>Agent sessions, 1000+ toolkits, meta-tools</td>
+<td>Hosted-first; less “own the sync layer”</td>
+</tr>
+<tr>
+<td><strong>Nango</strong></td>
+<td>OSS, auth+proxy+sync+actions, self-host/BYOC</td>
+<td>You write/maintain action functions</td>
+</tr>
+<tr>
+<td><strong>Pipedream Connect</strong></td>
+<td>Huge catalog, connect proxy</td>
+<td>Less “session meta-tool” agent UX</td>
+</tr>
+<tr>
+<td><strong>Merge / unified APIs</strong></td>
+<td>Normalized CRM/HR models</td>
+<td>Wrong abstraction for arbitrary agent actions</td>
+</tr>
+<tr>
+<td><strong>APIM + Foundry</strong></td>
+<td>Native Entra, compliance story</td>
+<td>You still author tools/connectors</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>6. Implementation plan (40–50 services)</h2>
+<h3>Phase 0 — Decisions (1–2 weeks)</h3>
+<ul>
+<li>Confirm <strong>must-have services</strong> (tier A: 10; tier B: 20; tier C: 15–20).</li>
+<li>Data residency / “tokens never leave our tenant” → forces BYOC or full build.</li>
+<li>Agent surfaces: Foundry only vs also Copilot Studio / Cursor MCP.</li>
+<li>Buy boundary: e.g. <strong>Nango for Auth+Proxy</strong> vs <strong>APIM Credential Manager only</strong> (APIM covers fewer SaaS OAuth providers out of the box; often enough for Microsoft + a curated set).</li>
+</ul>
+<h3>Phase 1 — Platform spine (6–10 weeks)</h3>
+<ol>
+<li>Entra app registrations + APIM instance (dev/prod).</li>
+<li>Connection data model + encryption (Key Vault keys).</li>
+<li>Connect UI (start OAuth, callback, list/revoke connections).</li>
+<li>Generic <strong>authenticated HTTP proxy</strong> (connection-scoped).</li>
+<li>Tool catalog service (CRUD + versioning + search index).</li>
+<li>Session API: <code>create</code> / <code>use</code> / <code>execute</code> + meta tools.</li>
+<li>MCP façade on APIM (or mcp-gateway on AKS).</li>
+<li>Audit log + basic admin portal.</li>
+</ol>
+<p><strong>Exit criteria:</strong> one pilot toolkit (e.g. GitHub or Microsoft Graph) works end-to-end: connect → search → execute → MCP from a test client.</p>
+<h3>Phase 2 — Connector factory (parallelizable, 8–16 weeks)</h3>
+<p>Establish a <strong>connector template</strong>:</p>
+<pre><code>connectors/
+  github/
+    auth.json          # endpoints, scopes, token placement
+    tools/*.tool.json  # JSON Schema tools
+    executor/          # Function or shared OpenAPI runner
+    triggers/          # optional
+    tests/
+</code></pre>
+<p>Throughput guideline for a trained team:</p>
+<table>
+<thead>
+<tr>
+<th>Connector class</th>
+<th>Examples</th>
+<th>Effort each</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Simple REST + clean OAuth</td>
+<td>GitHub, Slack, Notion</td>
+<td>3–8 engineer-days</td>
+</tr>
+<tr>
+<td>Complex enterprise</td>
+<td>Salesforce, SAP, ServiceNow</td>
+<td>2–4 engineer-weeks</td>
+</tr>
+<tr>
+<td>Microsoft Graph family</td>
+<td>Mail, Calendar, SharePoint, Teams</td>
+<td>1–2 weeks once Graph auth is solid (shared)</td>
+</tr>
+<tr>
+<td>API-key only</td>
+<td>Some IT tools</td>
+<td>1–3 days</td>
+</tr>
+</tbody></table>
+<p>For <strong>45 connectors</strong>, a realistic mix (~25 simple, ~15 medium, ~5 hard):</p>
+<ul>
+<li>~25×5d + 15×10d + 5×15d ≈ <strong>400 engineer-days</strong> ≈ <strong>2 FTE for ~4–5 months</strong>, plus review/security.</li>
+</ul>
+<p>Use codegen from OpenAPI where possible, then <strong>human-edit descriptions</strong> for LLM use.</p>
+<h3>Phase 3 — Production hardening (4–8 weeks)</h3>
+<ul>
+<li>Rate-limit fairness per tenant/connection.</li>
+<li>Token refresh job + alerting on refresh failures.</li>
+<li>Scope least-privilege matrix per tool.</li>
+<li>Red-team prompt-injection tests (ensure no secret leakage in tool results).</li>
+<li>SLOs, runbooks, chaos on vendor 429/5xx.</li>
+<li>Toolkit versioning policy (pin in prod pipelines; latest in agents).</li>
+</ul>
+<h3>Phase 4 — Scale &amp; productize</h3>
+<ul>
+<li>Customer-facing “Integrations” settings in your product.</li>
+<li>Trigger → Service Bus → agent wake-up.</li>
+<li>Optional sync/RAG pipelines for selected systems.</li>
+<li>Cost dashboards (executions per toolkit).</li>
+</ul>
+<hr>
+<h2>7. Cost estimates (to <em>build</em>)</h2>
+<p>Figures are <strong>order-of-magnitude</strong> in USD for a Western/EU blended team (~$150–200/hr fully loaded for senior platform engineers; adjust to your rates). Vendor marketing numbers often cite $8k–$25k <strong>per integration</strong> and ~$3k–$6k/year maintenance (<a href="https://inqodo.com/blogs/build-vs-buy-saas-integrations-cost">build-vs-buy analyses</a>; <a href="https://composio.dev/content/build-vs-buy-ai-agent-integrations">Composio build-vs-buy</a>).</p>
+<h3>7.1 One-time build</h3>
+<table>
+<thead>
+<tr>
+<th>Workstream</th>
+<th>Low</th>
+<th>Mid</th>
+<th>High</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Platform spine (auth, proxy, sessions, MCP, admin)</td>
+<td>$120k</td>
+<td>$220k</td>
+<td>$400k</td>
+<td>2–4 seniors, 2–4 months</td>
+</tr>
+<tr>
+<td>40–50 connectors (mixed complexity)</td>
+<td>$200k</td>
+<td>$350k</td>
+<td>$600k</td>
+<td>Dominated by enterprise APIs + QA</td>
+</tr>
+<tr>
+<td>Security / compliance (threat model, pen test, SOC mapping)</td>
+<td>$40k</td>
+<td>$80k</td>
+<td>$150k</td>
+<td>Higher if multi-tenant SaaS</td>
+</tr>
+<tr>
+<td>Foundry/agent UX integration</td>
+<td>$30k</td>
+<td>$60k</td>
+<td>$120k</td>
+<td>Product surface</td>
+</tr>
+<tr>
+<td><strong>Total build</strong></td>
+<td><strong>~$390k</strong></td>
+<td><strong>~$710k</strong></td>
+<td><strong>~$1.27M</strong></td>
+<td>Full clone territory at the high end</td>
+</tr>
+</tbody></table>
+<p><strong>Hybrid (recommended):</strong> reuse Nango or APIM Credential Manager for auth → often <strong>cuts $80k–$200k</strong> and months of OAuth edge cases off the spine.</p>
+<h3>7.2 Annual run cost (after launch)</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Mid estimate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Connector maintenance (API churn)</td>
+<td>$150k–$300k/yr (≈ 1–2 FTE) for 45 connectors</td>
+</tr>
+<tr>
+<td>Platform on-call / features</td>
+<td>$150k–$250k/yr</td>
+</tr>
+<tr>
+<td>Azure (APIM Premium/Standard, Container Apps, Functions, Cosmos, Monitor)</td>
+<td>$3k–$20k/mo depending on tier &amp; traffic</td>
+</tr>
+<tr>
+<td>Optional vendor (Nango/Composio Enterprise)</td>
+<td>Custom; often cheaper than 2 FTEs if catalog coverage fits</td>
+</tr>
+</tbody></table>
+<p>Composio’s public SKUs (indicative): Free capped tool calls; Pro <del>$29/mo + usage; Enterprise custom (VPC/SSO). Nango: Free → Pay-as-you-go (</del>$50 credits) → Enterprise BYOC. Use these as <strong>buy</strong> baselines against your <strong>build</strong> mid case (~$700k + ~$300k/yr).</p>
+<h3>7.3 Decision shortcut</h3>
+<pre class="mermaid">flowchart TD
+  Q1{Tokens must stay<br/>in our Azure tenant?}
+  Q1 -->|No| Buy[Buy Composio/Nango Cloud<br/>+ thin Entra wrapper]
+  Q1 -->|Yes| Q2{Need 200+ long-tail<br/>SaaS tools soon?}
+  Q2 -->|Yes| BYOC[Nango/Composio BYOC on Azure<br/>+ your MCP/APIM façade]
+  Q2 -->|No - 40-50 curated| Hybrid[Build hybrid:<br/>APIM + Functions + catalog<br/>optional Nango Auth]
+  Buy --> Done[Ship in weeks]
+  BYOC --> Done2[Ship in 1-3 months]
+  Hybrid --> Done3[Ship MVP in 2-4 months<br/>connectors thereafter]</pre><hr>
+<h2>8. Suggested Microsoft reference architecture (concrete)</h2>
+<p><strong>Minimal viable “internal Composio”:</strong></p>
+<ol>
+<li><strong>APIM</strong>  <ul>
+<li>Inbound: Entra JWT / MCP OAuth.  </li>
+<li>Outbound: Credential Manager where provider supported; else call your Auth Broker.</li>
+</ul>
+</li>
+<li><strong>Auth Broker</strong> (Container App)  <ul>
+<li>OAuth start/callback; stores connections in Cosmos; secrets in Key Vault.</li>
+</ul>
+</li>
+<li><strong>Tool Router</strong>  <ul>
+<li>Meta tools + <code>execute</code>; queries Azure AI Search over tool descriptions.</li>
+</ul>
+</li>
+<li><strong>Executors</strong>  <ul>
+<li>Azure Functions keyed by <code>toolkit_slug</code>; shared HttpClient with retry/429 backoff.</li>
+</ul>
+</li>
+<li><strong>MCP</strong>  <ul>
+<li>APIM MCP server <strong>or</strong> microsoft/mcp-gateway on AKS exposing Tool Router.</li>
+</ul>
+</li>
+<li><strong>Agents</strong>  <ul>
+<li>Azure AI Foundry agent with MCP tool connection to your gateway.</li>
+</ul>
+</li>
+</ol>
+<p>Pilot order that de-risks the platform:</p>
+<ol>
+<li>Microsoft Graph (Mail or Calendar) — Entra-native.  </li>
+<li>GitHub — well-documented OAuth + rich tools (see Azure-Samples AI-Gateway lab).  </li>
+<li>Slack or Teams — messaging patterns.  </li>
+<li>One “painful” enterprise system (Salesforce/ServiceNow) — proves the factory.</li>
+</ol>
+<hr>
+<h2>9. Risks and design pitfalls</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Context window explosion (too many tools)</td>
+<td>Meta-tool search; hard toolkit allowlists per session</td>
+</tr>
+<tr>
+<td>Over-broad OAuth scopes</td>
+<td>Per-tool required scopes; progressive consent</td>
+</tr>
+<tr>
+<td>Refresh-token rotations / sudden revoke</td>
+<td>Alerting; Connect UX to re-auth; degrade gracefully</td>
+</tr>
+<tr>
+<td>Prompt injection → data exfil via tools</td>
+<td>Allowlist tools; human approval for destructive actions; egress policies</td>
+</tr>
+<tr>
+<td>Treating Logic Apps as the agent platform</td>
+<td>Use Logic Apps for ops; keep brokered tool execution in APIM/Functions</td>
+</tr>
+<tr>
+<td>Generating tools blindly from OpenAPI</td>
+<td>Always curate names/descriptions; hide dangerous ops</td>
+</tr>
+<tr>
+<td>Building syncs too early</td>
+<td>Ship actions first; add sync/RAG only for clear product needs</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>10. Sources</h2>
+<h3>Product / docs</h3>
+<ul>
+<li><a href="https://docs.composio.dev/docs/how-composio-works">Composio — How it works (sessions)</a></li>
+<li><a href="https://docs.composio.dev/docs/sessions-vs-direct-execution">Composio — Sessions vs direct execution</a></li>
+<li><a href="https://composio.dev/content/secure-ai-agent-infrastructure-guide">Composio — Secure AI agent infrastructure</a></li>
+<li><a href="https://composio.dev/content/per-user-oauth-for-ai-agents">Composio — Per-user OAuth for agents</a></li>
+<li><a href="https://nango.dev/docs/guides/functions/unified-apis">Nango — Auth / Proxy / Unified APIs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/api-management/credentials-overview">Azure APIM — Credential Manager</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/api-management/secure-mcp-servers">Azure APIM — Secure MCP servers</a></li>
+</ul>
+<h3>GitHub</h3>
+<ul>
+<li><a href="https://github.com/ComposioHQ/composio">https://github.com/ComposioHQ/composio</a>  </li>
+<li><a href="https://github.com/NangoHQ/nango">https://github.com/NangoHQ/nango</a>  </li>
+<li><a href="https://github.com/NangoHQ/github-api-integration">https://github.com/NangoHQ/github-api-integration</a>  </li>
+<li><a href="https://github.com/microsoft/mcp-gateway">https://github.com/microsoft/mcp-gateway</a>  </li>
+<li><a href="https://github.com/Azure-Samples/AI-Gateway">https://github.com/Azure-Samples/AI-Gateway</a>  </li>
+<li><a href="https://github.com/mdspinali/mcp-entra-proxy">https://github.com/mdspinali/mcp-entra-proxy</a></li>
+</ul>
+<h3>Cost / build-vs-buy</h3>
+<ul>
+<li><a href="https://composio.dev/content/build-vs-buy-ai-agent-integrations">https://composio.dev/content/build-vs-buy-ai-agent-integrations</a>  </li>
+<li><a href="https://inqodo.com/blogs/build-vs-buy-saas-integrations-cost">https://inqodo.com/blogs/build-vs-buy-saas-integrations-cost</a>  </li>
+<li><a href="https://nango.dev/pricing/">https://nango.dev/pricing/</a>  </li>
+<li><a href="https://composio.dev/content/composio-vs-nango">https://composio.dev/content/composio-vs-nango</a></li>
+</ul>
+<hr>
+<h2>11. Bottom line</h2>
+<p>Composio-class systems are an <strong>agent-facing control plane</strong>: per-user OAuth, encrypted connections, JSON Schema tools, a session-scoped tool router, credential-safe execution, and MCP.  </p>
+<p>On Microsoft stack, <strong>do not start by cloning 1,000 toolkits</strong>. Build (or buy) the <strong>spine</strong> on <strong>Entra + APIM + Functions/Container Apps</strong>, reuse <strong>Nango or APIM Credential Manager</strong> for OAuth/proxy where possible, and industrialize a <strong>connector factory</strong> for your fixed set of <strong>40–50</strong> services.  </p>
+<p>Budget planning: expect on the order of <strong>$0.4M–$0.8M</strong> to reach a credible internal platform with that connector count (hybrid), or <strong>materially less</strong> if you BYOC a vendor and only build the Entra/MCP façade — versus <strong>$1M+</strong> and ongoing multi-FTE maintenance for a full greenfield clone.</p>
+
+    </article>
+    <footer>
+      Rendered from <code>docs/composio-like-microsoft-stack.md</code>. Diagrams via Mermaid.
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const content = document.getElementById('content');
+      const toc = document.getElementById('toc-list');
+      const headings = content.querySelectorAll('h2');
+      headings.forEach((h, i) => {
+        if (!h.id) h.id = 'section-' + (i + 1);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        toc.appendChild(li);
+      });
+      const first = content.firstElementChild;
+      if (first && first.tagName === 'H1') {
+        document.querySelector('.doc-hero').appendChild(first);
+      }
+    })();
+  </script>
+</body>
+</html>
